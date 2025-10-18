@@ -1,0 +1,328 @@
+#pragma version 11
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 1 8 32
+    bytecblock "total_bounty" "maintainer" "is_resolved" "issue_id" "usdc_asset" 0x151f7c75
+    // smart_contracts/issue_escrow/contract.py:4
+    // class IssueEscrow(ARC4Contract):
+    txn NumAppArgs
+    bz main___algopy_default_create@15
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    assert
+    pushbytess 0xff837658 0x960b6e31 0x0556803b 0x561ac80f 0xa640c552 0x9e0ebef2 // method "create_bounty(string,uint64,address)string", method "fund_bounty(uint64)string", method "distribute_payout(address,uint64)string", method "mark_resolved()string", method "refund(uint64)string", method "get_bounty_info()(string,uint64,uint64,address,uint64)"
+    txna ApplicationArgs 0
+    match create_bounty fund_bounty distribute_payout mark_resolved refund get_bounty_info
+    err
+
+main___algopy_default_create@15:
+    txn OnCompletion
+    !
+    txn ApplicationID
+    !
+    &&
+    return // on error: OnCompletion must be NoOp && can only call when creating
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.create_bounty[routing]() -> void:
+create_bounty:
+    // smart_contracts/issue_escrow/contract.py:15
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16
+    pushint 2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for (len+utf8[])
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    txna ApplicationArgs 3
+    dup
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    // smart_contracts/issue_escrow/contract.py:23
+    // self.issue_id.value = issue_id
+    bytec_3 // "issue_id"
+    dig 3
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:24
+    // self.total_bounty.value = UInt64(0)
+    bytec_0 // "total_bounty"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:25
+    // self.usdc_asset.value = usdc_asset
+    bytec 4 // "usdc_asset"
+    uncover 2
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:26
+    // self.maintainer.value = maintainer
+    bytec_1 // "maintainer"
+    swap
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:27
+    // self.is_resolved.value = UInt64(0)
+    bytec_2 // "is_resolved"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:28
+    // return String("Bounty created for issue: ") + issue_id
+    pushbytes "Bounty created for issue: "
+    swap
+    concat
+    // smart_contracts/issue_escrow/contract.py:15
+    // @arc4.abimethod()
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec 5 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.fund_bounty[routing]() -> void:
+fund_bounty:
+    // smart_contracts/issue_escrow/contract.py:30
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/issue_escrow/contract.py:33
+    // assert self.is_resolved.value == UInt64(0), "Bounty already resolved"
+    intc_0 // 0
+    bytec_2 // "is_resolved"
+    app_global_get_ex
+    assert // check self.is_resolved exists
+    !
+    assert // Bounty already resolved
+    // smart_contracts/issue_escrow/contract.py:40
+    // self.total_bounty.value = self.total_bounty.value + amount
+    intc_0 // 0
+    bytec_0 // "total_bounty"
+    app_global_get_ex
+    assert // check self.total_bounty exists
+    +
+    bytec_0 // "total_bounty"
+    swap
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:30
+    // @arc4.abimethod()
+    pushbytes 0x151f7c75000d46756e64656420626f756e7479
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.distribute_payout[routing]() -> void:
+distribute_payout:
+    // smart_contracts/issue_escrow/contract.py:43
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    len
+    intc_3 // 32
+    ==
+    assert // invalid number of bytes for uint8[32]
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/issue_escrow/contract.py:50
+    // assert Txn.sender == self.maintainer.value, "Only maintainer can distribute"
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "maintainer"
+    app_global_get_ex
+    assert // check self.maintainer exists
+    ==
+    assert // Only maintainer can distribute
+    // smart_contracts/issue_escrow/contract.py:51
+    // assert self.is_resolved.value == UInt64(1), "Issue not resolved yet"
+    intc_0 // 0
+    bytec_2 // "is_resolved"
+    app_global_get_ex
+    assert // check self.is_resolved exists
+    intc_1 // 1
+    ==
+    assert // Issue not resolved yet
+    // smart_contracts/issue_escrow/contract.py:52
+    // assert amount <= self.total_bounty.value, "Insufficient bounty funds"
+    intc_0 // 0
+    bytec_0 // "total_bounty"
+    app_global_get_ex
+    assert // check self.total_bounty exists
+    dup2
+    <=
+    assert // Insufficient bounty funds
+    // smart_contracts/issue_escrow/contract.py:59
+    // self.total_bounty.value = self.total_bounty.value - amount
+    swap
+    -
+    bytec_0 // "total_bounty"
+    swap
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:43
+    // @arc4.abimethod()
+    pushbytes 0x151f7c75001a446973747269627574656420746f20636f6e7472696275746f72
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.mark_resolved[routing]() -> void:
+mark_resolved:
+    // smart_contracts/issue_escrow/contract.py:65
+    // assert Txn.sender == self.maintainer.value, "Only maintainer can mark resolved"
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "maintainer"
+    app_global_get_ex
+    assert // check self.maintainer exists
+    ==
+    assert // Only maintainer can mark resolved
+    // smart_contracts/issue_escrow/contract.py:66
+    // self.is_resolved.value = UInt64(1)
+    bytec_2 // "is_resolved"
+    intc_1 // 1
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:62
+    // @arc4.abimethod()
+    pushbytes 0x151f7c7500184973737565206d61726b6564206173207265736f6c766564
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.refund[routing]() -> void:
+refund:
+    // smart_contracts/issue_escrow/contract.py:69
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_2 // 8
+    ==
+    assert // invalid number of bytes for uint64
+    btoi
+    // smart_contracts/issue_escrow/contract.py:72
+    // assert Txn.sender == self.maintainer.value, "Only maintainer can refund"
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "maintainer"
+    app_global_get_ex
+    assert // check self.maintainer exists
+    ==
+    assert // Only maintainer can refund
+    // smart_contracts/issue_escrow/contract.py:73
+    // assert amount <= self.total_bounty.value, "Insufficient bounty funds"
+    intc_0 // 0
+    bytec_0 // "total_bounty"
+    app_global_get_ex
+    assert // check self.total_bounty exists
+    dup2
+    <=
+    assert // Insufficient bounty funds
+    // smart_contracts/issue_escrow/contract.py:80
+    // self.total_bounty.value = self.total_bounty.value - amount
+    swap
+    -
+    bytec_0 // "total_bounty"
+    swap
+    app_global_put
+    // smart_contracts/issue_escrow/contract.py:69
+    // @arc4.abimethod()
+    pushbytes 0x151f7c750016526566756e64656420746f206d61696e7461696e6572
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.issue_escrow.contract.IssueEscrow.get_bounty_info[routing]() -> void:
+get_bounty_info:
+    // smart_contracts/issue_escrow/contract.py:87
+    // self.issue_id.value,
+    intc_0 // 0
+    bytec_3 // "issue_id"
+    app_global_get_ex
+    assert // check self.issue_id exists
+    // smart_contracts/issue_escrow/contract.py:88
+    // self.total_bounty.value,
+    intc_0 // 0
+    bytec_0 // "total_bounty"
+    app_global_get_ex
+    assert // check self.total_bounty exists
+    // smart_contracts/issue_escrow/contract.py:89
+    // self.usdc_asset.value,
+    intc_0 // 0
+    bytec 4 // "usdc_asset"
+    app_global_get_ex
+    assert // check self.usdc_asset exists
+    // smart_contracts/issue_escrow/contract.py:90
+    // self.maintainer.value,
+    intc_0 // 0
+    bytec_1 // "maintainer"
+    app_global_get_ex
+    assert // check self.maintainer exists
+    // smart_contracts/issue_escrow/contract.py:91
+    // self.is_resolved.value
+    intc_0 // 0
+    bytec_2 // "is_resolved"
+    app_global_get_ex
+    assert // check self.is_resolved exists
+    // smart_contracts/issue_escrow/contract.py:83
+    // @arc4.abimethod()
+    dig 4
+    len
+    itob
+    extract 6 2
+    uncover 5
+    concat
+    uncover 4
+    itob
+    pushbytes 0x003a
+    swap
+    concat
+    uncover 4
+    itob
+    concat
+    uncover 3
+    concat
+    uncover 2
+    itob
+    concat
+    swap
+    concat
+    bytec 5 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return

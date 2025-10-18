@@ -1,0 +1,29 @@
+{
+  "name": "algo-bounty",
+  "version": "0.1.0",
+  "description": "Trustless Open-Source Bounties on Algorand",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=algo-bounty-frontend",
+    "build": "npm run build --workspace=algo-bounty-frontend",
+    "start": "npm run start --workspace=algo-bounty-frontend",
+    "lint": "npm run lint --workspace=algo-bounty-frontend",
+    "setup": "npm run setup:env --workspace=algo-bounty-frontend",
+    "localnet:start": "algokit localnet start",
+    "localnet:stop": "algokit localnet stop",
+    "localnet:status": "algokit localnet status",
+    "deploy:contracts": "cd projects/algo-bounty-contracts && poetry run python -m smart_contracts.issue_escrow.deploy_config",
+    "install:all": "npm install && cd projects/algo-bounty-frontend && npm install && cd ../algo-bounty-contracts && poetry install"
+  },
+  "devDependencies": {
+    "@algorandfoundation/algokit-utils": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20.0",
+    "npm": ">=9.0"
+  }
+}
+
