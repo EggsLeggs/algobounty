@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-100/20 to-purple-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative flex flex-col h-full">
                 <h3 className="font-semibold text-indigo-900 mb-2 text-center">Trustless Escrow</h3>
-                <p className="text-sm text-indigo-700 text-center flex-grow">USDC (ASA) held securely in smart contracts until work is completed and verified</p>
+                <p className="text-sm text-indigo-700 text-center flex-grow">ALGO held securely in smart contracts until work is completed and verified</p>
               </div>
             </div>
           </motion.div>
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
              </div>
            </div>
             <h3 className="font-semibold text-indigo-900 mb-2">Fund Issue</h3>
-            <p className="text-sm text-indigo-700">Fund the issue with USDC on Algorand blockchain</p>
+            <p className="text-sm text-indigo-700">Fund the issue with ALGO on Algorand blockchain</p>
           </motion.div>
 
           {/* Step 3: Contribute */}

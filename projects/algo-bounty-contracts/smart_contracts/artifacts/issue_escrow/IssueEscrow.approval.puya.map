@@ -3,7 +3,7 @@
   "sources": [
     "../../issue_escrow/contract.py"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGA;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;;;;;;;;AAWK;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAQG;AAAA;;AAAA;AACA;AAA0B;AAA1B;AACA;;AAAA;;AAAA;AACA;AAAA;AAAA;AACA;AAAyB;AAAzB;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAbV;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAeA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;AAAA;AAAA;AAAA;AAAA;AAAP;AAO0B;AAAA;AAAA;AAAA;AAAA;AAA1B;AAAA;AAAA;AAVH;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAaA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAOU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACO;AAAA;AAAA;AAAA;AAA0B;AAA1B;AAAP;AACiB;AAAA;AAAA;AAAA;AAAV;AAAA;AAAP;AAO0B;AAAA;AAA1B;AAAA;AAAA;AAhBH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAsBU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;AAAyB;AAAzB;AAJH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAOA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACiB;AAAA;AAAA;AAAA;AAAV;AAAA;AAAP;AAO0B;AAAA;AAA1B;AAAA;AAAA;AAXH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAkBO;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AARP;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA",
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGA;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;;;;;;;;AAYK;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAQU;AAAA;;AAAA;AAAA;AAAA;AAAP;AACO;;AAAA;;AAAA;AAAP;AAEA;;AAAA;;AAAA;AACA;AAA0B;AAA1B;AACA;AAAA;;AAAA;AACA;AAAA;AAAA;AACA;AAAyB;AAAzB;AACA;;AAAyB;AAAzB;AAEO;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAlBV;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAoBA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;AAAA;;AAAA;AAAA;AAA0B;AAA1B;AAAP;AACO;AAAA;AAAA;AAAA;AAAA;AAAP;AACA;AAAA;AAGA;AACe;AAAA;AAAA;AAAA;AACI;;AAEF;;;;;;;;;;;;AAJjB;;;AAAA;;;AAAA;AAO0B;AAAA;AAAA;AAAA;AAAA;AAA1B;AAAA;AAAA;AAfH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAkBA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAOU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACO;AAAA;AAAA;AAAA;AAA0B;AAA1B;AAAP;AACiB;AAAA;AAAA;AAAA;AAAV;AAAA;AAAP;AACA;;AAAA;AAGA;AACe;AAAA;AAAA;AAAA;AAGE;;;;;;;;;;;;;;AAJjB;;;AAAA;;;AAAA;AAO0B;AAAA;AAA1B;AAAA;AAAA;AApBH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AA0BU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAP;AACA;AAAyB;AAAzB;AAJH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAOA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGU;;AAAc;AAAA;AAAA;AAAA;AAAd;AAAA;;AAAA;AAAP;AACiB;AAAA;AAAA;AAAA;AAAV;;AAAA;;AAAA;AAAP;AACA;;AAAA;AAGA;AACe;AAAA;AAAA;AAAA;AAGE;;;;;;;;;;;;;;AAJjB;;;AAAA;;;AAAA;AAO0B;AAAA;AAA1B;AAAA;AAAA;AAfH;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAsBO;AAAA;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AATP;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -11,12 +11,12 @@
       "params": {},
       "block": "main",
       "stack_in": [],
-      "op": "intcblock 0 1 8 32"
+      "op": "intcblock 0 1 8 4"
     },
     "7": {
-      "op": "bytecblock \"total_bounty\" \"maintainer\" \"is_resolved\" \"issue_id\" \"usdc_asset\" 0x151f7c75"
+      "op": "bytecblock \"total_bounty\" \"algo_asset\" \"maintainer\" \"is_resolved\" \"initialized\" \"issue_id\" 0x151f7c75"
     },
-    "70": {
+    "82": {
       "op": "txn NumAppArgs",
       "defined_out": [
         "tmp%0#1"
@@ -25,11 +25,11 @@
         "tmp%0#1"
       ]
     },
-    "72": {
+    "84": {
       "op": "bz main___algopy_default_create@15",
       "stack_out": []
     },
-    "75": {
+    "87": {
       "op": "txn OnCompletion",
       "defined_out": [
         "tmp%2#0"
@@ -38,7 +38,7 @@
         "tmp%2#0"
       ]
     },
-    "77": {
+    "89": {
       "op": "!",
       "defined_out": [
         "tmp%3#0"
@@ -47,12 +47,12 @@
         "tmp%3#0"
       ]
     },
-    "78": {
+    "90": {
       "error": "OnCompletion must be NoOp",
       "op": "assert // OnCompletion must be NoOp",
       "stack_out": []
     },
-    "79": {
+    "91": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%4#0"
@@ -61,17 +61,17 @@
         "tmp%4#0"
       ]
     },
-    "81": {
+    "93": {
       "op": "assert",
       "stack_out": []
     },
-    "82": {
-      "op": "pushbytess 0xff837658 0x960b6e31 0x0556803b 0x561ac80f 0xa640c552 0x9e0ebef2 // method \"create_bounty(string,uint64,address)string\", method \"fund_bounty(uint64)string\", method \"distribute_payout(address,uint64)string\", method \"mark_resolved()string\", method \"refund(uint64)string\", method \"get_bounty_info()(string,uint64,uint64,address,uint64)\"",
+    "94": {
+      "op": "pushbytess 0xff837658 0x960b6e31 0x0556803b 0x561ac80f 0xa640c552 0x1d43eebc // method \"create_bounty(string,uint64,address)string\", method \"fund_bounty(uint64)string\", method \"distribute_payout(address,uint64)string\", method \"mark_resolved()string\", method \"refund(uint64)string\", method \"get_bounty_info()(string,uint64,uint64,address,uint64,uint64)\"",
       "defined_out": [
         "Method(create_bounty(string,uint64,address)string)",
         "Method(distribute_payout(address,uint64)string)",
         "Method(fund_bounty(uint64)string)",
-        "Method(get_bounty_info()(string,uint64,uint64,address,uint64))",
+        "Method(get_bounty_info()(string,uint64,uint64,address,uint64,uint64))",
         "Method(mark_resolved()string)",
         "Method(refund(uint64)string)"
       ],
@@ -81,16 +81,16 @@
         "Method(distribute_payout(address,uint64)string)",
         "Method(mark_resolved()string)",
         "Method(refund(uint64)string)",
-        "Method(get_bounty_info()(string,uint64,uint64,address,uint64))"
+        "Method(get_bounty_info()(string,uint64,uint64,address,uint64,uint64))"
       ]
     },
-    "114": {
+    "126": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(create_bounty(string,uint64,address)string)",
         "Method(distribute_payout(address,uint64)string)",
         "Method(fund_bounty(uint64)string)",
-        "Method(get_bounty_info()(string,uint64,uint64,address,uint64))",
+        "Method(get_bounty_info()(string,uint64,uint64,address,uint64,uint64))",
         "Method(mark_resolved()string)",
         "Method(refund(uint64)string)",
         "tmp%6#0"
@@ -101,18 +101,18 @@
         "Method(distribute_payout(address,uint64)string)",
         "Method(mark_resolved()string)",
         "Method(refund(uint64)string)",
-        "Method(get_bounty_info()(string,uint64,uint64,address,uint64))",
+        "Method(get_bounty_info()(string,uint64,uint64,address,uint64,uint64))",
         "tmp%6#0"
       ]
     },
-    "117": {
+    "129": {
       "op": "match create_bounty fund_bounty distribute_payout mark_resolved refund get_bounty_info",
       "stack_out": []
     },
-    "131": {
+    "143": {
       "op": "err"
     },
-    "132": {
+    "144": {
       "block": "main___algopy_default_create@15",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -123,7 +123,7 @@
         "tmp%7#0"
       ]
     },
-    "134": {
+    "146": {
       "op": "!",
       "defined_out": [
         "tmp%8#0"
@@ -132,7 +132,7 @@
         "tmp%8#0"
       ]
     },
-    "135": {
+    "147": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%8#0",
@@ -143,7 +143,7 @@
         "tmp%9#0"
       ]
     },
-    "137": {
+    "149": {
       "op": "!",
       "defined_out": [
         "tmp%10#0",
@@ -154,7 +154,7 @@
         "tmp%10#0"
       ]
     },
-    "138": {
+    "150": {
       "op": "&&",
       "defined_out": [
         "tmp%11#0"
@@ -163,13 +163,13 @@
         "tmp%11#0"
       ]
     },
-    "139": {
+    "151": {
       "error": "OnCompletion must be NoOp && can only call when creating",
       "op": "return // on error: OnCompletion must be NoOp && can only call when creating",
       "defined_out": [],
       "stack_out": []
     },
-    "140": {
+    "152": {
       "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.create_bounty[routing]",
       "params": {},
       "block": "create_bounty",
@@ -182,7 +182,7 @@
         "tmp%0#0"
       ]
     },
-    "143": {
+    "155": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -193,7 +193,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "144": {
+    "156": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -206,7 +206,7 @@
         "0"
       ]
     },
-    "145": {
+    "157": {
       "op": "extract_uint16",
       "defined_out": [
         "aggregate%array_length%0#0",
@@ -217,7 +217,7 @@
         "aggregate%array_length%0#0"
       ]
     },
-    "146": {
+    "158": {
       "op": "pushint 2 // 2",
       "defined_out": [
         "2",
@@ -230,7 +230,7 @@
         "2"
       ]
     },
-    "148": {
+    "160": {
       "op": "+",
       "defined_out": [
         "add%0#0",
@@ -241,7 +241,7 @@
         "add%0#0"
       ]
     },
-    "149": {
+    "161": {
       "op": "dig 1",
       "stack_out": [
         "tmp%0#0",
@@ -249,7 +249,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "151": {
+    "163": {
       "op": "len",
       "defined_out": [
         "add%0#0",
@@ -262,7 +262,7 @@
         "len%0#0"
       ]
     },
-    "152": {
+    "164": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -273,14 +273,14 @@
         "eq%0#0"
       ]
     },
-    "153": {
+    "165": {
       "error": "invalid number of bytes for (len+utf8[])",
       "op": "assert // invalid number of bytes for (len+utf8[])",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "154": {
+    "166": {
       "op": "extract 2 0",
       "defined_out": [
         "issue_id#0"
@@ -289,7 +289,7 @@
         "issue_id#0"
       ]
     },
-    "157": {
+    "169": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "issue_id#0",
@@ -300,7 +300,7 @@
         "tmp%2#0"
       ]
     },
-    "160": {
+    "172": {
       "op": "dup",
       "defined_out": [
         "issue_id#0",
@@ -313,7 +313,7 @@
         "tmp%2#0 (copy)"
       ]
     },
-    "161": {
+    "173": {
       "op": "len",
       "defined_out": [
         "issue_id#0",
@@ -326,7 +326,7 @@
         "len%1#0"
       ]
     },
-    "162": {
+    "174": {
       "op": "intc_2 // 8",
       "defined_out": [
         "8",
@@ -341,7 +341,7 @@
         "8"
       ]
     },
-    "163": {
+    "175": {
       "op": "==",
       "defined_out": [
         "eq%1#0",
@@ -354,7 +354,7 @@
         "eq%1#0"
       ]
     },
-    "164": {
+    "176": {
       "error": "invalid number of bytes for uint64",
       "op": "assert // invalid number of bytes for uint64",
       "stack_out": [
@@ -362,207 +362,333 @@
         "tmp%2#0"
       ]
     },
-    "165": {
+    "177": {
       "op": "btoi",
       "defined_out": [
-        "issue_id#0",
-        "usdc_asset#0"
+        "algo_asset#0",
+        "issue_id#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0"
+        "algo_asset#0"
       ]
     },
-    "166": {
+    "178": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
+        "algo_asset#0",
         "issue_id#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0"
       ]
     },
-    "169": {
+    "181": {
       "op": "dup",
       "defined_out": [
+        "algo_asset#0",
         "issue_id#0",
         "maintainer#0",
-        "maintainer#0 (copy)",
-        "usdc_asset#0"
+        "maintainer#0 (copy)"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "maintainer#0 (copy)"
       ]
     },
-    "170": {
+    "182": {
       "op": "len",
       "defined_out": [
+        "algo_asset#0",
         "issue_id#0",
         "len%2#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "len%2#0"
       ]
     },
-    "171": {
-      "op": "intc_3 // 32",
+    "183": {
+      "op": "pushint 32 // 32",
       "defined_out": [
         "32",
+        "algo_asset#0",
         "issue_id#0",
         "len%2#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "len%2#0",
         "32"
       ]
     },
-    "172": {
+    "185": {
       "op": "==",
       "defined_out": [
+        "algo_asset#0",
         "eq%2#0",
         "issue_id#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "eq%2#0"
       ]
     },
-    "173": {
+    "186": {
       "error": "invalid number of bytes for uint8[32]",
       "op": "assert // invalid number of bytes for uint8[32]",
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0"
       ]
     },
-    "174": {
-      "op": "bytec_3 // \"issue_id\"",
-      "defined_out": [
-        "\"issue_id\"",
+    "187": {
+      "op": "intc_0 // 0",
+      "stack_out": [
         "issue_id#0",
+        "algo_asset#0",
         "maintainer#0",
-        "usdc_asset#0"
+        "0"
+      ]
+    },
+    "188": {
+      "op": "bytec 4 // \"initialized\"",
+      "defined_out": [
+        "\"initialized\"",
+        "0",
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "0",
+        "\"initialized\""
+      ]
+    },
+    "190": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "191": {
+      "error": "check self.initialized exists",
+      "op": "assert // check self.initialized exists",
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "192": {
+      "op": "!",
+      "defined_out": [
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "tmp%0#1"
+      ]
+    },
+    "193": {
+      "error": "Bounty already initialized",
+      "op": "assert // Bounty already initialized",
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0"
+      ]
+    },
+    "194": {
+      "op": "txn Sender",
+      "defined_out": [
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "tmp%1#1"
+      ]
+    },
+    "196": {
+      "op": "dig 1",
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "tmp%1#1",
+        "maintainer#0 (copy)"
+      ]
+    },
+    "198": {
+      "op": "==",
+      "defined_out": [
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0",
+        "tmp%2#1"
+      ]
+    },
+    "199": {
+      "error": "Only maintainer can create bounty",
+      "op": "assert // Only maintainer can create bounty",
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
+        "maintainer#0"
+      ]
+    },
+    "200": {
+      "op": "bytec 5 // \"issue_id\"",
+      "defined_out": [
+        "\"issue_id\"",
+        "algo_asset#0",
+        "issue_id#0",
+        "maintainer#0"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "algo_asset#0",
         "maintainer#0",
         "\"issue_id\""
       ]
     },
-    "175": {
+    "202": {
       "op": "dig 3",
       "defined_out": [
         "\"issue_id\"",
+        "algo_asset#0",
         "issue_id#0",
         "issue_id#0 (copy)",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "\"issue_id\"",
         "issue_id#0 (copy)"
       ]
     },
-    "177": {
+    "204": {
       "op": "app_global_put",
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0"
       ]
     },
-    "178": {
+    "205": {
       "op": "bytec_0 // \"total_bounty\"",
       "defined_out": [
         "\"total_bounty\"",
+        "algo_asset#0",
         "issue_id#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "\"total_bounty\""
       ]
     },
-    "179": {
+    "206": {
       "op": "intc_0 // 0",
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
         "\"total_bounty\"",
         "0"
       ]
     },
-    "180": {
+    "207": {
       "op": "app_global_put",
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0"
       ]
     },
-    "181": {
-      "op": "bytec 4 // \"usdc_asset\"",
+    "208": {
+      "op": "bytec_1 // \"algo_asset\"",
       "defined_out": [
-        "\"usdc_asset\"",
+        "\"algo_asset\"",
+        "algo_asset#0",
         "issue_id#0",
-        "maintainer#0",
-        "usdc_asset#0"
+        "maintainer#0"
       ],
       "stack_out": [
         "issue_id#0",
-        "usdc_asset#0",
+        "algo_asset#0",
         "maintainer#0",
-        "\"usdc_asset\""
+        "\"algo_asset\""
       ]
     },
-    "183": {
+    "209": {
       "op": "uncover 2",
       "stack_out": [
         "issue_id#0",
         "maintainer#0",
-        "\"usdc_asset\"",
-        "usdc_asset#0"
+        "\"algo_asset\"",
+        "algo_asset#0"
       ]
     },
-    "185": {
+    "211": {
       "op": "app_global_put",
       "stack_out": [
         "issue_id#0",
         "maintainer#0"
       ]
     },
-    "186": {
-      "op": "bytec_1 // \"maintainer\"",
+    "212": {
+      "op": "bytec_2 // \"maintainer\"",
       "defined_out": [
         "\"maintainer\"",
         "issue_id#0",
@@ -574,7 +700,7 @@
         "\"maintainer\""
       ]
     },
-    "187": {
+    "213": {
       "op": "swap",
       "stack_out": [
         "issue_id#0",
@@ -582,14 +708,14 @@
         "maintainer#0"
       ]
     },
-    "188": {
+    "214": {
       "op": "app_global_put",
       "stack_out": [
         "issue_id#0"
       ]
     },
-    "189": {
-      "op": "bytec_2 // \"is_resolved\"",
+    "215": {
+      "op": "bytec_3 // \"is_resolved\"",
       "defined_out": [
         "\"is_resolved\"",
         "issue_id#0"
@@ -599,7 +725,7 @@
         "\"is_resolved\""
       ]
     },
-    "190": {
+    "216": {
       "op": "intc_0 // 0",
       "stack_out": [
         "issue_id#0",
@@ -607,13 +733,39 @@
         "0"
       ]
     },
-    "191": {
+    "217": {
       "op": "app_global_put",
       "stack_out": [
         "issue_id#0"
       ]
     },
-    "192": {
+    "218": {
+      "op": "bytec 4 // \"initialized\"",
+      "stack_out": [
+        "issue_id#0",
+        "\"initialized\""
+      ]
+    },
+    "220": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "\"initialized\"",
+        "1",
+        "issue_id#0"
+      ],
+      "stack_out": [
+        "issue_id#0",
+        "\"initialized\"",
+        "1"
+      ]
+    },
+    "221": {
+      "op": "app_global_put",
+      "stack_out": [
+        "issue_id#0"
+      ]
+    },
+    "222": {
       "op": "pushbytes \"Bounty created for issue: \"",
       "defined_out": [
         "\"Bounty created for issue: \"",
@@ -624,67 +776,74 @@
         "\"Bounty created for issue: \""
       ]
     },
-    "220": {
+    "250": {
       "op": "swap",
       "stack_out": [
         "\"Bounty created for issue: \"",
         "issue_id#0"
       ]
     },
-    "221": {
+    "251": {
       "op": "concat",
+      "defined_out": [
+        "tmp%3#1"
+      ],
       "stack_out": [
-        "tmp%0#0"
+        "tmp%3#1"
       ]
     },
-    "222": {
+    "252": {
       "op": "dup",
+      "defined_out": [
+        "tmp%3#1",
+        "tmp%3#1 (copy)"
+      ],
       "stack_out": [
-        "tmp%0#0",
-        "tmp%0#0 (copy)"
+        "tmp%3#1",
+        "tmp%3#1 (copy)"
       ]
     },
-    "223": {
+    "253": {
       "op": "len",
       "defined_out": [
         "aggregate%length%0#0",
-        "tmp%0#0"
+        "tmp%3#1"
       ],
       "stack_out": [
-        "tmp%0#0",
+        "tmp%3#1",
         "aggregate%length%0#0"
       ]
     },
-    "224": {
+    "254": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%0#0",
-        "tmp%0#0"
+        "tmp%3#1"
       ],
       "stack_out": [
-        "tmp%0#0",
+        "tmp%3#1",
         "aggregate%as_bytes%0#0"
       ]
     },
-    "225": {
+    "255": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%length_uint16%0#0",
-        "tmp%0#0"
+        "tmp%3#1"
       ],
       "stack_out": [
-        "tmp%0#0",
+        "tmp%3#1",
         "aggregate%length_uint16%0#0"
       ]
     },
-    "228": {
+    "258": {
       "op": "swap",
       "stack_out": [
         "aggregate%length_uint16%0#0",
-        "tmp%0#0"
+        "tmp%3#1"
       ]
     },
-    "229": {
+    "259": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0"
@@ -693,8 +852,8 @@
         "aggregate%encoded_value%0#0"
       ]
     },
-    "230": {
-      "op": "bytec 5 // 0x151f7c75",
+    "260": {
+      "op": "bytec 6 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "aggregate%encoded_value%0#0"
@@ -704,14 +863,14 @@
         "0x151f7c75"
       ]
     },
-    "232": {
+    "262": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "aggregate%encoded_value%0#0"
       ]
     },
-    "233": {
+    "263": {
       "op": "concat",
       "defined_out": [
         "tmp%8#0"
@@ -720,24 +879,21 @@
         "tmp%8#0"
       ]
     },
-    "234": {
+    "264": {
       "op": "log",
       "stack_out": []
     },
-    "235": {
+    "265": {
       "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
       "stack_out": [
         "1"
       ]
     },
-    "236": {
+    "266": {
       "op": "return",
       "stack_out": []
     },
-    "237": {
+    "267": {
       "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.fund_bounty[routing]",
       "params": {},
       "block": "fund_bounty",
@@ -750,7 +906,7 @@
         "tmp%0#0"
       ]
     },
-    "240": {
+    "270": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -761,7 +917,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "241": {
+    "271": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -772,7 +928,7 @@
         "len%0#0"
       ]
     },
-    "242": {
+    "272": {
       "op": "intc_2 // 8",
       "defined_out": [
         "8",
@@ -785,7 +941,7 @@
         "8"
       ]
     },
-    "243": {
+    "273": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -796,14 +952,14 @@
         "eq%0#0"
       ]
     },
-    "244": {
+    "274": {
       "error": "invalid number of bytes for uint64",
       "op": "assert // invalid number of bytes for uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "245": {
+    "275": {
       "op": "btoi",
       "defined_out": [
         "amount#0"
@@ -812,7 +968,7 @@
         "amount#0"
       ]
     },
-    "246": {
+    "276": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -823,20 +979,20 @@
         "0"
       ]
     },
-    "247": {
-      "op": "bytec_2 // \"is_resolved\"",
+    "277": {
+      "op": "bytec 4 // \"initialized\"",
       "defined_out": [
-        "\"is_resolved\"",
+        "\"initialized\"",
         "0",
         "amount#0"
       ],
       "stack_out": [
         "amount#0",
         "0",
-        "\"is_resolved\""
+        "\"initialized\""
       ]
     },
-    "248": {
+    "279": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
@@ -849,16 +1005,29 @@
         "maybe_exists%0#0"
       ]
     },
-    "249": {
-      "error": "check self.is_resolved exists",
-      "op": "assert // check self.is_resolved exists",
+    "280": {
+      "error": "check self.initialized exists",
+      "op": "assert // check self.initialized exists",
       "stack_out": [
         "amount#0",
         "maybe_value%0#0"
       ]
     },
-    "250": {
-      "op": "!",
+    "281": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "amount#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "1"
+      ]
+    },
+    "282": {
+      "op": "==",
       "defined_out": [
         "amount#0",
         "tmp%0#1"
@@ -868,399 +1037,114 @@
         "tmp%0#1"
       ]
     },
-    "251": {
+    "283": {
+      "error": "Bounty not initialized",
+      "op": "assert // Bounty not initialized",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "284": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "285": {
+      "op": "bytec_3 // \"is_resolved\"",
+      "defined_out": [
+        "\"is_resolved\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"is_resolved\""
+      ]
+    },
+    "286": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "287": {
+      "error": "check self.is_resolved exists",
+      "op": "assert // check self.is_resolved exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "288": {
+      "op": "!",
+      "defined_out": [
+        "amount#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "amount#0",
+        "tmp%1#1"
+      ]
+    },
+    "289": {
       "error": "Bounty already resolved",
       "op": "assert // Bounty already resolved",
       "stack_out": [
         "amount#0"
       ]
     },
-    "252": {
+    "290": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "291": {
+      "error": "Amount must be greater than 0",
+      "op": "assert // Amount must be greater than 0",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "292": {
+      "op": "itxn_begin"
+    },
+    "293": {
       "op": "intc_0 // 0",
       "stack_out": [
         "amount#0",
         "0"
-      ]
-    },
-    "253": {
-      "op": "bytec_0 // \"total_bounty\"",
-      "defined_out": [
-        "\"total_bounty\"",
-        "0",
-        "amount#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "0",
-        "\"total_bounty\""
-      ]
-    },
-    "254": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "amount#0",
-        "maybe_exists%1#0",
-        "maybe_value%1#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "maybe_value%1#0",
-        "maybe_exists%1#0"
-      ]
-    },
-    "255": {
-      "error": "check self.total_bounty exists",
-      "op": "assert // check self.total_bounty exists",
-      "stack_out": [
-        "amount#0",
-        "maybe_value%1#0"
-      ]
-    },
-    "256": {
-      "op": "+",
-      "defined_out": [
-        "tmp%1#1"
-      ],
-      "stack_out": [
-        "tmp%1#1"
-      ]
-    },
-    "257": {
-      "op": "bytec_0 // \"total_bounty\"",
-      "stack_out": [
-        "tmp%1#1",
-        "\"total_bounty\""
-      ]
-    },
-    "258": {
-      "op": "swap",
-      "stack_out": [
-        "\"total_bounty\"",
-        "tmp%1#1"
-      ]
-    },
-    "259": {
-      "op": "app_global_put",
-      "stack_out": []
-    },
-    "260": {
-      "op": "pushbytes 0x151f7c75000d46756e64656420626f756e7479",
-      "defined_out": [
-        "0x151f7c75000d46756e64656420626f756e7479"
-      ],
-      "stack_out": [
-        "0x151f7c75000d46756e64656420626f756e7479"
-      ]
-    },
-    "281": {
-      "op": "log",
-      "stack_out": []
-    },
-    "282": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1"
-      ],
-      "stack_out": [
-        "1"
-      ]
-    },
-    "283": {
-      "op": "return",
-      "stack_out": []
-    },
-    "284": {
-      "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.distribute_payout[routing]",
-      "params": {},
-      "block": "distribute_payout",
-      "stack_in": [],
-      "op": "txna ApplicationArgs 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "287": {
-      "op": "len",
-      "defined_out": [
-        "len%0#0"
-      ],
-      "stack_out": [
-        "len%0#0"
-      ]
-    },
-    "288": {
-      "op": "intc_3 // 32",
-      "defined_out": [
-        "32",
-        "len%0#0"
-      ],
-      "stack_out": [
-        "len%0#0",
-        "32"
-      ]
-    },
-    "289": {
-      "op": "==",
-      "defined_out": [
-        "eq%0#0"
-      ],
-      "stack_out": [
-        "eq%0#0"
-      ]
-    },
-    "290": {
-      "error": "invalid number of bytes for uint8[32]",
-      "op": "assert // invalid number of bytes for uint8[32]",
-      "stack_out": []
-    },
-    "291": {
-      "op": "txna ApplicationArgs 2",
-      "defined_out": [
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%2#0"
       ]
     },
     "294": {
-      "op": "dup",
+      "op": "bytec_1 // \"algo_asset\"",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%2#0 (copy)"
+        "\"algo_asset\"",
+        "0",
+        "amount#0"
       ],
       "stack_out": [
-        "tmp%2#0",
-        "tmp%2#0 (copy)"
+        "amount#0",
+        "0",
+        "\"algo_asset\""
       ]
     },
     "295": {
-      "op": "len",
-      "defined_out": [
-        "len%1#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%2#0",
-        "len%1#0"
-      ]
-    },
-    "296": {
-      "op": "intc_2 // 8",
-      "defined_out": [
-        "8",
-        "len%1#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%2#0",
-        "len%1#0",
-        "8"
-      ]
-    },
-    "297": {
-      "op": "==",
-      "defined_out": [
-        "eq%1#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%2#0",
-        "eq%1#0"
-      ]
-    },
-    "298": {
-      "error": "invalid number of bytes for uint64",
-      "op": "assert // invalid number of bytes for uint64",
-      "stack_out": [
-        "tmp%2#0"
-      ]
-    },
-    "299": {
-      "op": "btoi",
-      "defined_out": [
-        "amount#0"
-      ],
-      "stack_out": [
-        "amount#0"
-      ]
-    },
-    "300": {
-      "op": "txn Sender",
-      "defined_out": [
-        "amount#0",
-        "tmp%0#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%0#1"
-      ]
-    },
-    "302": {
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "0",
-        "amount#0",
-        "tmp%0#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%0#1",
-        "0"
-      ]
-    },
-    "303": {
-      "op": "bytec_1 // \"maintainer\"",
-      "defined_out": [
-        "\"maintainer\"",
-        "0",
-        "amount#0",
-        "tmp%0#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%0#1",
-        "0",
-        "\"maintainer\""
-      ]
-    },
-    "304": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "amount#0",
-        "maybe_exists%0#0",
-        "maybe_value%0#0",
-        "tmp%0#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%0#1",
-        "maybe_value%0#0",
-        "maybe_exists%0#0"
-      ]
-    },
-    "305": {
-      "error": "check self.maintainer exists",
-      "op": "assert // check self.maintainer exists",
-      "stack_out": [
-        "amount#0",
-        "tmp%0#1",
-        "maybe_value%0#0"
-      ]
-    },
-    "306": {
-      "op": "==",
-      "defined_out": [
-        "amount#0",
-        "tmp%1#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%1#1"
-      ]
-    },
-    "307": {
-      "error": "Only maintainer can distribute",
-      "op": "assert // Only maintainer can distribute",
-      "stack_out": [
-        "amount#0"
-      ]
-    },
-    "308": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "amount#0",
-        "0"
-      ]
-    },
-    "309": {
-      "op": "bytec_2 // \"is_resolved\"",
-      "defined_out": [
-        "\"is_resolved\"",
-        "0",
-        "amount#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "0",
-        "\"is_resolved\""
-      ]
-    },
-    "310": {
-      "op": "app_global_get_ex",
-      "defined_out": [
-        "amount#0",
-        "maybe_exists%1#0",
-        "maybe_value%1#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "maybe_value%1#0",
-        "maybe_exists%1#0"
-      ]
-    },
-    "311": {
-      "error": "check self.is_resolved exists",
-      "op": "assert // check self.is_resolved exists",
-      "stack_out": [
-        "amount#0",
-        "maybe_value%1#0"
-      ]
-    },
-    "312": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1",
-        "amount#0",
-        "maybe_value%1#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "maybe_value%1#0",
-        "1"
-      ]
-    },
-    "313": {
-      "op": "==",
-      "defined_out": [
-        "amount#0",
-        "tmp%2#1"
-      ],
-      "stack_out": [
-        "amount#0",
-        "tmp%2#1"
-      ]
-    },
-    "314": {
-      "error": "Issue not resolved yet",
-      "op": "assert // Issue not resolved yet",
-      "stack_out": [
-        "amount#0"
-      ]
-    },
-    "315": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "amount#0",
-        "0"
-      ]
-    },
-    "316": {
-      "op": "bytec_0 // \"total_bounty\"",
-      "defined_out": [
-        "\"total_bounty\"",
-        "0",
-        "amount#0"
-      ],
-      "stack_out": [
-        "amount#0",
-        "0",
-        "\"total_bounty\""
-      ]
-    },
-    "317": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
@@ -1273,85 +1157,834 @@
         "maybe_exists%2#0"
       ]
     },
+    "296": {
+      "error": "check self.algo_asset exists",
+      "op": "assert // check self.algo_asset exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "297": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "amount#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "299": {
+      "op": "txn Sender",
+      "defined_out": [
+        "amount#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0"
+      ]
+    },
+    "301": {
+      "op": "itxn_field AssetSender",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "303": {
+      "op": "dig 2",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "305": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
+      ]
+    },
+    "307": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "309": {
+      "op": "itxn_field XferAsset",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "311": {
+      "op": "intc_3 // axfer",
+      "defined_out": [
+        "amount#0",
+        "axfer"
+      ],
+      "stack_out": [
+        "amount#0",
+        "axfer"
+      ]
+    },
+    "312": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "314": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "315": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "317": {
+      "op": "itxn_submit"
+    },
     "318": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "319": {
+      "op": "bytec_0 // \"total_bounty\"",
+      "defined_out": [
+        "\"total_bounty\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"total_bounty\""
+      ]
+    },
+    "320": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "321": {
       "error": "check self.total_bounty exists",
       "op": "assert // check self.total_bounty exists",
       "stack_out": [
         "amount#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "322": {
+      "op": "+",
+      "defined_out": [
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "tmp%3#1"
+      ]
+    },
+    "323": {
+      "op": "bytec_0 // \"total_bounty\"",
+      "stack_out": [
+        "tmp%3#1",
+        "\"total_bounty\""
+      ]
+    },
+    "324": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_bounty\"",
+        "tmp%3#1"
+      ]
+    },
+    "325": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "326": {
+      "op": "pushbytes 0x151f7c75001a46756e64656420626f756e7479207375636365737366756c6c79",
+      "defined_out": [
+        "0x151f7c75001a46756e64656420626f756e7479207375636365737366756c6c79"
+      ],
+      "stack_out": [
+        "0x151f7c75001a46756e64656420626f756e7479207375636365737366756c6c79"
+      ]
+    },
+    "360": {
+      "op": "log",
+      "stack_out": []
+    },
+    "361": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "1"
+      ]
+    },
+    "362": {
+      "op": "return",
+      "stack_out": []
+    },
+    "363": {
+      "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.distribute_payout[routing]",
+      "params": {},
+      "block": "distribute_payout",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "contributor#0"
+      ],
+      "stack_out": [
+        "contributor#0"
+      ]
+    },
+    "366": {
+      "op": "dup",
+      "defined_out": [
+        "contributor#0",
+        "contributor#0 (copy)"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "contributor#0 (copy)"
+      ]
+    },
+    "367": {
+      "op": "len",
+      "defined_out": [
+        "contributor#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "len%0#0"
+      ]
+    },
+    "368": {
+      "op": "pushint 32 // 32",
+      "defined_out": [
+        "32",
+        "contributor#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "370": {
+      "op": "==",
+      "defined_out": [
+        "contributor#0",
+        "eq%0#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "eq%0#0"
+      ]
+    },
+    "371": {
+      "error": "invalid number of bytes for uint8[32]",
+      "op": "assert // invalid number of bytes for uint8[32]",
+      "stack_out": [
+        "contributor#0"
+      ]
+    },
+    "372": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "contributor#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0"
+      ]
+    },
+    "375": {
+      "op": "dup",
+      "defined_out": [
+        "contributor#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0",
+        "tmp%2#0 (copy)"
+      ]
+    },
+    "376": {
+      "op": "len",
+      "defined_out": [
+        "contributor#0",
+        "len%1#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0",
+        "len%1#0"
+      ]
+    },
+    "377": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "contributor#0",
+        "len%1#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "378": {
+      "op": "==",
+      "defined_out": [
+        "contributor#0",
+        "eq%1#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0",
+        "eq%1#0"
+      ]
+    },
+    "379": {
+      "error": "invalid number of bytes for uint64",
+      "op": "assert // invalid number of bytes for uint64",
+      "stack_out": [
+        "contributor#0",
+        "tmp%2#0"
+      ]
+    },
+    "380": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0",
+        "contributor#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0"
+      ]
+    },
+    "381": {
+      "op": "txn Sender",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%0#1"
+      ]
+    },
+    "383": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "amount#0",
+        "contributor#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%0#1",
+        "0"
+      ]
+    },
+    "384": {
+      "op": "bytec_2 // \"maintainer\"",
+      "defined_out": [
+        "\"maintainer\"",
+        "0",
+        "amount#0",
+        "contributor#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%0#1",
+        "0",
+        "\"maintainer\""
+      ]
+    },
+    "385": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%0#1",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "386": {
+      "error": "check self.maintainer exists",
+      "op": "assert // check self.maintainer exists",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%0#1",
+        "maybe_value%0#0"
+      ]
+    },
+    "387": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%1#1"
+      ]
+    },
+    "388": {
+      "error": "Only maintainer can distribute",
+      "op": "assert // Only maintainer can distribute",
+      "stack_out": [
+        "contributor#0",
+        "amount#0"
+      ]
+    },
+    "389": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "0"
+      ]
+    },
+    "390": {
+      "op": "bytec_3 // \"is_resolved\"",
+      "defined_out": [
+        "\"is_resolved\"",
+        "0",
+        "amount#0",
+        "contributor#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "0",
+        "\"is_resolved\""
+      ]
+    },
+    "391": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "392": {
+      "error": "check self.is_resolved exists",
+      "op": "assert // check self.is_resolved exists",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "393": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "amount#0",
+        "contributor#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "1"
+      ]
+    },
+    "394": {
+      "op": "==",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "tmp%2#1"
+      ]
+    },
+    "395": {
+      "error": "Issue not resolved yet",
+      "op": "assert // Issue not resolved yet",
+      "stack_out": [
+        "contributor#0",
+        "amount#0"
+      ]
+    },
+    "396": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "0"
+      ]
+    },
+    "397": {
+      "op": "bytec_0 // \"total_bounty\"",
+      "defined_out": [
+        "\"total_bounty\"",
+        "0",
+        "amount#0",
+        "contributor#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "0",
+        "\"total_bounty\""
+      ]
+    },
+    "398": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "399": {
+      "error": "check self.total_bounty exists",
+      "op": "assert // check self.total_bounty exists",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
         "maybe_value%2#0"
       ]
     },
-    "319": {
+    "400": {
       "op": "dup2",
       "defined_out": [
         "amount#0",
         "amount#0 (copy)",
+        "contributor#0",
         "maybe_value%2#0",
         "maybe_value%2#0 (copy)"
       ],
       "stack_out": [
+        "contributor#0",
         "amount#0",
         "maybe_value%2#0",
         "amount#0 (copy)",
         "maybe_value%2#0 (copy)"
       ]
     },
-    "320": {
+    "401": {
       "op": "<=",
       "defined_out": [
         "amount#0",
+        "contributor#0",
         "maybe_value%2#0",
         "tmp%3#1"
       ],
       "stack_out": [
+        "contributor#0",
         "amount#0",
         "maybe_value%2#0",
         "tmp%3#1"
       ]
     },
-    "321": {
+    "402": {
       "error": "Insufficient bounty funds",
       "op": "assert // Insufficient bounty funds",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "403": {
+      "op": "dig 1",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "405": {
+      "error": "Amount must be greater than 0",
+      "op": "assert // Amount must be greater than 0",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "406": {
+      "op": "itxn_begin"
+    },
+    "407": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "408": {
+      "op": "bytec_1 // \"algo_asset\"",
+      "defined_out": [
+        "\"algo_asset\"",
+        "0",
+        "amount#0",
+        "contributor#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "0",
+        "\"algo_asset\""
+      ]
+    },
+    "409": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "maybe_exists%3#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "410": {
+      "error": "check self.algo_asset exists",
+      "op": "assert // check self.algo_asset exists",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "411": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "amount#0",
+        "contributor#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0"
+      ]
+    },
+    "413": {
+      "op": "itxn_field AssetSender",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "415": {
+      "op": "dig 2",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "417": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "contributor#0",
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "419": {
+      "op": "uncover 3",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "contributor#0"
+      ]
+    },
+    "421": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "423": {
+      "op": "itxn_field XferAsset",
       "stack_out": [
         "amount#0",
         "maybe_value%2#0"
       ]
     },
-    "322": {
+    "425": {
+      "op": "intc_3 // axfer",
+      "defined_out": [
+        "amount#0",
+        "axfer",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "axfer"
+      ]
+    },
+    "426": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "428": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "429": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "431": {
+      "op": "itxn_submit"
+    },
+    "432": {
       "op": "swap",
       "stack_out": [
         "maybe_value%2#0",
         "amount#0"
       ]
     },
-    "323": {
+    "433": {
       "op": "-",
       "defined_out": [
-        "tmp%4#1"
+        "tmp%5#1"
       ],
       "stack_out": [
-        "tmp%4#1"
+        "tmp%5#1"
       ]
     },
-    "324": {
+    "434": {
       "op": "bytec_0 // \"total_bounty\"",
       "stack_out": [
-        "tmp%4#1",
+        "tmp%5#1",
         "\"total_bounty\""
       ]
     },
-    "325": {
+    "435": {
       "op": "swap",
       "stack_out": [
         "\"total_bounty\"",
-        "tmp%4#1"
+        "tmp%5#1"
       ]
     },
-    "326": {
+    "436": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "327": {
+    "437": {
       "op": "pushbytes 0x151f7c75001a446973747269627574656420746f20636f6e7472696275746f72",
       "defined_out": [
         "0x151f7c75001a446973747269627574656420746f20636f6e7472696275746f72"
@@ -1360,21 +1993,21 @@
         "0x151f7c75001a446973747269627574656420746f20636f6e7472696275746f72"
       ]
     },
-    "361": {
+    "471": {
       "op": "log",
       "stack_out": []
     },
-    "362": {
+    "472": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "363": {
+    "473": {
       "op": "return",
       "stack_out": []
     },
-    "364": {
+    "474": {
       "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.mark_resolved[routing]",
       "params": {},
       "block": "mark_resolved",
@@ -1387,7 +2020,7 @@
         "tmp%0#1"
       ]
     },
-    "366": {
+    "476": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -1398,8 +2031,8 @@
         "0"
       ]
     },
-    "367": {
-      "op": "bytec_1 // \"maintainer\"",
+    "477": {
+      "op": "bytec_2 // \"maintainer\"",
       "defined_out": [
         "\"maintainer\"",
         "0",
@@ -1411,7 +2044,7 @@
         "\"maintainer\""
       ]
     },
-    "368": {
+    "478": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1424,7 +2057,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "369": {
+    "479": {
       "error": "check self.maintainer exists",
       "op": "assert // check self.maintainer exists",
       "stack_out": [
@@ -1432,7 +2065,7 @@
         "maybe_value%0#0"
       ]
     },
-    "370": {
+    "480": {
       "op": "==",
       "defined_out": [
         "tmp%1#1"
@@ -1441,13 +2074,13 @@
         "tmp%1#1"
       ]
     },
-    "371": {
+    "481": {
       "error": "Only maintainer can mark resolved",
       "op": "assert // Only maintainer can mark resolved",
       "stack_out": []
     },
-    "372": {
-      "op": "bytec_2 // \"is_resolved\"",
+    "482": {
+      "op": "bytec_3 // \"is_resolved\"",
       "defined_out": [
         "\"is_resolved\""
       ],
@@ -1455,7 +2088,7 @@
         "\"is_resolved\""
       ]
     },
-    "373": {
+    "483": {
       "op": "intc_1 // 1",
       "defined_out": [
         "\"is_resolved\"",
@@ -1466,11 +2099,11 @@
         "1"
       ]
     },
-    "374": {
+    "484": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "375": {
+    "485": {
       "op": "pushbytes 0x151f7c7500184973737565206d61726b6564206173207265736f6c766564",
       "defined_out": [
         "0x151f7c7500184973737565206d61726b6564206173207265736f6c766564"
@@ -1479,21 +2112,21 @@
         "0x151f7c7500184973737565206d61726b6564206173207265736f6c766564"
       ]
     },
-    "407": {
+    "517": {
       "op": "log",
       "stack_out": []
     },
-    "408": {
+    "518": {
       "op": "intc_1 // 1",
       "stack_out": [
         "1"
       ]
     },
-    "409": {
+    "519": {
       "op": "return",
       "stack_out": []
     },
-    "410": {
+    "520": {
       "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.refund[routing]",
       "params": {},
       "block": "refund",
@@ -1506,7 +2139,7 @@
         "tmp%0#0"
       ]
     },
-    "413": {
+    "523": {
       "op": "dup",
       "defined_out": [
         "tmp%0#0",
@@ -1517,7 +2150,7 @@
         "tmp%0#0 (copy)"
       ]
     },
-    "414": {
+    "524": {
       "op": "len",
       "defined_out": [
         "len%0#0",
@@ -1528,7 +2161,7 @@
         "len%0#0"
       ]
     },
-    "415": {
+    "525": {
       "op": "intc_2 // 8",
       "defined_out": [
         "8",
@@ -1541,7 +2174,7 @@
         "8"
       ]
     },
-    "416": {
+    "526": {
       "op": "==",
       "defined_out": [
         "eq%0#0",
@@ -1552,14 +2185,14 @@
         "eq%0#0"
       ]
     },
-    "417": {
+    "527": {
       "error": "invalid number of bytes for uint64",
       "op": "assert // invalid number of bytes for uint64",
       "stack_out": [
         "tmp%0#0"
       ]
     },
-    "418": {
+    "528": {
       "op": "btoi",
       "defined_out": [
         "amount#0"
@@ -1568,7 +2201,7 @@
         "amount#0"
       ]
     },
-    "419": {
+    "529": {
       "op": "txn Sender",
       "defined_out": [
         "amount#0",
@@ -1579,7 +2212,7 @@
         "tmp%0#1"
       ]
     },
-    "421": {
+    "531": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -1592,8 +2225,8 @@
         "0"
       ]
     },
-    "422": {
-      "op": "bytec_1 // \"maintainer\"",
+    "532": {
+      "op": "bytec_2 // \"maintainer\"",
       "defined_out": [
         "\"maintainer\"",
         "0",
@@ -1607,7 +2240,7 @@
         "\"maintainer\""
       ]
     },
-    "423": {
+    "533": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
@@ -1622,7 +2255,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "424": {
+    "534": {
       "error": "check self.maintainer exists",
       "op": "assert // check self.maintainer exists",
       "stack_out": [
@@ -1631,136 +2264,369 @@
         "maybe_value%0#0"
       ]
     },
-    "425": {
+    "535": {
+      "op": "swap",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "tmp%0#1"
+      ]
+    },
+    "536": {
+      "op": "dig 1",
+      "defined_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "tmp%0#1",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "538": {
       "op": "==",
       "defined_out": [
         "amount#0",
+        "maybe_value%0#0",
         "tmp%1#1"
       ],
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "tmp%1#1"
       ]
     },
-    "426": {
+    "539": {
       "error": "Only maintainer can refund",
       "op": "assert // Only maintainer can refund",
       "stack_out": [
-        "amount#0"
+        "amount#0",
+        "maybe_value%0#0"
       ]
     },
-    "427": {
+    "540": {
       "op": "intc_0 // 0",
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "0"
       ]
     },
-    "428": {
+    "541": {
       "op": "bytec_0 // \"total_bounty\"",
       "defined_out": [
         "\"total_bounty\"",
         "0",
-        "amount#0"
+        "amount#0",
+        "maybe_value%0#0"
       ],
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "0",
         "\"total_bounty\""
       ]
     },
-    "429": {
+    "542": {
       "op": "app_global_get_ex",
       "defined_out": [
         "amount#0",
         "maybe_exists%1#0",
+        "maybe_value%0#0",
         "maybe_value%1#0"
       ],
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "maybe_exists%1#0"
       ]
     },
-    "430": {
+    "543": {
       "error": "check self.total_bounty exists",
       "op": "assert // check self.total_bounty exists",
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "431": {
-      "op": "dup2",
+    "544": {
+      "op": "dig 2",
       "defined_out": [
         "amount#0",
         "amount#0 (copy)",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "546": {
+      "op": "dig 1",
+      "defined_out": [
+        "amount#0",
+        "amount#0 (copy)",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "maybe_value%1#0 (copy)"
       ],
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "amount#0 (copy)",
         "maybe_value%1#0 (copy)"
       ]
     },
-    "432": {
+    "548": {
       "op": "<=",
       "defined_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "tmp%2#1"
       ],
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "tmp%2#1"
       ]
     },
-    "433": {
+    "549": {
       "error": "Insufficient bounty funds",
       "op": "assert // Insufficient bounty funds",
       "stack_out": [
         "amount#0",
+        "maybe_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "434": {
+    "550": {
+      "op": "dig 2",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "552": {
+      "error": "Amount must be greater than 0",
+      "op": "assert // Amount must be greater than 0",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "553": {
+      "op": "itxn_begin"
+    },
+    "554": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "555": {
+      "op": "bytec_1 // \"algo_asset\"",
+      "defined_out": [
+        "\"algo_asset\"",
+        "0",
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0",
+        "\"algo_asset\""
+      ]
+    },
+    "556": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%2#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "557": {
+      "error": "check self.algo_asset exists",
+      "op": "assert // check self.algo_asset exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "558": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "amount#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "inner_txn_params%0%%param_AssetSender_idx_0#0"
+      ]
+    },
+    "560": {
+      "op": "itxn_field AssetSender",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "562": {
+      "op": "dig 3",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "564": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "566": {
+      "op": "uncover 2",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "568": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "570": {
+      "op": "itxn_field XferAsset",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "572": {
+      "op": "intc_3 // axfer",
+      "defined_out": [
+        "amount#0",
+        "axfer",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "axfer"
+      ]
+    },
+    "573": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "575": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "576": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "578": {
+      "op": "itxn_submit"
+    },
+    "579": {
       "op": "swap",
       "stack_out": [
         "maybe_value%1#0",
         "amount#0"
       ]
     },
-    "435": {
+    "580": {
       "op": "-",
       "defined_out": [
-        "tmp%3#1"
+        "tmp%4#1"
       ],
       "stack_out": [
-        "tmp%3#1"
+        "tmp%4#1"
       ]
     },
-    "436": {
+    "581": {
       "op": "bytec_0 // \"total_bounty\"",
       "stack_out": [
-        "tmp%3#1",
+        "tmp%4#1",
         "\"total_bounty\""
       ]
     },
-    "437": {
+    "582": {
       "op": "swap",
       "stack_out": [
         "\"total_bounty\"",
-        "tmp%3#1"
+        "tmp%4#1"
       ]
     },
-    "438": {
+    "583": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "439": {
+    "584": {
       "op": "pushbytes 0x151f7c750016526566756e64656420746f206d61696e7461696e6572",
       "defined_out": [
         "0x151f7c750016526566756e64656420746f206d61696e7461696e6572"
@@ -1769,11 +2635,11 @@
         "0x151f7c750016526566756e64656420746f206d61696e7461696e6572"
       ]
     },
-    "469": {
+    "614": {
       "op": "log",
       "stack_out": []
     },
-    "470": {
+    "615": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -1782,11 +2648,11 @@
         "1"
       ]
     },
-    "471": {
+    "616": {
       "op": "return",
       "stack_out": []
     },
-    "472": {
+    "617": {
       "subroutine": "smart_contracts.issue_escrow.contract.IssueEscrow.get_bounty_info[routing]",
       "params": {},
       "block": "get_bounty_info",
@@ -1799,8 +2665,8 @@
         "0"
       ]
     },
-    "473": {
-      "op": "bytec_3 // \"issue_id\"",
+    "618": {
+      "op": "bytec 5 // \"issue_id\"",
       "defined_out": [
         "\"issue_id\"",
         "0"
@@ -1810,7 +2676,7 @@
         "\"issue_id\""
       ]
     },
-    "474": {
+    "620": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1821,21 +2687,21 @@
         "maybe_exists%0#0"
       ]
     },
-    "475": {
+    "621": {
       "error": "check self.issue_id exists",
       "op": "assert // check self.issue_id exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "476": {
+    "622": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "477": {
+    "623": {
       "op": "bytec_0 // \"total_bounty\"",
       "defined_out": [
         "\"total_bounty\"",
@@ -1848,7 +2714,7 @@
         "\"total_bounty\""
       ]
     },
-    "478": {
+    "624": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1861,7 +2727,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "479": {
+    "625": {
       "error": "check self.total_bounty exists",
       "op": "assert // check self.total_bounty exists",
       "stack_out": [
@@ -1869,7 +2735,7 @@
         "maybe_value%1#0"
       ]
     },
-    "480": {
+    "626": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
@@ -1877,10 +2743,10 @@
         "0"
       ]
     },
-    "481": {
-      "op": "bytec 4 // \"usdc_asset\"",
+    "627": {
+      "op": "bytec_1 // \"algo_asset\"",
       "defined_out": [
-        "\"usdc_asset\"",
+        "\"algo_asset\"",
         "0",
         "maybe_value%0#0",
         "maybe_value%1#0"
@@ -1889,10 +2755,10 @@
         "maybe_value%0#0",
         "maybe_value%1#0",
         "0",
-        "\"usdc_asset\""
+        "\"algo_asset\""
       ]
     },
-    "483": {
+    "628": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1907,16 +2773,16 @@
         "maybe_exists%2#0"
       ]
     },
-    "484": {
-      "error": "check self.usdc_asset exists",
-      "op": "assert // check self.usdc_asset exists",
+    "629": {
+      "error": "check self.algo_asset exists",
+      "op": "assert // check self.algo_asset exists",
       "stack_out": [
         "maybe_value%0#0",
         "maybe_value%1#0",
         "maybe_value%2#0"
       ]
     },
-    "485": {
+    "630": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
@@ -1925,8 +2791,8 @@
         "0"
       ]
     },
-    "486": {
-      "op": "bytec_1 // \"maintainer\"",
+    "631": {
+      "op": "bytec_2 // \"maintainer\"",
       "defined_out": [
         "\"maintainer\"",
         "0",
@@ -1942,7 +2808,7 @@
         "\"maintainer\""
       ]
     },
-    "487": {
+    "632": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%3#0",
@@ -1959,7 +2825,7 @@
         "maybe_exists%3#0"
       ]
     },
-    "488": {
+    "633": {
       "error": "check self.maintainer exists",
       "op": "assert // check self.maintainer exists",
       "stack_out": [
@@ -1969,7 +2835,7 @@
         "maybe_value%3#0"
       ]
     },
-    "489": {
+    "634": {
       "op": "intc_0 // 0",
       "stack_out": [
         "maybe_value%0#0",
@@ -1979,8 +2845,8 @@
         "0"
       ]
     },
-    "490": {
-      "op": "bytec_2 // \"is_resolved\"",
+    "635": {
+      "op": "bytec_3 // \"is_resolved\"",
       "defined_out": [
         "\"is_resolved\"",
         "0",
@@ -1998,7 +2864,7 @@
         "\"is_resolved\""
       ]
     },
-    "491": {
+    "636": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%4#0",
@@ -2017,7 +2883,7 @@
         "maybe_exists%4#0"
       ]
     },
-    "492": {
+    "637": {
       "error": "check self.is_resolved exists",
       "op": "assert // check self.is_resolved exists",
       "stack_out": [
@@ -2028,11 +2894,23 @@
         "maybe_value%4#0"
       ]
     },
-    "493": {
-      "op": "dig 4",
-      "defined_out": [
+    "638": {
+      "op": "intc_0 // 0",
+      "stack_out": [
         "maybe_value%0#0",
-        "maybe_value%0#0 (copy)",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "0"
+      ]
+    },
+    "639": {
+      "op": "bytec 4 // \"initialized\"",
+      "defined_out": [
+        "\"initialized\"",
+        "0",
+        "maybe_value%0#0",
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
@@ -2044,10 +2922,65 @@
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "0",
+        "\"initialized\""
+      ]
+    },
+    "641": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%5#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "642": {
+      "error": "check self.initialized exists",
+      "op": "assert // check self.initialized exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "643": {
+      "op": "dig 5",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0",
         "maybe_value%0#0 (copy)"
       ]
     },
-    "495": {
+    "645": {
       "op": "len",
       "defined_out": [
         "aggregate%length%0#0",
@@ -2055,7 +2988,8 @@
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%0#0",
@@ -2063,10 +2997,11 @@
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%length%0#0"
       ]
     },
-    "496": {
+    "646": {
       "op": "itob",
       "defined_out": [
         "aggregate%as_bytes%0#0",
@@ -2074,7 +3009,8 @@
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%0#0",
@@ -2082,10 +3018,11 @@
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%as_bytes%0#0"
       ]
     },
-    "497": {
+    "647": {
       "op": "extract 6 2",
       "defined_out": [
         "aggregate%length_uint16%0#0",
@@ -2093,7 +3030,8 @@
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%0#0",
@@ -2101,215 +3039,272 @@
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%length_uint16%0#0"
       ]
     },
-    "500": {
-      "op": "uncover 5",
+    "650": {
+      "op": "uncover 6",
       "stack_out": [
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%length_uint16%0#0",
         "maybe_value%0#0"
       ]
     },
-    "502": {
+    "652": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0"
       ]
     },
-    "503": {
-      "op": "uncover 4",
+    "653": {
+      "op": "uncover 5",
       "stack_out": [
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "maybe_value%1#0"
       ]
     },
-    "505": {
+    "655": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%val_as_bytes%0#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "506": {
-      "op": "pushbytes 0x003a",
+    "656": {
+      "op": "pushbytes 0x0042",
       "defined_out": [
-        "0x003a",
+        "0x0042",
         "aggregate%encoded_value%0#0",
         "aggregate%val_as_bytes%0#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%val_as_bytes%0#0",
-        "0x003a"
+        "0x0042"
       ]
     },
-    "510": {
+    "660": {
       "op": "swap",
       "stack_out": [
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
-        "0x003a",
+        "0x0042",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "511": {
+    "661": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%head%1#0",
         "maybe_value%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%2#0",
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%1#0"
       ]
     },
-    "512": {
-      "op": "uncover 4",
+    "662": {
+      "op": "uncover 5",
       "stack_out": [
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%1#0",
         "maybe_value%2#0"
       ]
     },
-    "514": {
+    "664": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%head%1#0",
         "aggregate%val_as_bytes%1#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%1#0",
         "aggregate%val_as_bytes%1#0"
       ]
     },
-    "515": {
+    "665": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%head%2#0",
         "maybe_value%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%3#0",
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%2#0"
       ]
     },
-    "516": {
-      "op": "uncover 3",
+    "666": {
+      "op": "uncover 4",
       "stack_out": [
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%2#0",
         "maybe_value%3#0"
       ]
     },
-    "518": {
+    "668": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%head%3#0",
-        "maybe_value%4#0"
+        "maybe_value%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
         "maybe_value%4#0",
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%3#0"
       ]
     },
-    "519": {
-      "op": "uncover 2",
+    "669": {
+      "op": "uncover 3",
       "stack_out": [
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%3#0",
         "maybe_value%4#0"
       ]
     },
-    "521": {
+    "671": {
       "op": "itob",
       "defined_out": [
         "aggregate%encoded_value%0#0",
         "aggregate%head%3#0",
-        "aggregate%val_as_bytes%2#0"
+        "aggregate%val_as_bytes%2#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%3#0",
         "aggregate%val_as_bytes%2#0"
       ]
     },
-    "522": {
+    "672": {
       "op": "concat",
       "defined_out": [
         "aggregate%encoded_value%0#0",
-        "aggregate%head%4#0"
+        "aggregate%head%4#0",
+        "maybe_value%5#0"
       ],
       "stack_out": [
+        "maybe_value%5#0",
         "aggregate%encoded_value%0#0",
         "aggregate%head%4#0"
       ]
     },
-    "523": {
+    "673": {
+      "op": "uncover 2",
+      "stack_out": [
+        "aggregate%encoded_value%0#0",
+        "aggregate%head%4#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "675": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%encoded_value%0#0",
+        "aggregate%head%4#0",
+        "aggregate%val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "aggregate%encoded_value%0#0",
+        "aggregate%head%4#0",
+        "aggregate%val_as_bytes%3#0"
+      ]
+    },
+    "676": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%encoded_value%0#0",
+        "aggregate%head%5#0"
+      ],
+      "stack_out": [
+        "aggregate%encoded_value%0#0",
+        "aggregate%head%5#0"
+      ]
+    },
+    "677": {
       "op": "swap",
       "stack_out": [
-        "aggregate%head%4#0",
+        "aggregate%head%5#0",
         "aggregate%encoded_value%0#0"
       ]
     },
-    "524": {
+    "678": {
       "op": "concat",
       "defined_out": [
         "aggregate%concat%0#0"
@@ -2318,8 +3313,8 @@
         "aggregate%concat%0#0"
       ]
     },
-    "525": {
-      "op": "bytec 5 // 0x151f7c75",
+    "679": {
+      "op": "bytec 6 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "aggregate%concat%0#0"
@@ -2329,27 +3324,27 @@
         "0x151f7c75"
       ]
     },
-    "527": {
+    "681": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "aggregate%concat%0#0"
       ]
     },
-    "528": {
+    "682": {
       "op": "concat",
       "defined_out": [
-        "tmp%6#0"
+        "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%6#0"
+        "tmp%7#0"
       ]
     },
-    "529": {
+    "683": {
       "op": "log",
       "stack_out": []
     },
-    "530": {
+    "684": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1"
@@ -2358,7 +3353,7 @@
         "1"
       ]
     },
-    "531": {
+    "685": {
       "op": "return",
       "stack_out": []
     }

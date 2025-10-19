@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: algo-bounty-mongodb
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: algo_bounty
+    volumes:
+      - mongodb_data_demo:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
+    # networks:
+    #   - algo-bounty-network
+
+#   mongo-express:
+#     image: mongo-express:1.0.2
+#     container_name: algo-bounty-mongo-express
+#     restart: unless-stopped
+#     ports:
+#       - "8081:8081"
+#     environment:
+#       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+#       ME_CONFIG_MONGODB_ADMINPASSWORD: password
+#       ME_CONFIG_MONGODB_URL: mongodb://admin:password@mongodb:27017/
+#       ME_CONFIG_BASICAUTH_USERNAME: admin
+#       ME_CONFIG_BASICAUTH_PASSWORD: admin
+#     depends_on:
+#       - mongodb
+#     networks:
+#       - algo-bounty-network
+
+#   # Algorand LocalNet (optional - for full development)
+#   algorand-localnet:
+#     image: algorandfoundation/algokit:latest
+#     container_name: algo-bounty-localnet
+#     restart: unless-stopped
+#     ports:
+#       - "4001:4001"  # algod
+#       - "8980:8980"  # indexer
+#       - "3000:3000"  # kmd
+#     command: algokit localnet start --reset
+#     volumes:
+#       - algorand_data:/opt/algorand/data
+#     networks:
+#       - algo-bounty-network
+
+volumes:
+  mongodb_data_demo:
+    driver: local
+#   algorand_data:
+#     driver: local
+
+# networks:
+#   algo-bounty-network:
+#     driver: bridge
