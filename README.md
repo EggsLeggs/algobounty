@@ -1,16 +1,22 @@
+![AlgoBounty Banner](.github/assets/AlgoBounty_Github_Banner.png)
+
 # AlgoBounty: Trustless Open-Source Bounties on Algorand
 
-AlgoBounty is a hackathon project that empowers open-source maintainers to attach trustless, verifiable bounties to their GitHub issues, leveraging Algorand's blockchain for escrowed payments.
+AlgoBounty is my individual hackathon project submission for the EasyA x Algorand Hackathon London 2025 that empowers open-source maintainers to attach trustless, verifiable bounties to their GitHub issues, leveraging Algorand's blockchain for escrowed payments.
 
-## 🚀 Features
+## 🏆 Awards
+
+- **2nd Place Winner** - Pitching Track at EasyA x Algorand Hackathon London 2025
+
+## Features
 
 - **Trustless Escrow**: All bounty payments are held in Algorand smart contracts
 - **Verifiable Execution**: Transparent and auditable payout distribution
 - **Fast, Low-Fee Transactions**: Built on Algorand's efficient blockchain
-- **Global Access**: Anyone with an internet connection and crypto wallet can participate
-- **GitHub Integration**: Seamless integration with GitHub issues and pull requests
+- **Verifiable Onchain Connections**: Secure connections between GitHub accounts and crypto wallets
+- **GitHub App Integration**: Seamless integration with GitHub issues and pull requests
 
-## 🏗️ Architecture
+## Architecture
 
 This project consists of three main components:
 
@@ -33,22 +39,15 @@ This project consists of three main components:
 ### Prerequisites
 
 - Node.js 20+ and npm 9+
-- Python 3.11+ and Poetry
-- AlgoKit CLI
+- Python 3.12 and Poetry
+- AlgoKit CLI 2.0.0+
 - Docker (for LocalNet)
 
 ### 1. Install Dependencies
 
 ```bash
-# Install AlgoKit CLI
-npm install -g @algorandfoundation/algokit
-
-# Install project dependencies
-cd projects/algo-bounty-contracts
-poetry install
-
-cd ../algo-bounty-frontend
-npm install
+# Bootstrap the project
+algokit project bootstrap all
 ```
 
 ### 2. Start LocalNet
@@ -59,6 +58,9 @@ algokit localnet start
 
 # Verify LocalNet is running
 algokit localnet status
+
+# Open Lora Explorer
+algokit localnet explorer
 ```
 
 ### 3. Deploy Smart Contracts
@@ -67,7 +69,7 @@ algokit localnet status
 cd projects/algo-bounty-contracts
 
 # Deploy the IssueEscrow contract
-poetry run python -m smart_contracts.issue_escrow.deploy_config
+algokit project deploy localnet
 ```
 
 ### 4. Start the Frontend
@@ -75,8 +77,8 @@ poetry run python -m smart_contracts.issue_escrow.deploy_config
 ```bash
 cd projects/algo-bounty-frontend
 
-# Copy environment configuration
-cp localnet.config.js .env.local
+# Copy the environment configuration
+cp .env.example .env
 
 # Start the development server
 npm run dev
@@ -84,57 +86,22 @@ npm run dev
 
 The application will be available at `http://localhost:3000`.
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
-Create a `.env.local` file in the frontend directory with the following variables:
+Create a `.env` file in the frontend directory and set the environment variables.
 
-```env
-# Algorand LocalNet Settings
-NEXT_PUBLIC_ALGOD_SERVER="http://localhost:4001"
-NEXT_PUBLIC_ALGOD_TOKEN="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-NEXT_PUBLIC_INDEXER_SERVER="http://localhost:8980"
-NEXT_PUBLIC_INDEXER_TOKEN="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-
-# GitHub Webhook Secret (optional)
-GITHUB_WEBHOOK_SECRET="your-webhook-secret"
-```
-
-### USDC Asset Setup
-
-For LocalNet development, you'll need to create a USDC asset:
-
-```bash
-# Create USDC asset on LocalNet
-algokit asset create --name "USD Coin" --unit "USDC" --decimals 6 --total 1000000000
-```
-
-## 🎯 Usage
+## Usage
 
 ### Creating a Bounty
 
 1. Open the AlgoBounty application
-2. Select a GitHub issue from the list
-3. Click "Fund Issue with AlgoBounty"
-4. Connect your wallet (Pera or Defly)
-5. Enter the USDC amount and create the bounty
-
-### Managing Bounties
-
-- **View Active Bounties**: See all active bounties in the dashboard
-- **Add Funds**: Contribute additional USDC to existing bounties
-- **Distribute Rewards**: Maintainers can distribute bounties to contributors
-- **Refund**: Maintainers can refund unused bounty funds
-
-### GitHub Integration
-
-The system includes webhook endpoints for GitHub integration:
-
-- `POST /api/webhooks/github` - Handles GitHub webhook events
-- `GET /api/bounties` - Lists all bounties
-- `POST /api/bounties` - Creates new bounties
-- `PUT /api/bounties` - Updates bounty status
+2. Add the GitHub app via the "Add GitHub App" button
+3. Select the repository you want to create a bounty for
+4. Now whenever a new issue is created in the repository, a bounty will be created for it and the link to the bounty will be added to the issue description.
+5. Contributors can now contribute to the bounty by funding it.
+6. Once the bounty is funded, the maintainer can distribute the bounty to the contributors.
 
 ## 🔍 Smart Contract Details
 
@@ -156,6 +123,23 @@ The main smart contract handles:
 - `usdc_asset`: USDC asset reference
 - `maintainer`: Repository maintainer address
 - `is_resolved`: Resolution status
+
+### GitHub Linker Contract
+
+The GitHub Linker contract is used to link GitHub accounts to Algorand addresses.
+
+- **link_github_account()**: Link a GitHub account to an Algorand address
+- **get_github_link()**: Get the Algorand address linked to a GitHub account
+
+### State Schema
+
+
+- `github_id`: GitHub account identifier
+- `algorand_address`: Algorand address
+- `expiry`: Expiry timestamp
+- `nonce`: Nonce
+- `attestor_pubkey`: Attestor public key
+- `signature`: Signature
 
 ## 🧪 Testing
 
@@ -182,46 +166,11 @@ Access the Lora explorer at `http://localhost:3001` to view transactions and con
 
 ### LocalNet (Development)
 
-The current setup is configured for LocalNet development. To deploy to TestNet or MainNet:
-
-1. Update environment variables
-2. Deploy contracts to target network
-3. Update frontend configuration
-4. Set up proper USDC asset references
-
-### Production Considerations
-
-- Set up proper GitHub webhook secrets
-- Use production-grade wallet providers
-- Implement proper error handling and logging
-- Set up monitoring and analytics
-- Consider gas optimization for smart contracts
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+The current setup is only configured for LocalNet development. Testnet and Mainnet deployments are not supported yet.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Algorand Foundation for the AlgoKit framework
-- Algorand community for support and feedback
-- GitHub for the platform integration
-
-## 📞 Support
-
-For questions or support:
-
-- Create an issue in the repository
-- Join the Algorand Discord
-- Check the AlgoKit documentation
+This project is licensed under the MIT License.
 
 ---
 
