@@ -1,0 +1,1 @@
+Going to add this soon based on this guide: https://cursor.com/docs/context/rules
