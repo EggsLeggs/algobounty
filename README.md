@@ -2,7 +2,7 @@
 
 # AlgoBounty: Trustless Open-Source Bounties on Algorand
 
-AlgoBounty is my individual hackathon project submission for the EasyA x Algorand Hackathon London 2025 that empowers open-source maintainers to attach trustless, verifiable bounties to their GitHub issues, leveraging Algorand's blockchain for escrowed payments.
+AlgoBounty empowers open-source maintainers to attach trustless, verifiable bounties to their GitHub issues, leveraging Algorand's blockchain for escrowed payments.
 
 ## 🏆 Awards
 
@@ -20,77 +20,19 @@ AlgoBounty is my individual hackathon project submission for the EasyA x Algoran
 
 This project consists of three main components:
 
-1. **Smart Contracts** (`/projects/algo-bounty-contracts/`)
+1. **Smart Contracts**
    - IssueEscrow contract for holding USDC bounties
    - Written in Python using Algopy framework
 
-2. **Frontend** (`/projects/algo-bounty-frontend/`)
+2. **dApp**
    - Next.js application with TypeScript
    - Wallet integration (Pera, Defly)
    - Bounty management interface
 
-3. **Backend API** (Next.js API routes)
+3. **Backend API**
    - GitHub webhook handlers
    - Bounty management endpoints
    - Smart contract interaction
-
-## 🛠️ Setup Instructions
-
-### Prerequisites
-
-- Node.js 20+ and npm 9+
-- Python 3.12 and Poetry
-- AlgoKit CLI 2.0.0+
-- Docker (for LocalNet)
-
-### 1. Install Dependencies
-
-```bash
-# Bootstrap the project
-algokit project bootstrap all
-```
-
-### 2. Start LocalNet
-
-```bash
-# Start Algorand LocalNet
-algokit localnet start
-
-# Verify LocalNet is running
-algokit localnet status
-
-# Open Lora Explorer
-algokit localnet explorer
-```
-
-### 3. Deploy Smart Contracts
-
-```bash
-cd projects/algo-bounty-contracts
-
-# Deploy the IssueEscrow contract
-algokit project deploy localnet
-```
-
-### 4. Start the Frontend
-
-```bash
-cd projects/algo-bounty-frontend
-
-# Copy the environment configuration
-cp .env.example .env
-
-# Start the development server
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`.
-
-## Configuration
-
-### Environment Variables
-
-Create a `.env` file in the frontend directory and set the environment variables.
 
 ## Usage
 
@@ -141,37 +83,28 @@ The GitHub Linker contract is used to link GitHub accounts to Algorand addresses
 - `attestor_pubkey`: Attestor public key
 - `signature`: Signature
 
-## 🧪 Testing
-
-### LocalNet Testing
-
-```bash
-# Start LocalNet
-algokit localnet start
-
-# Run contract tests
-cd projects/algo-bounty-contracts
-poetry run pytest
-
-# Test frontend
-cd projects/algo-bounty-frontend
-npm run test
-```
-
-### Lora Explorer
-
-Access the Lora explorer at `http://localhost:3001` to view transactions and contract interactions.
-
-## 🚀 Deployment
-
-### LocalNet (Development)
-
-The current setup is only configured for LocalNet development. Testnet and Mainnet deployments are not supported yet.
-
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **Commons Clause License** (Apache 2.0 + Commons Clause).
 
----
+### What this means:
 
-**Note**: This is a hackathon project and should be thoroughly tested before any production use.
+✅ **You CAN:**
+- View and study the source code
+- Modify and create derivative works
+- Contribute improvements back to the project
+- Use the software for non-commercial purposes
+
+❌ **You CANNOT:**
+- Sell or offer for sale the software as a service
+- **Redeploy or commercially deploy the smart contracts** for commercial purposes
+- Use the software to provide a competing commercial service
+- Charge fees for hosting, consulting, or support services where the value derives substantially from the Software's functionality
+
+### Smart Contract Deployment Restriction
+
+**IMPORTANT:** The smart contracts in this repository (IssueEscrow, GitHubLinker, etc.) are provided for educational, auditing, and contribution purposes only. **Commercial deployment or redeployment of these smart contracts is expressly prohibited** without explicit written permission from the copyright holder.
+
+For commercial licensing or partnership inquiries, please contact the project maintainers.
+
+See [LICENSE](../LICENSE) for full license terms.
