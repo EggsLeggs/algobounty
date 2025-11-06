@@ -33,7 +33,7 @@ const Hero = () => {
   }, [allWords.length])
 
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden px-4 py-16 pt-28">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden px-4 py-16 pt-28">
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Pill Badge */}

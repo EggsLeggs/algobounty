@@ -1,15 +1,42 @@
+import { useEffect, useRef } from 'react'
+import { PlusCircle, Wallet, Code, Trophy } from '@phosphor-icons/react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger)
+
 const HowItWorks = () => {
+  // Refs for each card
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const sectionRef = useRef<HTMLElement>(null)
+
+  // Define unique wonky transforms for each card
+  // Reduced intensity: Rotations: -4° to 4°, Translations: -10px to 10px
+  const wonkyTransforms = [
+    { rotation: -3.5, x: -8, y: 6 }, // Card 1
+    { rotation: 3, x: 7, y: -8 },    // Card 2
+    { rotation: -2.5, x: -6, y: 9 },  // Card 3
+    { rotation: 4, x: 10, y: -7 },    // Card 4
+  ]
+
+  // Final slightly wonky state (about 30% of initial wonkiness)
+  const finalWonkyTransforms = [
+    { rotation: -1, x: -2.5, y: 1.8 }, // Card 1
+    { rotation: 0.9, x: 2, y: -2.4 },   // Card 2
+    { rotation: -0.75, x: -1.8, y: 2.7 }, // Card 3
+    { rotation: 1.2, x: 3, y: -2.1 },   // Card 4
+  ]
+
   const cards = [
     {
       number: '01',
       title: 'CREATE',
       description: 'Create a bounty for any GitHub issue and set the reward amount.',
       icon: (
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 5L35 20L50 25L35 30L30 45L25 30L10 25L25 20L30 5Z" fill="#D77FD1" stroke="#2d2d2d" strokeWidth="2"/>
-          <circle cx="30" cy="25" r="3" fill="#2d2d2d"/>
-          <path d="M20 15L25 20M40 15L35 20M20 35L25 30M40 35L35 30" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
+        <div className="w-20 h-20 rounded-full bg-[#D77FD1] flex items-center justify-center border-2 border-[#2d2d2d]">
+          <PlusCircle size={40} weight="fill" color="#2d2d2d" />
+        </div>
       ),
     },
     {
@@ -17,12 +44,9 @@ const HowItWorks = () => {
       title: 'FUND',
       description: 'Fund your bounty with Algorand tokens locked in a smart contract.',
       icon: (
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="30" r="20" fill="#94A159" stroke="#2d2d2d" strokeWidth="2"/>
-          <circle cx="30" cy="30" r="12" fill="#2d2d2d"/>
-          <path d="M30 18L30 42M18 30L42 30" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
-          <path d="M25 25L35 35M35 25L25 35" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
+        <div className="w-20 h-20 rounded-full bg-[#94A159] flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Wallet size={40} weight="fill" color="#2d2d2d" />
+        </div>
       ),
     },
     {
@@ -30,13 +54,9 @@ const HowItWorks = () => {
       title: 'CONTRIBUTE',
       description: 'Developers work on the issue and submit pull requests to solve it.',
       icon: (
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="15" y="20" width="30" height="25" rx="2" fill="#E93827" stroke="#2d2d2d" strokeWidth="2"/>
-          <rect x="20" y="25" width="20" height="15" fill="#2d2d2d"/>
-          <path d="M15 20L30 10L45 20" stroke="#2d2d2d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M25 30L30 35L35 30" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M20 15L25 20M40 15L35 20" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
+        <div className="w-20 h-20 rounded-full bg-[#E93827] flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Code size={40} weight="fill" color="#2d2d2d" />
+        </div>
       ),
     },
     {
@@ -44,18 +64,99 @@ const HowItWorks = () => {
       title: 'CLAIM',
       description: 'Claim your reward automatically when the pull request is merged.',
       icon: (
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 10L35 20L45 22L35 24L30 34L25 24L15 22L25 20L30 10Z" fill="#94A159" stroke="#2d2d2d" strokeWidth="2"/>
-          <rect x="20" y="38" width="20" height="8" rx="1" fill="#2d2d2d"/>
-          <path d="M25 35L30 30L35 35" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M22 42L28 42M32 42L38 42" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
+        <div className="w-20 h-20 rounded-full bg-[#94A159] flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Trophy size={40} weight="fill" color="#2d2d2d" />
+        </div>
       ),
     },
   ]
 
+  useEffect(() => {
+    // Set initial wonky state for all cards
+    cardRefs.current.forEach((card, index) => {
+      if (card) {
+        const transform = wonkyTransforms[index]
+        gsap.set(card, {
+          rotation: transform.rotation,
+          x: transform.x,
+          y: transform.y,
+          scale: 1,
+        })
+      }
+    })
+
+    // Create ScrollTrigger animation with reversible scrub
+    const triggers = cardRefs.current.map((card, index) => {
+      if (!card) return null
+
+      const finalTransform = finalWonkyTransforms[index]
+      return ScrollTrigger.create({
+        trigger: card,
+        start: 'top 85%',
+        end: 'top 30%',
+        animation: gsap.to(card, {
+          rotation: finalTransform.rotation,
+          x: finalTransform.x,
+          y: finalTransform.y,
+          duration: 1,
+          ease: 'power2.out',
+        }),
+        scrub: true,
+      })
+    }).filter(Boolean)
+
+    // Add hover animations
+    const hoverAnimations = cardRefs.current.map((card) => {
+      if (!card) return null
+
+      let hoverTween: gsap.core.Tween | null = null
+
+      const handleMouseEnter = () => {
+        if (hoverTween) hoverTween.kill()
+        const currentY = gsap.getProperty(card, 'y') as number
+        hoverTween = gsap.to(card, {
+          scale: 1.05,
+          y: currentY - 8,
+          duration: 0.3,
+          ease: 'power2.out',
+          overwrite: 'auto',
+        })
+      }
+
+      const handleMouseLeave = () => {
+        if (hoverTween) hoverTween.kill()
+        const currentY = gsap.getProperty(card, 'y') as number
+        hoverTween = gsap.to(card, {
+          scale: 1,
+          y: currentY + 8,
+          duration: 0.3,
+          ease: 'power2.out',
+          overwrite: 'auto',
+        })
+      }
+
+      card.addEventListener('mouseenter', handleMouseEnter)
+      card.addEventListener('mouseleave', handleMouseLeave)
+
+      return { card, handleMouseEnter, handleMouseLeave }
+    }).filter(Boolean)
+
+    // Cleanup function
+    return () => {
+      triggers.forEach((trigger) => {
+        if (trigger) trigger.kill()
+      })
+      hoverAnimations.forEach((anim) => {
+        if (anim) {
+          anim.card.removeEventListener('mouseenter', anim.handleMouseEnter)
+          anim.card.removeEventListener('mouseleave', anim.handleMouseLeave)
+        }
+      })
+    }
+  }, [])
+
   return (
-    <section className="relative py-20 px-4 bg-[#2d2d2d] overflow-hidden rounded-4xl ">
+    <section ref={sectionRef} className="relative py-20 px-4 bg-[#2d2d2d] overflow-hidden rounded-4xl ">
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="relative mb-16 text-center">
@@ -146,7 +247,10 @@ const HowItWorks = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative bg-[#f9f2e9] rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              ref={(el) => {
+                cardRefs.current[index] = el
+              }}
+              className="relative bg-[#f9f2e9] rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-[#2d2d2d]"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E")`,
               }}
