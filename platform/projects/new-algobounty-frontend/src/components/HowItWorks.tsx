@@ -34,8 +34,8 @@ const HowItWorks = () => {
       title: 'CREATE',
       description: 'Create an issue for any linked GitHub repo and the bounty will be automatically created.',
       icon: (
-        <div className="w-20 h-20 rounded-full bg-[#D77FD1] flex items-center justify-center border-2 border-[#2d2d2d]">
-          <PlusCircle size={40} weight="fill" color="#2d2d2d" />
+        <div className="w-20 h-20 rounded-full bg-pink flex items-center justify-center border-2 border-[#2d2d2d]">
+          <PlusCircle size={40} weight="fill" className='text-foreground'/>
         </div>
       ),
     },
@@ -44,8 +44,8 @@ const HowItWorks = () => {
       title: 'FUND',
       description: 'Fund your bounty with Algorand tokens locked in a smart contract.',
       icon: (
-        <div className="w-20 h-20 rounded-full bg-[#94A159] flex items-center justify-center border-2 border-[#2d2d2d]">
-          <Wallet size={40} weight="fill" color="#2d2d2d" />
+        <div className="w-20 h-20 rounded-full bg-green flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Wallet size={40} weight="fill" className='text-foreground' />
         </div>
       ),
     },
@@ -54,8 +54,8 @@ const HowItWorks = () => {
       title: 'CONTRIBUTE',
       description: 'Developers work on the issue and submit pull requests to solve it.',
       icon: (
-        <div className="w-20 h-20 rounded-full bg-[#E93827] flex items-center justify-center border-2 border-[#2d2d2d]">
-          <Code size={40} weight="fill" color="#2d2d2d" />
+        <div className="w-20 h-20 rounded-full bg-red flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Code size={40} weight="fill" className='text-foreground' />
         </div>
       ),
     },
@@ -64,8 +64,8 @@ const HowItWorks = () => {
       title: 'CLAIM',
       description: 'Claim your reward when the pull request is merged.',
       icon: (
-        <div className="w-20 h-20 rounded-full bg-[#94A159] flex items-center justify-center border-2 border-[#2d2d2d]">
-          <Trophy size={40} weight="fill" color="#2d2d2d" />
+        <div className="w-20 h-20 rounded-full bg-blue flex items-center justify-center border-2 border-[#2d2d2d]">
+          <Trophy size={40} weight="fill" className='text-foreground' />
         </div>
       ),
     },

@@ -42,7 +42,7 @@ const SustainabilitySection = () => {
           {/* Left: Header */}
           <div className="flex items-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Making Open Source
+              Making Open-Source
               <br />
               <span className="wonky-text" style={{ transform: 'rotate(0.5deg) translateX(2px)' }}>
                 Sustainable
@@ -52,7 +52,7 @@ const SustainabilitySection = () => {
 
           {/* Right: Benefits Text */}
           <div className="flex items-center">
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+            <p className="lg:text-lg text-foreground/80 leading-relaxed">
               Our platform creates a sustainable ecosystem that benefits{' '}
               <span
                 className="px-2 py-1 rounded-md font-semibold"
