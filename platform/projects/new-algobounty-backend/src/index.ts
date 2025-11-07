@@ -25,6 +25,7 @@ import { webhookRouter } from "./routes/webhooks.js";
 import { authRouter } from "./routes/auth.js";
 import { githubRouter } from "./routes/github.js";
 import { attestationRouter } from "./routes/attestations.js";
+import { bountyImageRouter, generateBountyImage } from "./routes/bountyImage.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -54,6 +55,9 @@ app.use("/api/webhooks", webhookRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/github", githubRouter);
 app.use("/api/attestations", attestationRouter);
+app.use("/api/bounty-image", bountyImageRouter);
+// Also handle .svg extension at the app level
+app.get("/api/bounty-image.svg", generateBountyImage);
 
 // Error handling middleware
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

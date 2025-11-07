@@ -30,13 +30,17 @@ export async function handleIssueOpened(payload: IssueOpenedPayload, octokit: Oc
 
     console.log(`🌐 Repository ${repository.full_name} is public, proceeding with bounty link addition`);
 
-    // TODO: Implement bounty link generation and addition
-    // This would use your bounty-utils functions
+    // Generate image URL for the bounty button (point to backend)
+    const backendUrl = process.env.BACKEND_URL || process.env.API_URL || `http://localhost:${process.env.PORT || 3001}`;
+    const frontendUrl = process.env.CORS_ORIGIN || "http://localhost:3000";
+    const imageUrl = `${backendUrl}/api/bounty-image.svg?repoId=${repository.id}&issue=${issue.number}`;
+    const fundingUrl = `${frontendUrl}/fund/${repository.owner.login}/${repository.name}/${repository.id}/issue/${issue.number}`;
 
-    const bountyLink = `[Fund this bounty](${process.env.CORS_ORIGIN || "http://localhost:3000"}/fund/${repository.full_name}/${issue.number})`;
+    // Create clickable image markdown link
+    const bountyLink = `[![Fund this bounty](${imageUrl})](${fundingUrl})`;
 
-    // Check if bounty link already exists
-    if (issue.body && issue.body.includes(bountyLink)) {
+    // Check if bounty link already exists (check for image pattern or old text pattern)
+    if (issue.body && (issue.body.includes(imageUrl) || issue.body.includes("Fund this bounty"))) {
       console.log(`✅ Bounty link already exists in issue #${issue.number}, skipping update`);
       return;
     }
@@ -111,6 +115,7 @@ ${awardLink}
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function handlePullRequestMerged(payload: PullRequestClosedPayload, octokit: Octokit) {
   const { pull_request, repository } = payload;
 

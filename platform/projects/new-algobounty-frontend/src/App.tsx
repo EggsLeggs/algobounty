@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { WalletId, WalletManager, WalletProvider } from '@txnlab/use-wallet-react'
 import type { SupportedWallet } from '@txnlab/use-wallet-react'
 import { SnackbarProvider } from 'notistack'
 import Navigation from '@/components/Navigation'
-import Hero from '@/components/Hero'
-import HowItWorks from '@/components/HowItWorks'
-import SustainabilitySection from '@/components/SustainabilitySection'
+import HomePage from '@/pages/HomePage'
+import FundPage from '@/pages/FundPage'
 import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
 
 let supportedWallets: SupportedWallet[]
@@ -56,11 +56,14 @@ function App() {
   return (
     <SnackbarProvider maxSnack={3}>
       <WalletProvider manager={walletManager}>
-        <Navigation />
-        <div className="noise" />
-        <Hero />
-        <HowItWorks />
-        <SustainabilitySection />
+        <BrowserRouter>
+          <Navigation />
+          <div className="noise" />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/fund/:owner/:repoName/:repoId/issue/:issueNumber" element={<FundPage />} />
+          </Routes>
+        </BrowserRouter>
       </WalletProvider>
     </SnackbarProvider>
   )
