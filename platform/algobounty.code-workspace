@@ -9,6 +9,12 @@
     },
     {
       "path": "./projects/algobounty-frontend"
+    },
+    {
+      "path": "./projects/new-algobounty-backend"
+    },
+    {
+      "path": "./projects/new-algobounty-frontend"
     }
   ],
   "settings": {
@@ -44,6 +50,22 @@
           "cwd": "${workspaceFolder}"
         },
         "problemMatcher": []
+      },
+      {
+        "label": "Start Cloudflare Tunnel (Backend)",
+        "command": "cloudflared",
+        "args": ["tunnel", "--url", "http://localhost:3001"],
+        "type": "shell",
+        "options": {
+          "cwd": "${workspaceFolder}/projects/new-algobounty-backend"
+        },
+        "problemMatcher": [],
+        "isBackground": true,
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "focus": false
+        }
       }
     ]
   },

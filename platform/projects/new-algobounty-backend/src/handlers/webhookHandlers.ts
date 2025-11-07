@@ -1,0 +1,119 @@
+import { Octokit } from "@octokit/rest";
+import type { WebhookEventMap } from "@octokit/webhooks";
+
+type IssueOpenedPayload = WebhookEventMap["issues.opened"];
+type IssueClosedPayload = WebhookEventMap["issues.closed"];
+type PullRequestClosedPayload = WebhookEventMap["pull_request.closed"];
+
+export async function handleIssueOpened(payload: IssueOpenedPayload, octokit: Octokit) {
+  const { issue, repository, installation } = payload;
+
+  console.log(`🔍 Processing new issue #${issue.number} in ${repository.full_name}`);
+
+  if (!installation) {
+    console.log("⚠️ No installation ID provided, skipping bounty link addition");
+    return;
+  }
+
+  try {
+    // Check if repository is public
+    const [owner, repo] = repository.full_name.split("/");
+    const repoInfo = await octokit.request("GET /repos/{owner}/{repo}", {
+      owner,
+      repo,
+    });
+
+    if (repoInfo.data.private) {
+      console.log(`🔒 Repository ${repository.full_name} is private, skipping bounty link addition`);
+      return;
+    }
+
+    console.log(`🌐 Repository ${repository.full_name} is public, proceeding with bounty link addition`);
+
+    // TODO: Implement bounty link generation and addition
+    // This would use your bounty-utils functions
+
+    const bountyLink = `[Fund this bounty](${process.env.CORS_ORIGIN || "http://localhost:3000"}/fund/${repository.full_name}/${issue.number})`;
+
+    // Check if bounty link already exists
+    if (issue.body && issue.body.includes(bountyLink)) {
+      console.log(`✅ Bounty link already exists in issue #${issue.number}, skipping update`);
+      return;
+    }
+
+    // Update issue description with bounty link
+    const updatedBody = `${bountyLink}\n\n---\n\n${issue.body || ""}`;
+
+    await octokit.request("PATCH /repos/{owner}/{repo}/issues/{issue_number}", {
+      owner,
+      repo,
+      issue_number: issue.number,
+      body: updatedBody,
+    });
+
+    console.log(`✅ Successfully added bounty link to issue #${issue.number}`);
+  } catch (error) {
+    console.error(`❌ Failed to add bounty link to issue #${issue.number}:`, error);
+  }
+}
+
+export async function handleIssueClosed(payload: IssueClosedPayload, octokit: Octokit) {
+  const { issue, repository, installation } = payload;
+
+  console.log(`🔍 Processing closed issue #${issue.number} in ${repository.full_name}`);
+
+  if (!installation) {
+    console.log("⚠️ No installation ID provided, skipping award message addition");
+    return;
+  }
+
+  // Check if this issue has a bounty link (was funded)
+  // TODO: Implement proper check
+  if (!issue.body || !issue.body.includes("Fund this bounty")) {
+    console.log(`ℹ️ Issue #${issue.number} doesn't have a bounty link, skipping award message`);
+    return;
+  }
+
+  try {
+    const [owner, repo] = repository.full_name.split("/");
+    const repoInfo = await octokit.request("GET /repos/{owner}/{repo}", {
+      owner,
+      repo,
+    });
+
+    if (repoInfo.data.private) {
+      console.log(`🔒 Repository ${repository.full_name} is private, skipping award message addition`);
+      return;
+    }
+
+    const awardLink = `[Award Bounty](${process.env.CORS_ORIGIN || "http://localhost:3000"}/award/${repository.full_name}/${issue.number})`;
+
+    const awardMessage = `## 🏆 Issue Resolved - Award Bounty
+
+This issue has been closed and appears to be resolved! If this issue had a bounty, maintainers can now award it to the contributor who resolved it.
+
+${awardLink}
+
+---
+
+*This message was automatically added by AlgoBounty when the issue was closed.*`;
+
+    await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+      owner,
+      repo,
+      issue_number: issue.number,
+      body: awardMessage,
+    });
+
+    console.log(`✅ Successfully added award message to issue #${issue.number}`);
+  } catch (error) {
+    console.error(`❌ Failed to add award message to issue #${issue.number}:`, error);
+  }
+}
+
+export async function handlePullRequestMerged(payload: PullRequestClosedPayload, octokit: Octokit) {
+  const { pull_request, repository } = payload;
+
+  console.log(`PR #${pull_request.number} merged in ${repository.full_name}`);
+  // TODO: Find associated issue and trigger bounty distribution
+}

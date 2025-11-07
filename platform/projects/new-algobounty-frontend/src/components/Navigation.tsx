@@ -28,8 +28,16 @@ const Navigation = () => {
   }
 
   const handleGitHubIntegration = () => {
-    // Placeholder for GitHub integration
-    console.log('GitHub integration clicked')
+    // Get GitHub app installation URL from environment variables
+    const installUrl = import.meta.env.VITE_GITHUB_APP_INSTALL_URL
+
+    if (installUrl && installUrl !== '#') {
+      // Open GitHub app installation page in new tab
+      window.open(installUrl, '_blank', 'noopener,noreferrer')
+    } else {
+      // Fallback: show alert if URL is not configured
+      alert('GitHub app installation URL is not configured. Please check your environment variables.')
+    }
   }
 
   return (
