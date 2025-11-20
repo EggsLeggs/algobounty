@@ -13,6 +13,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Verify critical files exist (for debugging)
+RUN ls -la src/lib/ && test -f src/lib/utils.ts || (echo "ERROR: utils.ts not found!" && exit 1)
+
 # Build the application
 # Use docker-specific build script that skips type checking
 # This avoids TypeScript path resolution issues in Docker/Railway
