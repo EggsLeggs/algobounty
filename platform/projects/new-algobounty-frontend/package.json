@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit --project tsconfig.app.json && tsc --noEmit --project tsconfig.node.json && vite build",
+    "build:docker": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview"
   },
