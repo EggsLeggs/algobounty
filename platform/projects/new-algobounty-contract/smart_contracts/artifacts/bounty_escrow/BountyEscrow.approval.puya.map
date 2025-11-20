@@ -1,0 +1,7460 @@
+{
+  "version": 3,
+  "sources": [
+    "/Users/haydenb/VSCodeProjects/github-algorand-bounty-system/algo-bounty/platform/projects/new-algobounty-contract/smart_contracts/bounty_escrow/contract.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA+BkD;AAAqC;AAArF;AAJF;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;AA0GG;;AAAA;AAAA;AAAA;;AAAA;AA1GH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AA0GG;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AArGH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAqGG;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAhGH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAgGG;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AA3FH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AA2FG;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAtFH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAsFG;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA5BA;;AAAA;AAAA;AAAA;;AAAA;AA1DH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA0DG;;;AAAA;;AAbA;;AAAA;AAAA;AAAA;;AAAA;AA7CH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA6CG;;;AAAA;;AAdA;;AAAA;AAAA;AAAA;;AAAA;AA/BH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA+BG;;;AAAA;;AAdA;;AAAA;AAAA;AAAA;;AAAA;AAjBH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAiBG;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAXH;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAWG;;;AAAA;;AAXH;;AAAA;;;AAMG;;AAAA;AAAA;AAAA;;;AAAA;;AAH0C;;AAKlB;;AAAvB;;AAGF;;;AAEE;;;AAVyC;;AAWzC;;AAAA;;AAGF;;;AA+FS;;AAAsB;;AAAtB;AAAP;AACmB;;AAAA;;AAAA;AAAA;AAAA;AACD;;AAAA;;AAAlB;AAAA;AAEa;;AAAA;;AAA6B;;AAAxC;AADF;AAIkB;;AAAA;;AAAwB;;AAAnC;AAAP;AAnGM;;AAAS;;;AAGO;;AAAA;;AAAA;AAnBwB;AAAA;AAAA;AAAA;AAsBd;;AAAA;AAtBc;AAsB9C;AAAA;AAzBsE;AAAA;;AAAA;AAoBhE;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAMqB;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AACI;;;;;;;;;;;;;;;AAAJ;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAGF;;;AAEE;;;AAiGM;;AAAS;;;AAAT;;AAAA;;AAAA;AAAA;AAAA;AACN;AAgCO;;AAIA;;AAJA;AA7Hc;;;;;AArCiD;AAAA;;AAAA;AAkChE;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAMqB;;AAAA;AANrB;;;AAMqB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AACI;;;;;;;;;;;;;;;AAAJ;;AAAA;AAAA;;;;;;;AAGF;;;AAEE;;;AAmFM;;AAAS;;;AAAT;AAAA;;AAAA;;AAAA;AACN;AAAA;AAlIsE;AAAA;;AAAA;AAgDhE;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAKqB;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AACI;;;;;;;;;;;;;;;;;;AAAJ;;AAAA;AAAA;;AAGF;;;AAwEQ;;AAAS;;;AAAT;AAAA;;AAAA;;AAAA;;AAAA;AAAA;;AAAA;;AAAA;;AAAA;AAAA;;AACN;AArEA;AACO;AAAP;AAwGO;;AAJA;AA1BP;;;AAEI;;AAAA;;AAAA;AADF;AAxEI;;AAAA;AAAA;;AAAA;AAAA;;AAAmB;AACzB;AAAA;AAEA;AACiB;;;;;;;;;;;;AADjB;;;AAAA;;;AAAA;AAQuB;AAAA;;AAAA;AAzEuB;AAAA;AAAA;AAAA;AA6Ed;;AAAA;AA7Ec;AA6E9C;AAAA;AAhFsE;AAAA;;AAAA;AA0EhE;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAOqB;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA3B;AACI;;;;;;;;;;;;;;;;AAAJ;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAGF;;;AAES;;AAAA;;;AAAA;;AAAP;AAGF;;;AAES;;AAAA;;;AAAA;;AAAA;;AAAP;AAGF;;;AAES;;AAAA;;;AAAA;;AAAA;;AAAA;;AAAP;AAGF;;;AAES;;AAAA;;;AAAA;AAAA;;AAAA;;AAAP;AAGF;;;AAES;;AAAA;;;AAAA;;AAAA;;AAAP;AAgBF;;;;;;;;AA3HwE;AA4HhE;;AA5HgE;AA4HhE;AACK;AAAA;;AAAJ;;;AAAiB;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;;;;;;;;;;;AAAxB;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;AAwBsB;AAiBf;;AAhBgB;;;AACX;;;AACC;;;;;;;;AAMF;;AA5J8B;AAAA;;AAAA;AAAA;AA4JlC;AAAP;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 2 129"
+    },
+    "8": {
+      "op": "bytecblock 0x00 \"total_locked\" 0x151f7c75 \"b:\" \"admin\""
+    },
+    "39": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "reinterpret_bool%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bool%0#0"
+      ]
+    },
+    "41": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "44": {
+      "op": "bytec_1 // \"total_locked\"",
+      "defined_out": [
+        "\"total_locked\""
+      ],
+      "stack_out": [
+        "\"total_locked\""
+      ]
+    },
+    "45": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_locked\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"total_locked\"",
+        "0"
+      ]
+    },
+    "46": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "47": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "49": {
+      "op": "bz main_bare_routing@17",
+      "stack_out": []
+    },
+    "52": {
+      "op": "pushbytess 0x82ab1ec4 0x6038823f 0x9bb5b7e7 0x4eff0aba 0x88876a4f 0xd3bc31c2 0x7cb6dd8e 0xe931ca41 0x3dbac521 0xd8b17c6e // method \"updateAdmin(account)void\", method \"fundBounty(string,uint64)void\", method \"markIssueClosed(string,account)void\", method \"assignClaimer(string,account)void\", method \"claimBounty(string,account)void\", method \"getTotalFunded(string)uint64\", method \"getTotalClaimed(string)uint64\", method \"isBountyClosed(string)bool\", method \"isBountyClaimed(string)bool\", method \"getAuthorizedClaimer(string)byte[]\"",
+      "defined_out": [
+        "Method(assignClaimer(string,account)void)",
+        "Method(claimBounty(string,account)void)",
+        "Method(fundBounty(string,uint64)void)",
+        "Method(getAuthorizedClaimer(string)byte[])",
+        "Method(getTotalClaimed(string)uint64)",
+        "Method(getTotalFunded(string)uint64)",
+        "Method(isBountyClaimed(string)bool)",
+        "Method(isBountyClosed(string)bool)",
+        "Method(markIssueClosed(string,account)void)",
+        "Method(updateAdmin(account)void)"
+      ],
+      "stack_out": [
+        "Method(updateAdmin(account)void)",
+        "Method(fundBounty(string,uint64)void)",
+        "Method(markIssueClosed(string,account)void)",
+        "Method(assignClaimer(string,account)void)",
+        "Method(claimBounty(string,account)void)",
+        "Method(getTotalFunded(string)uint64)",
+        "Method(getTotalClaimed(string)uint64)",
+        "Method(isBountyClosed(string)bool)",
+        "Method(isBountyClaimed(string)bool)",
+        "Method(getAuthorizedClaimer(string)byte[])"
+      ]
+    },
+    "104": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(assignClaimer(string,account)void)",
+        "Method(claimBounty(string,account)void)",
+        "Method(fundBounty(string,uint64)void)",
+        "Method(getAuthorizedClaimer(string)byte[])",
+        "Method(getTotalClaimed(string)uint64)",
+        "Method(getTotalFunded(string)uint64)",
+        "Method(isBountyClaimed(string)bool)",
+        "Method(isBountyClosed(string)bool)",
+        "Method(markIssueClosed(string,account)void)",
+        "Method(updateAdmin(account)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(updateAdmin(account)void)",
+        "Method(fundBounty(string,uint64)void)",
+        "Method(markIssueClosed(string,account)void)",
+        "Method(assignClaimer(string,account)void)",
+        "Method(claimBounty(string,account)void)",
+        "Method(getTotalFunded(string)uint64)",
+        "Method(getTotalClaimed(string)uint64)",
+        "Method(isBountyClosed(string)bool)",
+        "Method(isBountyClaimed(string)bool)",
+        "Method(getAuthorizedClaimer(string)byte[])",
+        "tmp%2#0"
+      ]
+    },
+    "107": {
+      "op": "match main_updateAdmin_route@5 main_fundBounty_route@6 main_markIssueClosed_route@7 main_assignClaimer_route@8 main_claimBounty_route@9 main_getTotalFunded_route@10 main_getTotalClaimed_route@11 main_isBountyClosed_route@12 main_isBountyClaimed_route@13 main_getAuthorizedClaimer_route@14",
+      "stack_out": []
+    },
+    "129": {
+      "block": "main_after_if_else@21",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "130": {
+      "op": "return",
+      "stack_out": []
+    },
+    "131": {
+      "block": "main_getAuthorizedClaimer_route@14",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%73#0"
+      ],
+      "stack_out": [
+        "tmp%73#0"
+      ]
+    },
+    "133": {
+      "op": "!",
+      "defined_out": [
+        "tmp%74#0"
+      ],
+      "stack_out": [
+        "tmp%74#0"
+      ]
+    },
+    "134": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "135": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%75#0"
+      ],
+      "stack_out": [
+        "tmp%75#0"
+      ]
+    },
+    "137": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "138": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0"
+      ]
+    },
+    "141": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%77#0",
+        "tmp%77#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "tmp%77#0 (copy)"
+      ]
+    },
+    "142": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%77#0",
+        "tmp%77#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "tmp%77#0 (copy)",
+        "0"
+      ]
+    },
+    "143": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%8#0",
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "length%8#0"
+      ]
+    },
+    "144": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%8#0",
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "length%8#0",
+        "2"
+      ]
+    },
+    "145": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%8#0",
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "num_bytes_with_header%8#0"
+      ]
+    },
+    "146": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%77#0",
+        "num_bytes_with_header%8#0",
+        "tmp%77#0 (copy)"
+      ]
+    },
+    "148": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%8#0",
+        "tmp%77#0",
+        "value_len%13#0"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "num_bytes_with_header%8#0",
+        "value_len%13#0"
+      ]
+    },
+    "149": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%13#0",
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0",
+        "size_is_correct%13#0"
+      ]
+    },
+    "150": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%77#0"
+      ]
+    },
+    "151": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%78#0"
+      ],
+      "stack_out": [
+        "tmp%78#0"
+      ]
+    },
+    "154": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getAuthorizedClaimer",
+      "op": "callsub getAuthorizedClaimer",
+      "defined_out": [
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0"
+      ]
+    },
+    "157": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%4#0",
+        "to_encode%4#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%4#0",
+        "to_encode%4#0 (copy)"
+      ]
+    },
+    "158": {
+      "op": "len",
+      "defined_out": [
+        "length%9#0",
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0",
+        "length%9#0"
+      ]
+    },
+    "159": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "160": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "163": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%4#0"
+      ]
+    },
+    "164": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "165": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "166": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "167": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%79#0"
+      ],
+      "stack_out": [
+        "tmp%79#0"
+      ]
+    },
+    "168": {
+      "op": "log",
+      "stack_out": []
+    },
+    "169": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "170": {
+      "op": "return",
+      "stack_out": []
+    },
+    "171": {
+      "block": "main_isBountyClaimed_route@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%66#0"
+      ],
+      "stack_out": [
+        "tmp%66#0"
+      ]
+    },
+    "173": {
+      "op": "!",
+      "defined_out": [
+        "tmp%67#0"
+      ],
+      "stack_out": [
+        "tmp%67#0"
+      ]
+    },
+    "174": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "175": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%68#0"
+      ],
+      "stack_out": [
+        "tmp%68#0"
+      ]
+    },
+    "177": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "178": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0"
+      ]
+    },
+    "181": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%70#0",
+        "tmp%70#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "tmp%70#0 (copy)"
+      ]
+    },
+    "182": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%70#0",
+        "tmp%70#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "tmp%70#0 (copy)",
+        "0"
+      ]
+    },
+    "183": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%7#0",
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "length%7#0"
+      ]
+    },
+    "184": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%7#0",
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "length%7#0",
+        "2"
+      ]
+    },
+    "185": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%7#0",
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "num_bytes_with_header%7#0"
+      ]
+    },
+    "186": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%70#0",
+        "num_bytes_with_header%7#0",
+        "tmp%70#0 (copy)"
+      ]
+    },
+    "188": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%7#0",
+        "tmp%70#0",
+        "value_len%12#0"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "num_bytes_with_header%7#0",
+        "value_len%12#0"
+      ]
+    },
+    "189": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%12#0",
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0",
+        "size_is_correct%12#0"
+      ]
+    },
+    "190": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%70#0"
+      ]
+    },
+    "191": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%71#0"
+      ],
+      "stack_out": [
+        "tmp%71#0"
+      ]
+    },
+    "194": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClaimed",
+      "op": "callsub isBountyClaimed",
+      "defined_out": [
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0"
+      ]
+    },
+    "197": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "0x00"
+      ]
+    },
+    "198": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "to_encode%3#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "199": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0x00",
+        "0",
+        "to_encode%3#0"
+      ]
+    },
+    "201": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%1#0"
+      ],
+      "stack_out": [
+        "encoded_bool%1#0"
+      ]
+    },
+    "202": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_bool%1#0"
+      ],
+      "stack_out": [
+        "encoded_bool%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "203": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_bool%1#0"
+      ]
+    },
+    "204": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%72#0"
+      ],
+      "stack_out": [
+        "tmp%72#0"
+      ]
+    },
+    "205": {
+      "op": "log",
+      "stack_out": []
+    },
+    "206": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "207": {
+      "op": "return",
+      "stack_out": []
+    },
+    "208": {
+      "block": "main_isBountyClosed_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%59#0"
+      ],
+      "stack_out": [
+        "tmp%59#0"
+      ]
+    },
+    "210": {
+      "op": "!",
+      "defined_out": [
+        "tmp%60#0"
+      ],
+      "stack_out": [
+        "tmp%60#0"
+      ]
+    },
+    "211": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "212": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%61#0"
+      ],
+      "stack_out": [
+        "tmp%61#0"
+      ]
+    },
+    "214": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "215": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0"
+      ]
+    },
+    "218": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%63#0",
+        "tmp%63#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "tmp%63#0 (copy)"
+      ]
+    },
+    "219": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%63#0",
+        "tmp%63#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "tmp%63#0 (copy)",
+        "0"
+      ]
+    },
+    "220": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%6#0",
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "length%6#0"
+      ]
+    },
+    "221": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%6#0",
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "length%6#0",
+        "2"
+      ]
+    },
+    "222": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%6#0",
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "num_bytes_with_header%6#0"
+      ]
+    },
+    "223": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%63#0",
+        "num_bytes_with_header%6#0",
+        "tmp%63#0 (copy)"
+      ]
+    },
+    "225": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%6#0",
+        "tmp%63#0",
+        "value_len%11#0"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "num_bytes_with_header%6#0",
+        "value_len%11#0"
+      ]
+    },
+    "226": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%11#0",
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0",
+        "size_is_correct%11#0"
+      ]
+    },
+    "227": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%63#0"
+      ]
+    },
+    "228": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%64#0"
+      ],
+      "stack_out": [
+        "tmp%64#0"
+      ]
+    },
+    "231": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClosed",
+      "op": "callsub isBountyClosed",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "234": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "0x00"
+      ]
+    },
+    "235": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "to_encode%2#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "236": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0x00",
+        "0",
+        "to_encode%2#0"
+      ]
+    },
+    "238": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "encoded_bool%0#0"
+      ]
+    },
+    "239": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "encoded_bool%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "240": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_bool%0#0"
+      ]
+    },
+    "241": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%65#0"
+      ],
+      "stack_out": [
+        "tmp%65#0"
+      ]
+    },
+    "242": {
+      "op": "log",
+      "stack_out": []
+    },
+    "243": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "244": {
+      "op": "return",
+      "stack_out": []
+    },
+    "245": {
+      "block": "main_getTotalClaimed_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0"
+      ]
+    },
+    "247": {
+      "op": "!",
+      "defined_out": [
+        "tmp%53#0"
+      ],
+      "stack_out": [
+        "tmp%53#0"
+      ]
+    },
+    "248": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "249": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%54#0"
+      ],
+      "stack_out": [
+        "tmp%54#0"
+      ]
+    },
+    "251": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "252": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0"
+      ]
+    },
+    "255": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%56#0",
+        "tmp%56#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "tmp%56#0 (copy)"
+      ]
+    },
+    "256": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%56#0",
+        "tmp%56#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "tmp%56#0 (copy)",
+        "0"
+      ]
+    },
+    "257": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%5#0",
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "length%5#0"
+      ]
+    },
+    "258": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%5#0",
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "length%5#0",
+        "2"
+      ]
+    },
+    "259": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%5#0",
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "num_bytes_with_header%5#0"
+      ]
+    },
+    "260": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%56#0",
+        "num_bytes_with_header%5#0",
+        "tmp%56#0 (copy)"
+      ]
+    },
+    "262": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%5#0",
+        "tmp%56#0",
+        "value_len%10#0"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "num_bytes_with_header%5#0",
+        "value_len%10#0"
+      ]
+    },
+    "263": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%10#0",
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0",
+        "size_is_correct%10#0"
+      ]
+    },
+    "264": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%56#0"
+      ]
+    },
+    "265": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%57#0"
+      ],
+      "stack_out": [
+        "tmp%57#0"
+      ]
+    },
+    "268": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalClaimed",
+      "op": "callsub getTotalClaimed",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "271": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0"
+      ]
+    },
+    "272": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "273": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "274": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%58#0"
+      ],
+      "stack_out": [
+        "tmp%58#0"
+      ]
+    },
+    "275": {
+      "op": "log",
+      "stack_out": []
+    },
+    "276": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "277": {
+      "op": "return",
+      "stack_out": []
+    },
+    "278": {
+      "block": "main_getTotalFunded_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "280": {
+      "op": "!",
+      "defined_out": [
+        "tmp%46#0"
+      ],
+      "stack_out": [
+        "tmp%46#0"
+      ]
+    },
+    "281": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "282": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "tmp%47#0"
+      ]
+    },
+    "284": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "285": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "288": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%49#0",
+        "tmp%49#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "tmp%49#0 (copy)"
+      ]
+    },
+    "289": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%49#0",
+        "tmp%49#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "tmp%49#0 (copy)",
+        "0"
+      ]
+    },
+    "290": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%4#0",
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "length%4#0"
+      ]
+    },
+    "291": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%4#0",
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "length%4#0",
+        "2"
+      ]
+    },
+    "292": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%4#0",
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "num_bytes_with_header%4#0"
+      ]
+    },
+    "293": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%49#0",
+        "num_bytes_with_header%4#0",
+        "tmp%49#0 (copy)"
+      ]
+    },
+    "295": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%4#0",
+        "tmp%49#0",
+        "value_len%9#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "num_bytes_with_header%4#0",
+        "value_len%9#0"
+      ]
+    },
+    "296": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%9#0",
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0",
+        "size_is_correct%9#0"
+      ]
+    },
+    "297": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "298": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "301": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalFunded",
+      "op": "callsub getTotalFunded",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "304": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "305": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "306": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "307": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "308": {
+      "op": "log",
+      "stack_out": []
+    },
+    "309": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "310": {
+      "op": "return",
+      "stack_out": []
+    },
+    "311": {
+      "block": "main_claimBounty_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "313": {
+      "op": "!",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "314": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "315": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "317": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "318": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "321": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%40#0",
+        "tmp%40#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "tmp%40#0 (copy)"
+      ]
+    },
+    "322": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%40#0",
+        "tmp%40#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "tmp%40#0 (copy)",
+        "0"
+      ]
+    },
+    "323": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%3#0",
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "length%3#0"
+      ]
+    },
+    "324": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%3#0",
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "length%3#0",
+        "2"
+      ]
+    },
+    "325": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%3#0",
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "num_bytes_with_header%3#0"
+      ]
+    },
+    "326": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%40#0",
+        "num_bytes_with_header%3#0",
+        "tmp%40#0 (copy)"
+      ]
+    },
+    "328": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%3#0",
+        "tmp%40#0",
+        "value_len%7#0"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "num_bytes_with_header%3#0",
+        "value_len%7#0"
+      ]
+    },
+    "329": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%7#0",
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0",
+        "size_is_correct%7#0"
+      ]
+    },
+    "330": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "331": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "334": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%41#0",
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0"
+      ]
+    },
+    "337": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "tmp%42#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "tmp%42#0 (copy)"
+      ]
+    },
+    "338": {
+      "op": "len",
+      "defined_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "value_len%8#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "value_len%8#0"
+      ]
+    },
+    "339": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%41#0",
+        "tmp%42#0",
+        "value_len%8#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "value_len%8#0",
+        "1"
+      ]
+    },
+    "340": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%8#0",
+        "tmp%41#0",
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0",
+        "size_is_correct%8#0"
+      ]
+    },
+    "341": {
+      "error": "invalid number of bytes for arc4.uint8",
+      "op": "assert // invalid number of bytes for arc4.uint8",
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%42#0"
+      ]
+    },
+    "342": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%41#0",
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%43#0"
+      ]
+    },
+    "343": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%41#0",
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%41#0",
+        "tmp%44#0"
+      ]
+    },
+    "345": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.claimBounty",
+      "op": "callsub claimBounty",
+      "stack_out": []
+    },
+    "348": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "349": {
+      "op": "return",
+      "stack_out": []
+    },
+    "350": {
+      "block": "main_assignClaimer_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "352": {
+      "op": "!",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "353": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "354": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "356": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "357": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "360": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%31#0",
+        "tmp%31#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "tmp%31#0 (copy)"
+      ]
+    },
+    "361": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%31#0",
+        "tmp%31#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "tmp%31#0 (copy)",
+        "0"
+      ]
+    },
+    "362": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%2#0",
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "length%2#0"
+      ]
+    },
+    "363": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%2#0",
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "length%2#0",
+        "2"
+      ]
+    },
+    "364": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%2#0",
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "num_bytes_with_header%2#0"
+      ]
+    },
+    "365": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%31#0",
+        "num_bytes_with_header%2#0",
+        "tmp%31#0 (copy)"
+      ]
+    },
+    "367": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%2#0",
+        "tmp%31#0",
+        "value_len%5#0"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "num_bytes_with_header%2#0",
+        "value_len%5#0"
+      ]
+    },
+    "368": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%5#0",
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0",
+        "size_is_correct%5#0"
+      ]
+    },
+    "369": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "370": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "373": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ]
+    },
+    "376": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "tmp%33#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "tmp%33#0 (copy)"
+      ]
+    },
+    "377": {
+      "op": "len",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "value_len%6#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "value_len%6#0"
+      ]
+    },
+    "378": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%32#0",
+        "tmp%33#0",
+        "value_len%6#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "value_len%6#0",
+        "1"
+      ]
+    },
+    "379": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%6#0",
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0",
+        "size_is_correct%6#0"
+      ]
+    },
+    "380": {
+      "error": "invalid number of bytes for arc4.uint8",
+      "op": "assert // invalid number of bytes for arc4.uint8",
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ]
+    },
+    "381": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%34#0"
+      ]
+    },
+    "382": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%35#0"
+      ]
+    },
+    "384": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assignClaimer",
+      "op": "callsub assignClaimer",
+      "stack_out": []
+    },
+    "387": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "388": {
+      "op": "return",
+      "stack_out": []
+    },
+    "389": {
+      "block": "main_markIssueClosed_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "391": {
+      "op": "!",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "392": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "393": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "395": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "396": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "399": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%22#0",
+        "tmp%22#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "tmp%22#0 (copy)"
+      ]
+    },
+    "400": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%22#0",
+        "tmp%22#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "tmp%22#0 (copy)",
+        "0"
+      ]
+    },
+    "401": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%1#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "length%1#0"
+      ]
+    },
+    "402": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%1#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "length%1#0",
+        "2"
+      ]
+    },
+    "403": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%1#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "num_bytes_with_header%1#0"
+      ]
+    },
+    "404": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%22#0",
+        "num_bytes_with_header%1#0",
+        "tmp%22#0 (copy)"
+      ]
+    },
+    "406": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%1#0",
+        "tmp%22#0",
+        "value_len%3#0"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "num_bytes_with_header%1#0",
+        "value_len%3#0"
+      ]
+    },
+    "407": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%3#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0",
+        "size_is_correct%3#0"
+      ]
+    },
+    "408": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "409": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "412": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%23#0",
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0"
+      ]
+    },
+    "415": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "tmp%24#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "tmp%24#0 (copy)"
+      ]
+    },
+    "416": {
+      "op": "len",
+      "defined_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "value_len%4#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "value_len%4#0"
+      ]
+    },
+    "417": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%23#0",
+        "tmp%24#0",
+        "value_len%4#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "value_len%4#0",
+        "1"
+      ]
+    },
+    "418": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%4#0",
+        "tmp%23#0",
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0",
+        "size_is_correct%4#0"
+      ]
+    },
+    "419": {
+      "error": "invalid number of bytes for arc4.uint8",
+      "op": "assert // invalid number of bytes for arc4.uint8",
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%24#0"
+      ]
+    },
+    "420": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%23#0",
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%25#0"
+      ]
+    },
+    "421": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%23#0",
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "tmp%26#0"
+      ]
+    },
+    "423": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.markIssueClosed",
+      "op": "callsub markIssueClosed",
+      "stack_out": []
+    },
+    "426": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "427": {
+      "op": "return",
+      "stack_out": []
+    },
+    "428": {
+      "block": "main_fundBounty_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "430": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "431": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "432": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "434": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "435": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "438": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%14#0",
+        "tmp%14#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "tmp%14#0 (copy)"
+      ]
+    },
+    "439": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%14#0",
+        "tmp%14#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "tmp%14#0 (copy)",
+        "0"
+      ]
+    },
+    "440": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "length%0#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "length%0#0"
+      ]
+    },
+    "441": {
+      "op": "intc_2 // 2",
+      "defined_out": [
+        "2",
+        "length%0#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "length%0#0",
+        "2"
+      ]
+    },
+    "442": {
+      "op": "+",
+      "defined_out": [
+        "num_bytes_with_header%0#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "num_bytes_with_header%0#0"
+      ]
+    },
+    "443": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%14#0",
+        "num_bytes_with_header%0#0",
+        "tmp%14#0 (copy)"
+      ]
+    },
+    "445": {
+      "op": "len",
+      "defined_out": [
+        "num_bytes_with_header%0#0",
+        "tmp%14#0",
+        "value_len%1#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "num_bytes_with_header%0#0",
+        "value_len%1#0"
+      ]
+    },
+    "446": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%1#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "size_is_correct%1#0"
+      ]
+    },
+    "447": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "448": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "451": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0"
+      ]
+    },
+    "454": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%16#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "tmp%16#0 (copy)"
+      ]
+    },
+    "455": {
+      "op": "len",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "value_len%2#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "value_len%2#0"
+      ]
+    },
+    "456": {
+      "op": "pushint 8 // 8",
+      "defined_out": [
+        "8",
+        "tmp%15#0",
+        "tmp%16#0",
+        "value_len%2#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "value_len%2#0",
+        "8"
+      ]
+    },
+    "458": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%2#0",
+        "tmp%15#0",
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0",
+        "size_is_correct%2#0"
+      ]
+    },
+    "459": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%16#0"
+      ]
+    },
+    "460": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%15#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "tmp%17#0"
+      ]
+    },
+    "461": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.fundBounty",
+      "op": "callsub fundBounty",
+      "stack_out": []
+    },
+    "464": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "465": {
+      "op": "return",
+      "stack_out": []
+    },
+    "466": {
+      "block": "main_updateAdmin_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "468": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "469": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "470": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "472": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "473": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "476": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%7#0",
+        "tmp%7#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "tmp%7#0 (copy)"
+      ]
+    },
+    "477": {
+      "op": "len",
+      "defined_out": [
+        "tmp%7#0",
+        "value_len%0#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "value_len%0#0"
+      ]
+    },
+    "478": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%7#0",
+        "value_len%0#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "value_len%0#0",
+        "1"
+      ]
+    },
+    "479": {
+      "op": "==",
+      "defined_out": [
+        "size_is_correct%0#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "size_is_correct%0#0"
+      ]
+    },
+    "480": {
+      "error": "invalid number of bytes for arc4.uint8",
+      "op": "assert // invalid number of bytes for arc4.uint8",
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "481": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "482": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "484": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.updateAdmin",
+      "op": "callsub updateAdmin",
+      "stack_out": []
+    },
+    "487": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "488": {
+      "op": "return",
+      "stack_out": []
+    },
+    "489": {
+      "block": "main_bare_routing@17",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%80#0"
+      ],
+      "stack_out": [
+        "tmp%80#0"
+      ]
+    },
+    "491": {
+      "op": "bnz main_after_if_else@21",
+      "stack_out": []
+    },
+    "494": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%81#0"
+      ],
+      "stack_out": [
+        "tmp%81#0"
+      ]
+    },
+    "496": {
+      "op": "!",
+      "defined_out": [
+        "tmp%82#0"
+      ],
+      "stack_out": [
+        "tmp%82#0"
+      ]
+    },
+    "497": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "498": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.createApplication",
+      "op": "callsub createApplication"
+    },
+    "501": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "502": {
+      "op": "return",
+      "stack_out": []
+    },
+    "503": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.createApplication",
+      "params": {},
+      "block": "createApplication",
+      "stack_in": [],
+      "op": "bytec 4 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "505": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "507": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "508": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "509": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.updateAdmin",
+      "params": {
+        "newAdmin#0": "bytes"
+      },
+      "block": "updateAdmin",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "512": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assertAdmin",
+      "op": "callsub assertAdmin"
+    },
+    "515": {
+      "op": "bytec 4 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "517": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"admin\"",
+        "newAdmin#0 (copy)"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "newAdmin#0 (copy)"
+      ]
+    },
+    "519": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "520": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "521": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.fundBounty",
+      "params": {
+        "bountyKey#0": "bytes",
+        "paymentTxnIndex#0": "uint64"
+      },
+      "block": "fundBounty",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "524": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "paymentTxnIndex#0 (copy)"
+      ],
+      "stack_out": [
+        "paymentTxnIndex#0 (copy)"
+      ]
+    },
+    "526": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "paymentTxnIndex#0 (copy)",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "paymentTxnIndex#0 (copy)",
+        "tmp%0#1"
+      ]
+    },
+    "528": {
+      "op": "<",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "529": {
+      "error": "funding index invalid",
+      "op": "assert // funding index invalid",
+      "stack_out": []
+    },
+    "530": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "paymentTxnIndex#0 (copy)"
+      ]
+    },
+    "532": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "gtxn_type%0#0"
+      ]
+    },
+    "534": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "535": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "536": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": []
+    },
+    "537": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "paymentTxnIndex#0 (copy)"
+      ]
+    },
+    "539": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "541": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%2#1 (copy)"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%2#1 (copy)"
+      ]
+    },
+    "542": {
+      "error": "amount must be > 0",
+      "op": "assert // amount must be > 0",
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "543": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "tmp%2#1",
+        "paymentTxnIndex#0 (copy)"
+      ]
+    },
+    "545": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%4#0"
+      ]
+    },
+    "547": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%4#0",
+        "tmp%5#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%4#0",
+        "tmp%5#1"
+      ]
+    },
+    "549": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%6#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%6#1"
+      ]
+    },
+    "550": {
+      "error": "payment must target contract",
+      "op": "assert // payment must target contract",
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "551": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "tmp%2#1",
+        "paymentTxnIndex#0 (copy)"
+      ]
+    },
+    "553": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%7#0"
+      ]
+    },
+    "555": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "557": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#1",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%9#0"
+      ]
+    },
+    "558": {
+      "error": "sender mismatch between txns",
+      "op": "assert // sender mismatch between txns",
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "559": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "bountyKey#0 (copy)",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "561": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "record.totalFunded#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalFunded#0",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0"
+      ]
+    },
+    "564": {
+      "op": "uncover 4",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "record.totalFunded#0"
+      ]
+    },
+    "566": {
+      "op": "dig 5",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "record.totalFunded#0",
+        "tmp%2#1 (copy)"
+      ]
+    },
+    "568": {
+      "op": "+",
+      "defined_out": [
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0"
+      ]
+    },
+    "569": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "0"
+      ]
+    },
+    "570": {
+      "op": "bytec_1 // \"total_locked\"",
+      "defined_out": [
+        "\"total_locked\"",
+        "0",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "0",
+        "\"total_locked\""
+      ]
+    },
+    "571": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "572": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "573": {
+      "op": "dig 6",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "maybe_value%0#0",
+        "tmp%2#1 (copy)"
+      ]
+    },
+    "575": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%0#0",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "576": {
+      "op": "bytec_1 // \"total_locked\"",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "materialized_values%0#0",
+        "\"total_locked\""
+      ]
+    },
+    "577": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "\"total_locked\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "578": {
+      "op": "app_global_put",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0"
+      ]
+    },
+    "579": {
+      "op": "bytec_3 // \"b:\"",
+      "defined_out": [
+        "\"b:\"",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "\"b:\""
+      ]
+    },
+    "580": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "582": {
+      "op": "concat",
+      "defined_out": [
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "updatedRecord.totalFunded#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "updatedRecord.totalFunded#0",
+        "tmp%3#0"
+      ]
+    },
+    "583": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "updatedRecord.totalFunded#0"
+      ]
+    },
+    "584": {
+      "op": "itob",
+      "defined_out": [
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "record.totalClaimed#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.totalClaimed#0",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "585": {
+      "op": "uncover 5",
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "record.totalClaimed#0"
+      ]
+    },
+    "587": {
+      "op": "itob",
+      "defined_out": [
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "588": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "record.isClosed#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00"
+      ]
+    },
+    "589": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClosed#0",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "590": {
+      "op": "uncover 7",
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0",
+        "record.isClosed#0"
+      ]
+    },
+    "592": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "record.authorizedClaimer#0",
+        "record.isClaimed#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "593": {
+      "op": "bytec_0 // 0x00",
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00"
+      ]
+    },
+    "594": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#1",
+        "record.isClaimed#0",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "595": {
+      "op": "uncover 7",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00",
+        "0",
+        "record.isClaimed#0"
+      ]
+    },
+    "597": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "598": {
+      "op": "uncover 3",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "600": {
+      "op": "uncover 3",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "602": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "603": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "605": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "606": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "607": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0",
+        "0"
+      ]
+    },
+    "608": {
+      "op": "getbit",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0"
+      ]
+    },
+    "609": {
+      "op": "intc_3 // 129"
+    },
+    "610": {
+      "op": "swap",
+      "defined_out": [
+        "129",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "129",
+        "is_true%0#0"
+      ]
+    },
+    "611": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "record.authorizedClaimer#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "record.authorizedClaimer#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "612": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%3#0",
+        "encoded_tuple_buffer%4#0",
+        "record.authorizedClaimer#0"
+      ]
+    },
+    "614": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0",
+        "tmp%2#1",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%3#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "615": {
+      "op": "box_put",
+      "stack_out": [
+        "tmp%2#1"
+      ]
+    },
+    "616": {
+      "op": "pushbytes \"bounty_funded\"",
+      "defined_out": [
+        "\"bounty_funded\"",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "tmp%2#1",
+        "\"bounty_funded\""
+      ]
+    },
+    "631": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "tmp%2#1",
+        "\"bounty_funded\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "633": {
+      "op": "concat",
+      "stack_out": [
+        "tmp%2#1",
+        "tmp%4#0"
+      ]
+    },
+    "634": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%4#0",
+        "tmp%2#1"
+      ]
+    },
+    "635": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%4#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "tmp%6#0"
+      ]
+    },
+    "636": {
+      "op": "concat",
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "637": {
+      "op": "log",
+      "stack_out": []
+    },
+    "638": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "639": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.markIssueClosed",
+      "params": {
+        "bountyKey#0": "bytes",
+        "claimer#0": "bytes"
+      },
+      "block": "markIssueClosed",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "642": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assertAdmin",
+      "op": "callsub assertAdmin"
+    },
+    "645": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "647": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "650": {
+      "op": "cover 4",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1"
+      ]
+    },
+    "652": {
+      "op": "cover 3",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1"
+      ]
+    },
+    "654": {
+      "op": "pop",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1"
+      ]
+    },
+    "655": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "656": {
+      "op": "dup",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "657": {
+      "error": "bounty not funded",
+      "op": "assert // bounty not funded",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "658": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "claimer#0 (copy)",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "claimer#0 (copy)"
+      ]
+    },
+    "660": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "claimer#0 (copy)",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "claimer#0 (copy)",
+        "tmp%0#2"
+      ]
+    },
+    "662": {
+      "op": "==",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#1"
+      ]
+    },
+    "663": {
+      "op": "bz markIssueClosed_ternary_false@2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "666": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0"
+      ]
+    },
+    "668": {
+      "block": "markIssueClosed_ternary_merge@3",
+      "stack_in": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0"
+      ],
+      "op": "bytec_3 // \"b:\"",
+      "defined_out": [
+        "\"b:\""
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "\"b:\""
+      ]
+    },
+    "669": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "671": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0"
+      ]
+    },
+    "672": {
+      "op": "frame_dig 3",
+      "defined_out": [
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "record.totalFunded#1"
+      ]
+    },
+    "674": {
+      "op": "itob",
+      "defined_out": [
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "675": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "record.totalClaimed#1"
+      ]
+    },
+    "677": {
+      "op": "itob",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "678": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00"
+      ]
+    },
+    "679": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "680": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "0",
+        "0x00",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0",
+        "record.isClaimed#1"
+      ]
+    },
+    "682": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "683": {
+      "op": "cover 2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "685": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "686": {
+      "op": "pushbytes 0x80",
+      "defined_out": [
+        "0x80",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "0x80"
+      ]
+    },
+    "689": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "690": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "691": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0",
+        "0"
+      ]
+    },
+    "692": {
+      "op": "getbit",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0"
+      ]
+    },
+    "693": {
+      "op": "intc_3 // 129"
+    },
+    "694": {
+      "op": "swap",
+      "defined_out": [
+        "129",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_tuple_buffer%3#0",
+        "129",
+        "is_true%0#0"
+      ]
+    },
+    "695": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0",
+        "tmp%1#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "696": {
+      "op": "uncover 2",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "updatedRecord.authorizedClaimer#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "encoded_tuple_buffer%4#0",
+        "updatedRecord.authorizedClaimer#0"
+      ]
+    },
+    "698": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "699": {
+      "op": "box_put",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "700": {
+      "op": "pushbytes \"bounty_closed\"",
+      "defined_out": [
+        "\"bounty_closed\"",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "\"bounty_closed\""
+      ]
+    },
+    "715": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "\"bounty_closed\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "717": {
+      "op": "concat",
+      "defined_out": [
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%2#0"
+      ]
+    },
+    "718": {
+      "op": "log",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "719": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "720": {
+      "block": "markIssueClosed_ternary_false@2",
+      "stack_in": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "op": "frame_dig -1",
+      "defined_out": [
+        "updatedRecord.authorizedClaimer#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "updatedRecord.authorizedClaimer#0"
+      ]
+    },
+    "722": {
+      "op": "b markIssueClosed_ternary_merge@3"
+    },
+    "725": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assignClaimer",
+      "params": {
+        "bountyKey#0": "bytes",
+        "claimer#0": "bytes"
+      },
+      "block": "assignClaimer",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "728": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assertAdmin",
+      "op": "callsub assertAdmin"
+    },
+    "731": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "733": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "736": {
+      "op": "pop",
+      "stack_out": [
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1"
+      ]
+    },
+    "737": {
+      "op": "cover 3",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1"
+      ]
+    },
+    "739": {
+      "op": "cover 2",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1"
+      ]
+    },
+    "741": {
+      "op": "swap",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "742": {
+      "op": "dup",
+      "defined_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ]
+    },
+    "743": {
+      "error": "bounty not funded",
+      "op": "assert // bounty not funded",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "744": {
+      "op": "bytec_3 // \"b:\"",
+      "defined_out": [
+        "\"b:\"",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "\"b:\""
+      ]
+    },
+    "745": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "747": {
+      "op": "concat",
+      "defined_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%0#0"
+      ]
+    },
+    "748": {
+      "op": "swap",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "tmp%0#0",
+        "record.totalFunded#1"
+      ]
+    },
+    "749": {
+      "op": "itob",
+      "defined_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "750": {
+      "op": "uncover 2",
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "record.totalClaimed#1"
+      ]
+    },
+    "752": {
+      "op": "itob",
+      "defined_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "753": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00"
+      ]
+    },
+    "754": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "755": {
+      "op": "uncover 5",
+      "stack_out": [
+        "record.isClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0",
+        "record.isClosed#1"
+      ]
+    },
+    "757": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "record.isClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.isClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "758": {
+      "op": "bytec_0 // 0x00",
+      "stack_out": [
+        "record.isClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00"
+      ]
+    },
+    "759": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "record.isClaimed#1",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "760": {
+      "op": "uncover 6",
+      "stack_out": [
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "0x00",
+        "0",
+        "record.isClaimed#1"
+      ]
+    },
+    "762": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "763": {
+      "op": "uncover 3",
+      "stack_out": [
+        "tmp%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "765": {
+      "op": "uncover 3",
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "767": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_bool%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "768": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%2#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "770": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "771": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "772": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_bool%1#0",
+        "0"
+      ]
+    },
+    "773": {
+      "op": "getbit",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0"
+      ]
+    },
+    "774": {
+      "op": "intc_3 // 129"
+    },
+    "775": {
+      "op": "swap",
+      "defined_out": [
+        "129",
+        "encoded_tuple_buffer%3#0",
+        "is_true%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%3#0",
+        "129",
+        "is_true%0#0"
+      ]
+    },
+    "776": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "777": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "claimer#0 (copy)",
+        "encoded_tuple_buffer%4#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%4#0",
+        "claimer#0 (copy)"
+      ]
+    },
+    "779": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "780": {
+      "op": "box_put",
+      "stack_out": []
+    },
+    "781": {
+      "op": "pushbytes \"claimer_assigned\"",
+      "defined_out": [
+        "\"claimer_assigned\""
+      ],
+      "stack_out": [
+        "\"claimer_assigned\""
+      ]
+    },
+    "799": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "\"claimer_assigned\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "801": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "802": {
+      "op": "log",
+      "stack_out": []
+    },
+    "803": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "804": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.claimBounty",
+      "params": {
+        "bountyKey#0": "bytes",
+        "recipient#0": "bytes"
+      },
+      "block": "claimBounty",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "807": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "809": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "812": {
+      "op": "dup",
+      "stack_out": [
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1",
+        "record.authorizedClaimer#1",
+        "record.authorizedClaimer#1 (copy)"
+      ]
+    },
+    "813": {
+      "op": "cover 5",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "815": {
+      "op": "cover 5",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.authorizedClaimer#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClaimed#1"
+      ]
+    },
+    "817": {
+      "op": "cover 3",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1"
+      ]
+    },
+    "819": {
+      "op": "dup",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1",
+        "record.isClosed#1 (copy)"
+      ]
+    },
+    "820": {
+      "op": "cover 3",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.isClosed#1"
+      ]
+    },
+    "822": {
+      "op": "cover 5",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1"
+      ]
+    },
+    "824": {
+      "op": "cover 4",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "826": {
+      "op": "dup",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "827": {
+      "op": "cover 4",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "829": {
+      "error": "bounty not funded",
+      "op": "assert // bounty not funded",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1",
+        "record.isClosed#1"
+      ]
+    },
+    "830": {
+      "error": "bounty still open",
+      "op": "assert // bounty still open",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "record.isClaimed#1"
+      ]
+    },
+    "831": {
+      "op": "!",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "tmp%0#0"
+      ]
+    },
+    "832": {
+      "error": "bounty already claimed",
+      "op": "assert // bounty already claimed",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "833": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%0#3"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "tmp%0#3"
+      ]
+    },
+    "835": {
+      "op": "==",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#1"
+      ]
+    },
+    "836": {
+      "op": "bnz claimBounty_after_inlined_smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.ensureClaimAuthorization@5",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "839": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "841": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "recipient#0 (copy)",
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.authorizedClaimer#1",
+        "recipient#0 (copy)"
+      ]
+    },
+    "843": {
+      "op": "==",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%1#1"
+      ]
+    },
+    "844": {
+      "error": "recipient not authorized",
+      "op": "assert // recipient not authorized",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "845": {
+      "block": "claimBounty_after_inlined_smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.ensureClaimAuthorization@5",
+      "stack_in": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ],
+      "op": "frame_dig 3",
+      "defined_out": [
+        "record.totalFunded#1"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "847": {
+      "op": "dup",
+      "defined_out": [
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ]
+    },
+    "848": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)",
+        "record.totalClaimed#1"
+      ]
+    },
+    "850": {
+      "op": "dup",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalClaimed#1 (copy)",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1 (copy)",
+        "record.totalClaimed#1 (copy)",
+        "record.totalClaimed#1 (copy)"
+      ]
+    },
+    "851": {
+      "op": "cover 2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1 (copy)",
+        "record.totalClaimed#1 (copy)"
+      ]
+    },
+    "853": {
+      "op": "-",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0"
+      ]
+    },
+    "854": {
+      "op": "dup",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "remaining#0 (copy)"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "remaining#0 (copy)"
+      ]
+    },
+    "855": {
+      "error": "nothing to claim",
+      "op": "assert // nothing to claim",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0"
+      ]
+    },
+    "856": {
+      "op": "itxn_begin"
+    },
+    "857": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "inner_txn_params%0%%param_Sender_idx_0#0",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "inner_txn_params%0%%param_Sender_idx_0#0"
+      ]
+    },
+    "859": {
+      "op": "dig 1",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "inner_txn_params%0%%param_Sender_idx_0#0",
+        "remaining#0 (copy)"
+      ]
+    },
+    "861": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "inner_txn_params%0%%param_Sender_idx_0#0"
+      ]
+    },
+    "863": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "inner_txn_params%0%%param_Sender_idx_0#0",
+        "recipient#0 (copy)",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "inner_txn_params%0%%param_Sender_idx_0#0",
+        "recipient#0 (copy)"
+      ]
+    },
+    "865": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "inner_txn_params%0%%param_Sender_idx_0#0"
+      ]
+    },
+    "867": {
+      "op": "itxn_field Sender",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0"
+      ]
+    },
+    "869": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "1"
+      ]
+    },
+    "870": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0"
+      ]
+    },
+    "872": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0",
+        "0"
+      ]
+    },
+    "873": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "record.totalClaimed#1",
+        "remaining#0"
+      ]
+    },
+    "875": {
+      "op": "itxn_submit"
+    },
+    "876": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "record.totalClaimed#1"
+      ]
+    },
+    "877": {
+      "op": "dig 1",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "record.totalClaimed#1",
+        "remaining#0 (copy)"
+      ]
+    },
+    "879": {
+      "op": "+",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ]
+    },
+    "880": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "0"
+      ]
+    },
+    "881": {
+      "op": "bytec_1 // \"total_locked\"",
+      "defined_out": [
+        "\"total_locked\"",
+        "0",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "0",
+        "\"total_locked\""
+      ]
+    },
+    "882": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "883": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "884": {
+      "op": "dig 2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "maybe_value%0#0",
+        "remaining#0 (copy)"
+      ]
+    },
+    "886": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%0#0",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "887": {
+      "op": "bytec_1 // \"total_locked\"",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "materialized_values%0#0",
+        "\"total_locked\""
+      ]
+    },
+    "888": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "\"total_locked\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "889": {
+      "op": "app_global_put",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ]
+    },
+    "890": {
+      "op": "bytec_3 // \"b:\"",
+      "defined_out": [
+        "\"b:\"",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "\"b:\""
+      ]
+    },
+    "891": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"b:\"",
+        "bountyKey#0 (copy)",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "893": {
+      "op": "concat",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "updatedRecord.totalClaimed#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "tmp%3#0"
+      ]
+    },
+    "894": {
+      "op": "uncover 3",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "tmp%3#0",
+        "record.totalFunded#1"
+      ]
+    },
+    "896": {
+      "op": "itob",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "updatedRecord.totalClaimed#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "updatedRecord.totalClaimed#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "897": {
+      "op": "uncover 2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "updatedRecord.totalClaimed#0"
+      ]
+    },
+    "899": {
+      "op": "itob",
+      "defined_out": [
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "900": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00"
+      ]
+    },
+    "901": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "902": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "0",
+        "0x00",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x00",
+        "0",
+        "record.isClosed#1"
+      ]
+    },
+    "904": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "905": {
+      "op": "cover 2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_bool%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "907": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "908": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%2#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "909": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "910": {
+      "op": "intc_3 // 129",
+      "defined_out": [
+        "129",
+        "encoded_tuple_buffer%3#0",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "129"
+      ]
+    },
+    "911": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%3#0",
+        "129",
+        "1"
+      ]
+    },
+    "912": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "913": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%4#0",
+        "record.authorizedClaimer#1"
+      ]
+    },
+    "915": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0",
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%3#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "916": {
+      "op": "box_put",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ]
+    },
+    "917": {
+      "op": "pushbytes \"bounty_claimed\"",
+      "defined_out": [
+        "\"bounty_claimed\"",
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "\"bounty_claimed\""
+      ]
+    },
+    "933": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "\"bounty_claimed\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "935": {
+      "op": "concat",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "remaining#0",
+        "tmp%4#0"
+      ]
+    },
+    "936": {
+      "op": "swap",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%4#0",
+        "remaining#0"
+      ]
+    },
+    "937": {
+      "op": "itob",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%4#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%4#0",
+        "tmp%5#0"
+      ]
+    },
+    "938": {
+      "op": "concat",
+      "defined_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1",
+        "tmp%6#0"
+      ]
+    },
+    "939": {
+      "op": "log",
+      "stack_out": [
+        "record.authorizedClaimer#1",
+        "record.isClosed#1",
+        "record.totalClaimed#1",
+        "record.totalFunded#1"
+      ]
+    },
+    "940": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "941": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalFunded",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "getTotalFunded",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "944": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "946": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "949": {
+      "op": "popn 4",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "951": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "952": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalClaimed",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "getTotalClaimed",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "955": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "957": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "960": {
+      "op": "popn 3",
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "962": {
+      "op": "bury 1",
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "964": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "965": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClosed",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "isBountyClosed",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "968": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "970": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "973": {
+      "op": "popn 2",
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "975": {
+      "op": "cover 2",
+      "stack_out": [
+        "tmp%2#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "977": {
+      "op": "popn 2",
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "979": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "980": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClaimed",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "isBountyClaimed",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "983": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "985": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "988": {
+      "op": "pop",
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ]
+    },
+    "989": {
+      "op": "cover 3",
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "991": {
+      "op": "popn 3",
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "993": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "994": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getAuthorizedClaimer",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "getAuthorizedClaimer",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "997": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "999": {
+      "callsub": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "op": "callsub readRecord",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "1002": {
+      "op": "cover 4",
+      "stack_out": [
+        "tmp%4#0",
+        "tmp%0#0",
+        "tmp%1#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ]
+    },
+    "1004": {
+      "op": "popn 4",
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "1006": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1007": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord",
+      "params": {
+        "bountyKey#0": "bytes"
+      },
+      "block": "readRecord",
+      "stack_in": [],
+      "op": "proto 1 5"
+    },
+    "1010": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2"
+      ]
+    },
+    "1011": {
+      "op": "pushbytes \"\"",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1"
+      ]
+    },
+    "1013": {
+      "op": "dupn 2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1"
+      ]
+    },
+    "1015": {
+      "op": "bytec_3 // \"b:\"",
+      "defined_out": [
+        "\"b:\""
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "\"b:\""
+      ]
+    },
+    "1016": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "\"b:\"",
+        "bountyKey#0 (copy)"
+      ]
+    },
+    "1018": {
+      "op": "concat",
+      "defined_out": [
+        "box#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0"
+      ]
+    },
+    "1019": {
+      "op": "dup",
+      "defined_out": [
+        "box#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "box#0"
+      ]
+    },
+    "1020": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "box#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "_%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1021": {
+      "op": "bury 1",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1023": {
+      "op": "bz readRecord_ternary_false@2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0"
+      ]
+    },
+    "1026": {
+      "op": "frame_dig 4",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "box#0"
+      ]
+    },
+    "1028": {
+      "op": "box_get",
+      "defined_out": [
+        "box#0",
+        "maybe_exists%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1029": {
+      "error": "Box must have value",
+      "op": "assert // Box must have value",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1030": {
+      "op": "dup",
+      "defined_out": [
+        "box#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "1031": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "0"
+      ]
+    },
+    "1032": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0"
+      ]
+    },
+    "1033": {
+      "op": "dig 1",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "1035": {
+      "op": "pushint 8 // 8",
+      "defined_out": [
+        "8",
+        "box#0",
+        "item0%1#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "maybe_value%0#0 (copy)",
+        "8"
+      ]
+    },
+    "1037": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0"
+      ]
+    },
+    "1038": {
+      "op": "dig 2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "1040": {
+      "op": "pushint 128 // 128",
+      "defined_out": [
+        "128",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0 (copy)",
+        "128"
+      ]
+    },
+    "1043": {
+      "op": "getbit",
+      "defined_out": [
+        "box#0",
+        "is_true%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "is_true%0#0"
+      ]
+    },
+    "1044": {
+      "op": "bytec_0 // 0x00",
+      "defined_out": [
+        "0x00",
+        "box#0",
+        "is_true%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "is_true%0#0",
+        "0x00"
+      ]
+    },
+    "1045": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "is_true%0#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "1046": {
+      "op": "uncover 2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "0x00",
+        "0",
+        "is_true%0#0"
+      ]
+    },
+    "1048": {
+      "op": "setbit",
+      "defined_out": [
+        "box#0",
+        "encoded_bool%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "1049": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "encoded_bool%0#0",
+        "0"
+      ]
+    },
+    "1050": {
+      "op": "getbit",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0"
+      ]
+    },
+    "1051": {
+      "op": "dig 3",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "1053": {
+      "op": "intc_3 // 129",
+      "defined_out": [
+        "129",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0 (copy)",
+        "129"
+      ]
+    },
+    "1054": {
+      "op": "getbit",
+      "defined_out": [
+        "box#0",
+        "is_true%1#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "is_true%1#0"
+      ]
+    },
+    "1055": {
+      "op": "bytec_0 // 0x00",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "is_true%1#0",
+        "0x00"
+      ]
+    },
+    "1056": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "is_true%1#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "1057": {
+      "op": "uncover 2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "0x00",
+        "0",
+        "is_true%1#0"
+      ]
+    },
+    "1059": {
+      "op": "setbit",
+      "defined_out": [
+        "box#0",
+        "encoded_bool%1#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "1060": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "encoded_bool%1#0",
+        "0"
+      ]
+    },
+    "1061": {
+      "op": "getbit",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "item3%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "maybe_value%0#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "item3%0#0"
+      ]
+    },
+    "1062": {
+      "op": "uncover 4",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "item3%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1064": {
+      "error": "Index access is out of bounds",
+      "op": "extract 17 32 // on error: Index access is out of bounds",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "item3%0#0",
+        "ternary_result%0.authorizedClaimer#2"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "item3%0#0",
+        "ternary_result%0.authorizedClaimer#2"
+      ]
+    },
+    "1067": {
+      "op": "frame_bury 0",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "item2%0#0",
+        "ternary_result%0.isClaimed#1"
+      ]
+    },
+    "1069": {
+      "op": "frame_bury 1",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "item0%1#0",
+        "item1%1#0",
+        "ternary_result%0.isClosed#1"
+      ]
+    },
+    "1071": {
+      "op": "frame_bury 2",
+      "defined_out": [
+        "box#0",
+        "item0%1#0",
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "item0%1#0",
+        "ternary_result%0.totalClaimed#1"
+      ]
+    },
+    "1073": {
+      "op": "frame_bury 3",
+      "defined_out": [
+        "box#0",
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1"
+      ]
+    },
+    "1075": {
+      "block": "readRecord_ternary_merge@3",
+      "stack_in": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "op": "frame_dig 3",
+      "defined_out": [
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "ternary_result%0.totalClaimed#1"
+      ]
+    },
+    "1077": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.isClosed#1"
+      ]
+    },
+    "1079": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.isClaimed#1"
+      ]
+    },
+    "1081": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.authorizedClaimer#2"
+      ]
+    },
+    "1083": {
+      "op": "uncover 9"
+    },
+    "1085": {
+      "op": "uncover 9"
+    },
+    "1087": {
+      "op": "uncover 9"
+    },
+    "1089": {
+      "op": "uncover 9"
+    },
+    "1091": {
+      "op": "uncover 9"
+    },
+    "1093": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1094": {
+      "block": "readRecord_ternary_false@2",
+      "stack_in": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0"
+      ],
+      "op": "intc_0 // 0"
+    },
+    "1095": {
+      "op": "global ZeroAddress"
+    },
+    "1097": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1",
+        "ternary_result%0.totalClaimed#1"
+      ]
+    },
+    "1098": {
+      "op": "frame_bury 3",
+      "defined_out": [
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ]
+    },
+    "1100": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1",
+        "ternary_result%0.isClosed#1"
+      ]
+    },
+    "1101": {
+      "op": "frame_bury 2",
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ]
+    },
+    "1103": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "tmp%0#1",
+        "ternary_result%0.isClaimed#1"
+      ]
+    },
+    "1104": {
+      "op": "frame_bury 1",
+      "defined_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1",
+        "ternary_result%0.authorizedClaimer#2"
+      ]
+    },
+    "1106": {
+      "op": "frame_bury 0",
+      "defined_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "ternary_result%0.totalFunded#1"
+      ],
+      "stack_out": [
+        "ternary_result%0.authorizedClaimer#2",
+        "ternary_result%0.isClaimed#1",
+        "ternary_result%0.isClosed#1",
+        "ternary_result%0.totalClaimed#1",
+        "box#0",
+        "ternary_result%0.totalFunded#1"
+      ]
+    },
+    "1108": {
+      "op": "b readRecord_ternary_merge@3"
+    },
+    "1111": {
+      "subroutine": "smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assertAdmin",
+      "params": {},
+      "block": "assertAdmin",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1113": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1114": {
+      "op": "bytec 4 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "1116": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1117": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1118": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1119": {
+      "error": "admin required",
+      "op": "assert // admin required",
+      "stack_out": []
+    },
+    "1120": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

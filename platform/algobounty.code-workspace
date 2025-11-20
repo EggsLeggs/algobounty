@@ -5,17 +5,20 @@
       "name": "ROOT"
     },
     {
-      "path": "./projects/algobounty-contracts"
-    },
-    {
-      "path": "./projects/algobounty-frontend"
-    },
-    {
       "path": "./projects/new-algobounty-backend"
     },
     {
       "path": "./projects/new-algobounty-frontend"
-    }
+    },
+    {
+      "path": "projects/new-algobounty-contract"
+    },
+    // {
+    //   "path": "./projects/algobounty-contracts"
+    // },
+    // {
+    //   "path": "./projects/algobounty-frontend"
+    // },
   ],
   "settings": {
     "files.exclude": {
@@ -78,9 +81,9 @@
         "configurations": [
           {
             "name": "Deploy contracts",
-            "folder": "algobounty-contracts"
+            "folder": "bew-algobounty-contract"
           },
-          { "name": "Run dApp", "folder": "algobounty-frontend" }
+          { "name": "Run dApp", "folder": "new-algobounty-frontend" }
         ],
         "presentation": {
           "hidden": false,

@@ -8,6 +8,7 @@ Backend API server for AlgoBounty, handling GitHub webhooks, OAuth authenticatio
 - **OAuth Authentication**: GitHub OAuth flow with `@octokit/oauth-app`
 - **GitHub API**: REST API calls using `@octokit/rest` and `@octokit/app`
 - **Attestations**: Ed25519 signature-based attestations for linking GitHub accounts to Algorand addresses
+- **Algorand Escrow**: Reads/writes the on-chain `BountyEscrow` contract to keep GitHub issues and funds in sync
 
 ## Tech Stack
 
@@ -44,6 +45,11 @@ Required environment variables:
 - `GITHUB_WEBHOOK_SECRET`: Webhook secret
 - `ATTESTOR_PRIVATE_KEY`: Ed25519 private key for attestations (base64)
 - `MONGODB_URI`: MongoDB connection string
+- `BOUNTY_ESCROW_APP_ID`: Application ID of the deployed `BountyEscrow` contract
+- `BOUNTY_ESCROW_OPERATOR_MNEMONIC`: Mnemonic for the contract operator account (used to close/claim bounties)
+- `BOUNTY_ESCROW_OPERATOR_LABEL` (optional): Defaults to `BOUNTY_ESCROW_OPERATOR`, used by AlgoKit to resolve the env mnemonic
+- `ALGOD_SERVER`, `ALGOD_PORT`, `ALGOD_TOKEN`: Algod RPC endpoint (e.g., `http://localhost:4001`, `4001`, `<algod-token>`)
+- `INDEXER_SERVER`, `INDEXER_TOKEN`: Indexer endpoint/token (optional but enables richer diagnostics)
 
 ### 3. Generate Attestor Keypair
 
@@ -97,6 +103,11 @@ The server will start on `http://localhost:3001` by default.
 - `POST /api/attestations/create` - Create new attestation
 - `POST /api/attestations/verify` - Verify attestation signature
 
+### Bounties
+- `GET /api/bounties/:owner/:repo/:issueNumber` - Return on-chain totals/status for the bounty key
+- `POST /api/bounties/:owner/:repo/:issueNumber/close` - Mark the bounty as closed on Algorand (invoked by webhooks)
+- `POST /api/bounties/:owner/:repo/:issueNumber/claim` - Release the escrow to a recipient address
+
 ## Project Structure
 
 ```
@@ -106,11 +117,15 @@ src/
 │   ├── webhooks.ts        # GitHub webhook routes
 │   ├── auth.ts            # OAuth authentication routes
 │   ├── github.ts          # GitHub API proxy routes
-│   └── attestations.ts    # Attestation management routes
+│   ├── attestations.ts    # Attestation management routes
+│   └── bounties.ts        # Bounty escrow routes
 ├── handlers/
 │   └── webhookHandlers.ts # Webhook event handlers
-└── lib/
-    └── attestation.ts     # Attestation utilities
+├── lib/
+│   ├── algorand.ts        # Shared Algorand client helpers
+│   └── attestation.ts     # Attestation utilities
+└── services/
+    └── bountyService.ts   # Wrapper around the BountyEscrow contract
 ```
 
 ## Environment Variables

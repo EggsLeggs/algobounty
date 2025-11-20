@@ -1,0 +1,1014 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 0 1 2 129
+    bytecblock 0x00 "total_locked" 0x151f7c75 "b:" "admin"
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/bounty_escrow/contract.algo.ts:32
+    // public totalLocked = GlobalState<uint64>({ key: 'total_locked', initialValue: Uint64(0) })
+    bytec_1 // "total_locked"
+    intc_0 // 0
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txn NumAppArgs
+    bz main_bare_routing@17
+    pushbytess 0x82ab1ec4 0x6038823f 0x9bb5b7e7 0x4eff0aba 0x88876a4f 0xd3bc31c2 0x7cb6dd8e 0xe931ca41 0x3dbac521 0xd8b17c6e // method "updateAdmin(account)void", method "fundBounty(string,uint64)void", method "markIssueClosed(string,account)void", method "assignClaimer(string,account)void", method "claimBounty(string,account)void", method "getTotalFunded(string)uint64", method "getTotalClaimed(string)uint64", method "isBountyClosed(string)bool", method "isBountyClaimed(string)bool", method "getAuthorizedClaimer(string)byte[]"
+    txna ApplicationArgs 0
+    match main_updateAdmin_route@5 main_fundBounty_route@6 main_markIssueClosed_route@7 main_assignClaimer_route@8 main_claimBounty_route@9 main_getTotalFunded_route@10 main_getTotalClaimed_route@11 main_isBountyClosed_route@12 main_isBountyClaimed_route@13 main_getAuthorizedClaimer_route@14
+
+main_after_if_else@21:
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    intc_0 // 0
+    return
+
+main_getAuthorizedClaimer_route@14:
+    // smart_contracts/bounty_escrow/contract.algo.ts:134
+    // @abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:134
+    // @abimethod({ readonly: true })
+    callsub getAuthorizedClaimer
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_isBountyClaimed_route@13:
+    // smart_contracts/bounty_escrow/contract.algo.ts:129
+    // @abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:129
+    // @abimethod({ readonly: true })
+    callsub isBountyClaimed
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_isBountyClosed_route@12:
+    // smart_contracts/bounty_escrow/contract.algo.ts:124
+    // @abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:124
+    // @abimethod({ readonly: true })
+    callsub isBountyClosed
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_getTotalClaimed_route@11:
+    // smart_contracts/bounty_escrow/contract.algo.ts:119
+    // @abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:119
+    // @abimethod({ readonly: true })
+    callsub getTotalClaimed
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_getTotalFunded_route@10:
+    // smart_contracts/bounty_escrow/contract.algo.ts:114
+    // @abimethod({ readonly: true })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:114
+    // @abimethod({ readonly: true })
+    callsub getTotalFunded
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_claimBounty_route@9:
+    // smart_contracts/bounty_escrow/contract.algo.ts:86
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 1
+    ==
+    assert // invalid number of bytes for arc4.uint8
+    btoi
+    txnas Accounts
+    // smart_contracts/bounty_escrow/contract.algo.ts:86
+    // @abimethod()
+    callsub claimBounty
+    intc_1 // 1
+    return
+
+main_assignClaimer_route@8:
+    // smart_contracts/bounty_escrow/contract.algo.ts:73
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 1
+    ==
+    assert // invalid number of bytes for arc4.uint8
+    btoi
+    txnas Accounts
+    // smart_contracts/bounty_escrow/contract.algo.ts:73
+    // @abimethod()
+    callsub assignClaimer
+    intc_1 // 1
+    return
+
+main_markIssueClosed_route@7:
+    // smart_contracts/bounty_escrow/contract.algo.ts:59
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 1
+    ==
+    assert // invalid number of bytes for arc4.uint8
+    btoi
+    txnas Accounts
+    // smart_contracts/bounty_escrow/contract.algo.ts:59
+    // @abimethod()
+    callsub markIssueClosed
+    intc_1 // 1
+    return
+
+main_fundBounty_route@6:
+    // smart_contracts/bounty_escrow/contract.algo.ts:45
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    txna ApplicationArgs 2
+    dup
+    len
+    pushint 8 // 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/bounty_escrow/contract.algo.ts:45
+    // @abimethod()
+    callsub fundBounty
+    intc_1 // 1
+    return
+
+main_updateAdmin_route@5:
+    // smart_contracts/bounty_escrow/contract.algo.ts:39
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txna ApplicationArgs 1
+    dup
+    len
+    intc_1 // 1
+    ==
+    assert // invalid number of bytes for arc4.uint8
+    btoi
+    txnas Accounts
+    // smart_contracts/bounty_escrow/contract.algo.ts:39
+    // @abimethod()
+    callsub updateAdmin
+    intc_1 // 1
+    return
+
+main_bare_routing@17:
+    // smart_contracts/bounty_escrow/contract.algo.ts:28
+    // export class BountyEscrow extends Contract {
+    txn OnCompletion
+    bnz main_after_if_else@21
+    // smart_contracts/bounty_escrow/contract.algo.ts:34
+    // @baremethod({ onCreate: 'require' })
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    callsub createApplication
+    intc_1 // 1
+    return
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.createApplication() -> void:
+createApplication:
+    // smart_contracts/bounty_escrow/contract.algo.ts:31
+    // public admin = GlobalState<Account>({ key: 'admin' })
+    bytec 4 // "admin"
+    // smart_contracts/bounty_escrow/contract.algo.ts:36
+    // this.admin.value = Txn.sender
+    txn Sender
+    app_global_put
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.updateAdmin(newAdmin: bytes) -> void:
+updateAdmin:
+    // smart_contracts/bounty_escrow/contract.algo.ts:39-40
+    // @abimethod()
+    // updateAdmin(newAdmin: Account) {
+    proto 1 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:41
+    // this.assertAdmin()
+    callsub assertAdmin
+    // smart_contracts/bounty_escrow/contract.algo.ts:31
+    // public admin = GlobalState<Account>({ key: 'admin' })
+    bytec 4 // "admin"
+    // smart_contracts/bounty_escrow/contract.algo.ts:42
+    // this.admin.value = newAdmin
+    frame_dig -1
+    app_global_put
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.fundBounty(bountyKey: bytes, paymentTxnIndex: uint64) -> void:
+fundBounty:
+    // smart_contracts/bounty_escrow/contract.algo.ts:45-46
+    // @abimethod()
+    // fundBounty(bountyKey: string, paymentTxnIndex: uint64) {
+    proto 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:140
+    // assert(paymentTxnIndex < Txn.groupIndex, 'funding index invalid')
+    frame_dig -1
+    txn GroupIndex
+    <
+    assert // funding index invalid
+    // smart_contracts/bounty_escrow/contract.algo.ts:141
+    // const paymentTxn = gtxn.PaymentTxn(paymentTxnIndex)
+    frame_dig -1
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // smart_contracts/bounty_escrow/contract.algo.ts:142
+    // assert(paymentTxn.amount > Uint64(0), 'amount must be > 0')
+    frame_dig -1
+    gtxns Amount
+    dup
+    assert // amount must be > 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:144
+    // paymentTxn.receiver.bytes.equals(Global.currentApplicationAddress.bytes),
+    frame_dig -1
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    // smart_contracts/bounty_escrow/contract.algo.ts:143-146
+    // assert(
+    //   paymentTxn.receiver.bytes.equals(Global.currentApplicationAddress.bytes),
+    //   'payment must target contract',
+    // )
+    assert // payment must target contract
+    // smart_contracts/bounty_escrow/contract.algo.ts:147
+    // assert(paymentTxn.sender.bytes.equals(Txn.sender.bytes), 'sender mismatch between txns')
+    frame_dig -1
+    gtxns Sender
+    txn Sender
+    ==
+    assert // sender mismatch between txns
+    // smart_contracts/bounty_escrow/contract.algo.ts:48
+    // const record = this.readRecord(bountyKey)
+    frame_dig -2
+    callsub readRecord
+    // smart_contracts/bounty_escrow/contract.algo.ts:51
+    // totalFunded: Uint64(record.totalFunded + payment.amount),
+    uncover 4
+    dig 5
+    +
+    // smart_contracts/bounty_escrow/contract.algo.ts:32
+    // public totalLocked = GlobalState<uint64>({ key: 'total_locked', initialValue: Uint64(0) })
+    intc_0 // 0
+    bytec_1 // "total_locked"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/bounty_escrow/contract.algo.ts:54
+    // this.totalLocked.value = Uint64(this.totalLocked.value + payment.amount)
+    dig 6
+    +
+    // smart_contracts/bounty_escrow/contract.algo.ts:32
+    // public totalLocked = GlobalState<uint64>({ key: 'total_locked', initialValue: Uint64(0) })
+    bytec_1 // "total_locked"
+    // smart_contracts/bounty_escrow/contract.algo.ts:54
+    // this.totalLocked.value = Uint64(this.totalLocked.value + payment.amount)
+    swap
+    app_global_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    bytec_3 // "b:"
+    frame_dig -2
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:49
+    // const updatedRecord: BountyRecord = {
+    swap
+    itob
+    uncover 5
+    itob
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 7
+    setbit
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 7
+    setbit
+    // smart_contracts/bounty_escrow/contract.algo.ts:55
+    // this.bountyPots(bountyKey).value = updatedRecord
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    intc_0 // 0
+    getbit
+    intc_3 // 129
+    swap
+    setbit
+    uncover 2
+    concat
+    box_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:56
+    // log('bounty_funded', Bytes(bountyKey), payment.amount)
+    pushbytes "bounty_funded"
+    frame_dig -2
+    concat
+    swap
+    itob
+    concat
+    log
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.markIssueClosed(bountyKey: bytes, claimer: bytes) -> void:
+markIssueClosed:
+    // smart_contracts/bounty_escrow/contract.algo.ts:59-60
+    // @abimethod()
+    // markIssueClosed(bountyKey: string, claimer: Account) {
+    proto 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:61
+    // this.assertAdmin()
+    callsub assertAdmin
+    // smart_contracts/bounty_escrow/contract.algo.ts:158
+    // const record = this.readRecord(bountyKey)
+    frame_dig -2
+    callsub readRecord
+    cover 4
+    cover 3
+    pop
+    swap
+    dup
+    // smart_contracts/bounty_escrow/contract.algo.ts:159
+    // assert(record.totalFunded > Uint64(0), 'bounty not funded')
+    assert // bounty not funded
+    // smart_contracts/bounty_escrow/contract.algo.ts:191
+    // return account.bytes.equals(this.zeroAccount().bytes)
+    frame_dig -1
+    // smart_contracts/bounty_escrow/contract.algo.ts:195
+    // return Account()
+    global ZeroAddress
+    // smart_contracts/bounty_escrow/contract.algo.ts:191
+    // return account.bytes.equals(this.zeroAccount().bytes)
+    ==
+    // smart_contracts/bounty_escrow/contract.algo.ts:66
+    // authorizedClaimer: this.isZeroAccount(claimer) ? record.authorizedClaimer : claimer,
+    bz markIssueClosed_ternary_false@2
+    frame_dig 0
+
+markIssueClosed_ternary_merge@3:
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    bytec_3 // "b:"
+    frame_dig -2
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:63
+    // const updatedRecord: BountyRecord = {
+    frame_dig 3
+    itob
+    frame_dig 2
+    itob
+    bytec_0 // 0x00
+    intc_0 // 0
+    frame_dig 1
+    setbit
+    // smart_contracts/bounty_escrow/contract.algo.ts:69
+    // this.bountyPots(bountyKey).value = updatedRecord
+    cover 2
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:63
+    // const updatedRecord: BountyRecord = {
+    pushbytes 0x80
+    // smart_contracts/bounty_escrow/contract.algo.ts:69
+    // this.bountyPots(bountyKey).value = updatedRecord
+    concat
+    swap
+    intc_0 // 0
+    getbit
+    intc_3 // 129
+    swap
+    setbit
+    uncover 2
+    concat
+    box_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:70
+    // log('bounty_closed', Bytes(bountyKey))
+    pushbytes "bounty_closed"
+    frame_dig -2
+    concat
+    log
+    retsub
+
+markIssueClosed_ternary_false@2:
+    frame_dig -1
+    b markIssueClosed_ternary_merge@3
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assignClaimer(bountyKey: bytes, claimer: bytes) -> void:
+assignClaimer:
+    // smart_contracts/bounty_escrow/contract.algo.ts:73-74
+    // @abimethod()
+    // assignClaimer(bountyKey: string, claimer: Account) {
+    proto 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:75
+    // this.assertAdmin()
+    callsub assertAdmin
+    // smart_contracts/bounty_escrow/contract.algo.ts:158
+    // const record = this.readRecord(bountyKey)
+    frame_dig -2
+    callsub readRecord
+    pop
+    cover 3
+    cover 2
+    swap
+    // smart_contracts/bounty_escrow/contract.algo.ts:159
+    // assert(record.totalFunded > Uint64(0), 'bounty not funded')
+    dup
+    assert // bounty not funded
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    bytec_3 // "b:"
+    frame_dig -2
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:77
+    // const updatedRecord: BountyRecord = {
+    swap
+    itob
+    uncover 2
+    itob
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 5
+    setbit
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 6
+    setbit
+    // smart_contracts/bounty_escrow/contract.algo.ts:82
+    // this.bountyPots(bountyKey).value = updatedRecord
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    intc_0 // 0
+    getbit
+    intc_3 // 129
+    swap
+    setbit
+    frame_dig -1
+    concat
+    box_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:83
+    // log('claimer_assigned', Bytes(bountyKey))
+    pushbytes "claimer_assigned"
+    frame_dig -2
+    concat
+    log
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.claimBounty(bountyKey: bytes, recipient: bytes) -> void:
+claimBounty:
+    // smart_contracts/bounty_escrow/contract.algo.ts:86-87
+    // @abimethod()
+    // claimBounty(bountyKey: string, recipient: Account) {
+    proto 2 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:158
+    // const record = this.readRecord(bountyKey)
+    frame_dig -2
+    callsub readRecord
+    dup
+    cover 5
+    cover 5
+    cover 3
+    dup
+    cover 3
+    cover 5
+    cover 4
+    dup
+    cover 4
+    // smart_contracts/bounty_escrow/contract.algo.ts:159
+    // assert(record.totalFunded > Uint64(0), 'bounty not funded')
+    assert // bounty not funded
+    // smart_contracts/bounty_escrow/contract.algo.ts:90
+    // assert(record.isClosed, 'bounty still open')
+    assert // bounty still open
+    // smart_contracts/bounty_escrow/contract.algo.ts:91
+    // assert(!record.isClaimed, 'bounty already claimed')
+    !
+    assert // bounty already claimed
+    // smart_contracts/bounty_escrow/contract.algo.ts:195
+    // return Account()
+    global ZeroAddress
+    // smart_contracts/bounty_escrow/contract.algo.ts:191
+    // return account.bytes.equals(this.zeroAccount().bytes)
+    ==
+    // smart_contracts/bounty_escrow/contract.algo.ts:165
+    // if (hasAssignedClaimer) {
+    bnz claimBounty_after_inlined_smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.ensureClaimAuthorization@5
+    // smart_contracts/bounty_escrow/contract.algo.ts:167
+    // record.authorizedClaimer.bytes.equals(recipient.bytes),
+    frame_dig 0
+    frame_dig -1
+    ==
+    // smart_contracts/bounty_escrow/contract.algo.ts:166-169
+    // assert(
+    //   record.authorizedClaimer.bytes.equals(recipient.bytes),
+    //   'recipient not authorized',
+    // )
+    assert // recipient not authorized
+
+claimBounty_after_inlined_smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.ensureClaimAuthorization@5:
+    // smart_contracts/bounty_escrow/contract.algo.ts:94
+    // const remaining = Uint64(record.totalFunded - record.totalClaimed)
+    frame_dig 3
+    dup
+    frame_dig 2
+    dup
+    cover 2
+    -
+    // smart_contracts/bounty_escrow/contract.algo.ts:95
+    // assert(remaining > Uint64(0), 'nothing to claim')
+    dup
+    assert // nothing to claim
+    // smart_contracts/bounty_escrow/contract.algo.ts:97-101
+    // itxn.payment({
+    //   sender: Global.currentApplicationAddress,
+    //   receiver: recipient,
+    //   amount: remaining,
+    // }).submit()
+    itxn_begin
+    // smart_contracts/bounty_escrow/contract.algo.ts:98
+    // sender: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    dig 1
+    itxn_field Amount
+    frame_dig -1
+    itxn_field Receiver
+    itxn_field Sender
+    // smart_contracts/bounty_escrow/contract.algo.ts:97-101
+    // itxn.payment({
+    //   sender: Global.currentApplicationAddress,
+    //   receiver: recipient,
+    //   amount: remaining,
+    // }).submit()
+    intc_1 // 1
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    itxn_submit
+    // smart_contracts/bounty_escrow/contract.algo.ts:105
+    // totalClaimed: Uint64(record.totalClaimed + remaining),
+    swap
+    dig 1
+    +
+    // smart_contracts/bounty_escrow/contract.algo.ts:32
+    // public totalLocked = GlobalState<uint64>({ key: 'total_locked', initialValue: Uint64(0) })
+    intc_0 // 0
+    bytec_1 // "total_locked"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/bounty_escrow/contract.algo.ts:109
+    // this.totalLocked.value = Uint64(this.totalLocked.value - remaining)
+    dig 2
+    -
+    // smart_contracts/bounty_escrow/contract.algo.ts:32
+    // public totalLocked = GlobalState<uint64>({ key: 'total_locked', initialValue: Uint64(0) })
+    bytec_1 // "total_locked"
+    // smart_contracts/bounty_escrow/contract.algo.ts:109
+    // this.totalLocked.value = Uint64(this.totalLocked.value - remaining)
+    swap
+    app_global_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    bytec_3 // "b:"
+    frame_dig -2
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:103
+    // const updatedRecord: BountyRecord = {
+    uncover 3
+    itob
+    uncover 2
+    itob
+    bytec_0 // 0x00
+    intc_0 // 0
+    frame_dig 1
+    setbit
+    // smart_contracts/bounty_escrow/contract.algo.ts:110
+    // this.bountyPots(bountyKey).value = updatedRecord
+    cover 2
+    concat
+    swap
+    concat
+    intc_3 // 129
+    intc_1 // 1
+    setbit
+    frame_dig 0
+    concat
+    box_put
+    // smart_contracts/bounty_escrow/contract.algo.ts:111
+    // log('bounty_claimed', Bytes(bountyKey), remaining)
+    pushbytes "bounty_claimed"
+    frame_dig -2
+    concat
+    swap
+    itob
+    concat
+    log
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalFunded(bountyKey: bytes) -> uint64:
+getTotalFunded:
+    // smart_contracts/bounty_escrow/contract.algo.ts:114-115
+    // @abimethod({ readonly: true })
+    // getTotalFunded(bountyKey: string): uint64 {
+    proto 1 1
+    // smart_contracts/bounty_escrow/contract.algo.ts:116
+    // return this.readRecord(bountyKey).totalFunded
+    frame_dig -1
+    callsub readRecord
+    popn 4
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getTotalClaimed(bountyKey: bytes) -> uint64:
+getTotalClaimed:
+    // smart_contracts/bounty_escrow/contract.algo.ts:119-120
+    // @abimethod({ readonly: true })
+    // getTotalClaimed(bountyKey: string): uint64 {
+    proto 1 1
+    // smart_contracts/bounty_escrow/contract.algo.ts:121
+    // return this.readRecord(bountyKey).totalClaimed
+    frame_dig -1
+    callsub readRecord
+    popn 3
+    bury 1
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClosed(bountyKey: bytes) -> uint64:
+isBountyClosed:
+    // smart_contracts/bounty_escrow/contract.algo.ts:124-125
+    // @abimethod({ readonly: true })
+    // isBountyClosed(bountyKey: string): boolean {
+    proto 1 1
+    // smart_contracts/bounty_escrow/contract.algo.ts:126
+    // return this.readRecord(bountyKey).isClosed
+    frame_dig -1
+    callsub readRecord
+    popn 2
+    cover 2
+    popn 2
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.isBountyClaimed(bountyKey: bytes) -> uint64:
+isBountyClaimed:
+    // smart_contracts/bounty_escrow/contract.algo.ts:129-130
+    // @abimethod({ readonly: true })
+    // isBountyClaimed(bountyKey: string): boolean {
+    proto 1 1
+    // smart_contracts/bounty_escrow/contract.algo.ts:131
+    // return this.readRecord(bountyKey).isClaimed
+    frame_dig -1
+    callsub readRecord
+    pop
+    cover 3
+    popn 3
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.getAuthorizedClaimer(bountyKey: bytes) -> bytes:
+getAuthorizedClaimer:
+    // smart_contracts/bounty_escrow/contract.algo.ts:134-135
+    // @abimethod({ readonly: true })
+    // getAuthorizedClaimer(bountyKey: string): bytes {
+    proto 1 1
+    // smart_contracts/bounty_escrow/contract.algo.ts:136
+    // return this.readRecord(bountyKey).authorizedClaimer.bytes
+    frame_dig -1
+    callsub readRecord
+    cover 4
+    popn 4
+    retsub
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.readRecord(bountyKey: bytes) -> uint64, uint64, uint64, uint64, bytes:
+readRecord:
+    // smart_contracts/bounty_escrow/contract.algo.ts:152
+    // private readRecord(bountyKey: string): BountyRecord {
+    proto 1 5
+    intc_0 // 0
+    pushbytes ""
+    dupn 2
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    bytec_3 // "b:"
+    // smart_contracts/bounty_escrow/contract.algo.ts:153
+    // const box = this.bountyPots(bountyKey)
+    frame_dig -1
+    // smart_contracts/bounty_escrow/contract.algo.ts:29
+    // private readonly bountyPots = BoxMap<string, BountyRecord>({ keyPrefix: 'b:' })
+    concat
+    // smart_contracts/bounty_escrow/contract.algo.ts:153
+    // const box = this.bountyPots(bountyKey)
+    dup
+    // smart_contracts/bounty_escrow/contract.algo.ts:154
+    // return box.exists ? box.value : this.emptyRecord()
+    box_len
+    bury 1
+    bz readRecord_ternary_false@2
+    frame_dig 4
+    box_get
+    assert // Box must have value
+    dup
+    intc_0 // 0
+    extract_uint64
+    dig 1
+    pushint 8 // 8
+    extract_uint64
+    dig 2
+    pushint 128 // 128
+    getbit
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    intc_0 // 0
+    getbit
+    dig 3
+    intc_3 // 129
+    getbit
+    bytec_0 // 0x00
+    intc_0 // 0
+    uncover 2
+    setbit
+    intc_0 // 0
+    getbit
+    uncover 4
+    extract 17 32 // on error: Index access is out of bounds
+    frame_bury 0
+    frame_bury 1
+    frame_bury 2
+    frame_bury 3
+
+readRecord_ternary_merge@3:
+    // smart_contracts/bounty_escrow/contract.algo.ts:154
+    // return box.exists ? box.value : this.emptyRecord()
+    frame_dig 3
+    frame_dig 2
+    frame_dig 1
+    frame_dig 0
+    uncover 9
+    uncover 9
+    uncover 9
+    uncover 9
+    uncover 9
+    retsub
+
+readRecord_ternary_false@2:
+    // smart_contracts/bounty_escrow/contract.algo.ts:178
+    // totalFunded: Uint64(0),
+    intc_0 // 0
+    // smart_contracts/bounty_escrow/contract.algo.ts:195
+    // return Account()
+    global ZeroAddress
+    // smart_contracts/bounty_escrow/contract.algo.ts:179
+    // totalClaimed: Uint64(0),
+    intc_0 // 0
+    frame_bury 3
+    // smart_contracts/bounty_escrow/contract.algo.ts:180
+    // isClosed: false,
+    intc_0 // 0
+    frame_bury 2
+    // smart_contracts/bounty_escrow/contract.algo.ts:181
+    // isClaimed: false,
+    intc_0 // 0
+    frame_bury 1
+    frame_bury 0
+    b readRecord_ternary_merge@3
+
+
+// smart_contracts/bounty_escrow/contract.algo.ts::BountyEscrow.assertAdmin() -> void:
+assertAdmin:
+    // smart_contracts/bounty_escrow/contract.algo.ts:187
+    // assert(Txn.sender.bytes.equals(this.admin.value.bytes), 'admin required')
+    txn Sender
+    // smart_contracts/bounty_escrow/contract.algo.ts:31
+    // public admin = GlobalState<Account>({ key: 'admin' })
+    intc_0 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/bounty_escrow/contract.algo.ts:187
+    // assert(Txn.sender.bytes.equals(this.admin.value.bytes), 'admin required')
+    ==
+    assert // admin required
+    retsub

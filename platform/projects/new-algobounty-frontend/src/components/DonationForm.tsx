@@ -1,19 +1,20 @@
 import { useState } from 'react'
-import { Wallet, Copy, Check } from 'lucide-react'
+import { Wallet, Copy, Check, Loader2 } from 'lucide-react'
 import { useWallet } from '@txnlab/use-wallet-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { useSnackbar } from 'notistack'
 import { useWalletModal } from '@/context/WalletModalContext'
 
-type Currency = 'ALGO' | 'USDC'
+export type Currency = 'ALGO' | 'USDC'
 
 interface DonationFormProps {
   totalFunded: number
-  onDonate?: (amount: number, currency: Currency) => void
+  onDonate?: (amount: number, currency: Currency) => Promise<void> | void
+  isFunding?: boolean
 }
 
-const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
+const DonationForm = ({ totalFunded, onDonate, isFunding = false }: DonationFormProps) => {
   const [amount, setAmount] = useState('')
   const [currency, setCurrency] = useState<Currency>('ALGO')
   const [copied, setCopied] = useState(false)
@@ -37,7 +38,7 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
     }
   }
 
-  const handleDonate = () => {
+  const handleDonate = async () => {
     if (!activeAddress) {
       openModal()
       enqueueSnackbar('Please connect your wallet first', { variant: 'warning' })
@@ -47,10 +48,15 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
       enqueueSnackbar('Please enter a valid amount', { variant: 'warning' })
       return
     }
-    onDonate?.(numericAmount, currency)
+    try {
+      await onDonate?.(numericAmount, currency)
+      setAmount('')
+    } catch {
+      // Parent handles errors/toasts; keep input for user to retry.
+    }
   }
 
-  const isDonateDisabled = !!activeAddress && numericAmount <= 0
+  const isDonateDisabled = (!!activeAddress && numericAmount <= 0) || isFunding
 
   return (
     <div className="space-y-6">
@@ -154,8 +160,8 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
           )}
           disabled={isDonateDisabled}
         >
-          <Wallet className="h-5 w-5" />
-          {activeAddress ? 'Donate' : 'Connect Wallet to Donate'}
+          {isFunding ? <Loader2 className="h-5 w-5 animate-spin" /> : <Wallet className="h-5 w-5" />}
+          {activeAddress ? (isFunding ? 'Processing...' : 'Donate') : 'Connect Wallet to Donate'}
         </Button>
       </div>
     </div>

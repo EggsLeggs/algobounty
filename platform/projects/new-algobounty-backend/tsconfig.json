@@ -5,6 +5,7 @@
     "lib": ["ES2022"],
     "moduleResolution": "node",
     "rootDir": "./src",
+    "rootDirs": ["./src", "../new-algobounty-contract/smart_contracts/artifacts"],
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
@@ -15,7 +16,11 @@
     "declarationMap": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@contracts/*": ["../new-algobounty-contract/smart_contracts/artifacts/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

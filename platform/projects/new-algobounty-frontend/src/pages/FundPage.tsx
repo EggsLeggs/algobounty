@@ -1,8 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Loader2, AlertCircle, Github } from 'lucide-react'
+import { Loader2, AlertCircle, Github, ShieldCheck, Lock } from 'lucide-react'
 import IssueDisplay from '@/components/IssueDisplay'
-import DonationForm from '@/components/DonationForm'
+import DonationForm, { type Currency } from '@/components/DonationForm'
+import { useWallet } from '@txnlab/use-wallet-react'
+import { useSnackbar } from 'notistack'
+import { useWalletModal } from '@/context/WalletModalContext'
+import { Button } from '@/components/ui/button'
+import {
+  buildBountyKey,
+  claimBountyOnChain,
+  fundBountyOnChain,
+  microAlgosToAlgos,
+} from '@/contracts/BountyEscrow'
 
 interface GitHubIssue {
   title: string
@@ -28,8 +38,19 @@ interface Repository {
   html_url: string
 }
 
+interface BountyState {
+  key: string
+  totalFundedMicroAlgos: string
+  totalClaimedMicroAlgos: string
+  isClosed: boolean
+  isClaimed: boolean
+  authorizedClaimer: string | null
+}
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+
 const FundPage = () => {
-  const { owner, repoName, repoId, issueNumber } = useParams<{
+  const { owner, repoName, repoId: _repoId, issueNumber } = useParams<{
     owner: string
     repoName: string
     repoId: string
@@ -41,7 +62,42 @@ const FundPage = () => {
   const [repository, setRepository] = useState<Repository | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [totalFunded] = useState(0)
+  const [bountyState, setBountyState] = useState<BountyState | null>(null)
+  const [bountyLoading, setBountyLoading] = useState(true)
+  const [funding, setFunding] = useState(false)
+  const [claiming, setClaiming] = useState(false)
+  const { activeAddress, signTransactions } = useWallet()
+  const { enqueueSnackbar } = useSnackbar()
+  const { openModal } = useWalletModal()
+
+  const bountyKey = useMemo(() => {
+    if (!owner || !repoName || !issueNumber) {
+      return ''
+    }
+    return buildBountyKey(owner, repoName, issueNumber)
+  }, [owner, repoName, issueNumber])
+
+  const fetchBountyState = useCallback(async () => {
+    if (!owner || !repoName || !issueNumber) {
+      return
+    }
+    setBountyLoading(true)
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/api/bounties/${encodeURIComponent(owner)}/${encodeURIComponent(repoName)}/${encodeURIComponent(issueNumber)}`,
+      )
+      if (!response.ok) {
+        throw new Error('Failed to load on-chain bounty state')
+      }
+      const data: BountyState = await response.json()
+      setBountyState(data)
+    } catch (err) {
+      console.error('Error fetching bounty state:', err)
+      setBountyState(null)
+    } finally {
+      setBountyLoading(false)
+    }
+  }, [owner, repoName, issueNumber])
 
   useEffect(() => {
     const fetchIssueData = async () => {
@@ -92,16 +148,6 @@ const FundPage = () => {
           full_name: `${owner}/${repoName}`,
           html_url: `https://github.com/${owner}/${repoName}`,
         })
-
-        // TODO: Fetch total funded from backend API
-        // For now, using placeholder
-        // const fundedResponse = await fetch(
-        //   `${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/bounties?repoId=${repoId}&issueNumber=${issueNumber}`
-        // )
-        // if (fundedResponse.ok) {
-        //   const fundedData = await fundedResponse.json()
-        //   setTotalFunded(fundedData.totalFunded || 0)
-        // }
       } catch (err) {
         console.error('Error fetching issue:', err)
         setError('Failed to fetch issue data. Please try again.')
@@ -111,12 +157,77 @@ const FundPage = () => {
     }
 
     fetchIssueData()
-  }, [owner, repoName, repoId, issueNumber])
+  }, [owner, repoName, issueNumber])
 
-  const handleDonate = (amount: number, currency: 'ALGO' | 'USDC') => {
-    // TODO: Implement donation logic
-    console.log('Donate:', amount, currency)
-    // This will connect to smart contract or backend API
+  useEffect(() => {
+    void fetchBountyState()
+  }, [fetchBountyState])
+
+  const handleDonate = async (amount: number, currency: Currency) => {
+    if (currency !== 'ALGO') {
+      enqueueSnackbar('Only ALGO donations are supported right now', { variant: 'warning' })
+      throw new Error('Unsupported currency')
+    }
+    if (!bountyKey) {
+      enqueueSnackbar('Missing bounty identifier', { variant: 'error' })
+      throw new Error('Invalid bounty key')
+    }
+    if (!activeAddress || !signTransactions) {
+      openModal()
+      enqueueSnackbar('Connect your wallet to donate', { variant: 'warning' })
+      throw new Error('Wallet not connected')
+    }
+
+    setFunding(true)
+    try {
+      await fundBountyOnChain({
+        bountyKey,
+        amountAlgos: amount,
+        sender: activeAddress,
+        signTransactions,
+      })
+      enqueueSnackbar('Donation submitted on Algorand 🎉', { variant: 'success' })
+      await fetchBountyState()
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to fund this bounty'
+      enqueueSnackbar(message, { variant: 'error' })
+      throw err
+    } finally {
+      setFunding(false)
+    }
+  }
+
+  const handleClaim = async () => {
+    if (!bountyKey) {
+      enqueueSnackbar('Missing bounty identifier', { variant: 'error' })
+      return
+    }
+    if (!activeAddress || !signTransactions) {
+      openModal()
+      enqueueSnackbar('Connect your wallet to claim', { variant: 'warning' })
+      return
+    }
+    if (!bountyState?.isClosed || bountyState.isClaimed) {
+      enqueueSnackbar('This bounty is not claimable yet', { variant: 'info' })
+      return
+    }
+
+    setClaiming(true)
+    try {
+      await claimBountyOnChain({
+        bountyKey,
+        sender: activeAddress,
+        recipient: activeAddress,
+        signTransactions,
+      })
+      enqueueSnackbar('Bounty claimed successfully 🎉', { variant: 'success' })
+      await fetchBountyState()
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to claim this bounty'
+      enqueueSnackbar(message, { variant: 'error' })
+    } finally {
+      setClaiming(false)
+    }
   }
 
   const handleGitHubIntegration = () => {
@@ -167,6 +278,11 @@ const FundPage = () => {
     return null
   }
 
+  const totalFunded = microAlgosToAlgos(bountyState?.totalFundedMicroAlgos ?? '0')
+  const totalClaimed = microAlgosToAlgos(bountyState?.totalClaimedMicroAlgos ?? '0')
+  const isClaimable = Boolean(bountyState?.isClosed && !bountyState?.isClaimed)
+  const authorizedClaimer = bountyState?.authorizedClaimer
+
   return (
     <div className="min-h-screen pt-28 pb-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -178,7 +294,68 @@ const FundPage = () => {
 
           {/* Right Column - Donation Form */}
           <div className="lg:col-span-1 space-y-6">
-            <DonationForm totalFunded={totalFunded} onDonate={handleDonate} />
+            <DonationForm totalFunded={totalFunded} onDonate={handleDonate} isFunding={funding} />
+
+            <div className="bg-background/50 backdrop-blur-sm rounded-3xl p-6 border-2 border-foreground/20 space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-foreground/60">Bounty Status</p>
+                  <p className="text-2xl font-bold text-foreground">
+                    {bountyLoading ? (
+                      <span className="flex items-center gap-2 text-sm font-medium text-foreground/70">
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Syncing…
+                      </span>
+                    ) : bountyState?.isClaimed ? (
+                      'Claimed'
+                    ) : bountyState?.isClosed ? (
+                      'Closed'
+                    ) : (
+                      'Open'
+                    )}
+                  </p>
+                </div>
+                {bountyState?.isClaimed ? (
+                  <ShieldCheck className="h-10 w-10 text-emerald-500" />
+                ) : bountyState?.isClosed ? (
+                  <Lock className="h-10 w-10 text-amber-500" />
+                ) : (
+                  <Github className="h-10 w-10 text-primary" />
+                )}
+              </div>
+
+              <div className="space-y-1 text-sm font-mono tabular-nums">
+                <p className="flex justify-between text-foreground/70">
+                  <span>Total Funded</span>
+                  <span>{totalFunded.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
+                </p>
+                <p className="flex justify-between text-foreground/70">
+                  <span>Total Claimed</span>
+                  <span>{totalClaimed.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
+                </p>
+              </div>
+
+              {authorizedClaimer && (
+                <div className="text-xs text-foreground/60 break-all">
+                  Authorized claimer: <span className="font-mono">{authorizedClaimer}</span>
+                </div>
+              )}
+
+              <Button
+                className="w-full gap-2"
+                onClick={handleClaim}
+                disabled={!isClaimable || claiming || bountyLoading}
+              >
+                {claiming ? <Loader2 className="h-4 w-4 animate-spin" /> : <ShieldCheck className="h-4 w-4" />}
+                {isClaimable ? (claiming ? 'Claiming...' : 'Claim Bounty') : 'Waiting for closure'}
+              </Button>
+
+              {!bountyState?.isClosed && (
+                <p className="text-xs text-foreground/60">
+                  Claims become available automatically once GitHub marks the issue as closed.
+                </p>
+              )}
+            </div>
 
             {/* Enable AlgoBounty Card */}
             <div className="bg-background/30 backdrop-blur-sm rounded-2xl p-5 border border-foreground/10 hover:border-foreground/20 transition-colors">

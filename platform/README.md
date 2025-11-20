@@ -56,6 +56,7 @@ npm run deploy:contracts
 npm run deploy:contracts:issue-escrow   # Deploy IssueEscrow contract
 npm run deploy:contracts:github-link   # Deploy GitHubLink contract
 npm run deploy:contracts:hello-world    # Deploy HelloWorld contract
+npm run deploy:new-algobounty-contract  # Deploy the new TypeScript escrow contract
 ```
 
 ### 5. Start the Frontend
@@ -112,6 +113,7 @@ The current setup is only configured for LocalNet development. Testnet and Mainn
 - `npm run deps:needed` - Install all dependencies
 - `npm run deps:frontend:needed` - Install frontend dependencies
 - `npm run deps:contracts:needed` - Install contract dependencies
+- `cd projects/new-algobounty-contract && npm install` - Install the new TypeScript contract workspace
 
 **LocalNet:**
 

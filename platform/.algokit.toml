@@ -6,4 +6,8 @@ type = 'workspace'
 projects_root_path = 'projects'
 
 [project.run]
-build = ['algobounty-contracts', 'algobounty-frontend']
+build = [
+  'new-algobounty-contract',
+  'new-algobounty-frontend',
+  'new-algobounty-backend',
+]

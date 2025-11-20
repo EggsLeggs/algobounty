@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/rest";
 import type { EmitterWebhookEvent } from "@octokit/webhooks";
+import { markIssueClosed } from "../services/bountyService.js";
 
 type IssueOpenedPayload = EmitterWebhookEvent<"issues.opened">["payload"];
 type IssueClosedPayload = EmitterWebhookEvent<"issues.closed">["payload"];
@@ -88,6 +89,13 @@ export async function handleIssueClosed(payload: IssueClosedPayload, octokit: Oc
     if (repoInfo.data.private) {
       console.log(`🔒 Repository ${repository.full_name} is private, skipping award message addition`);
       return;
+    }
+
+    try {
+      await markIssueClosed(repository.owner.login, repository.name, issue.number.toString());
+      console.log(`✅ Marked ${repository.full_name}#${issue.number} as closed on-chain`);
+    } catch (error) {
+      console.error("❌ Failed to mark bounty closed on-chain:", error);
     }
 
     const awardLink = `[Award Bounty](${process.env.CORS_ORIGIN || "http://localhost:3000"}/award/${repository.full_name}/${issue.number})`;
