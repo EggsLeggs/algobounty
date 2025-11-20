@@ -1,5 +1,7 @@
 import React from 'react'
 import { Github, Calendar, User } from 'lucide-react'
+import ReactMarkdown, { type Components } from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { cn } from '@/lib/utils'
 
 interface IssueDisplayProps {
@@ -25,6 +27,25 @@ interface IssueDisplayProps {
     full_name: string
     html_url: string
   }
+}
+
+const MarkdownLink = ({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithoutRef<'a'>) => (
+  <a
+    {...props}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={cn('text-primary hover:underline', className)}
+  >
+    {children}
+  </a>
+)
+
+const markdownComponents: Components = {
+  a: MarkdownLink,
 }
 
 const IssueDisplay = ({ issue, repository }: IssueDisplayProps) => {
@@ -117,29 +138,21 @@ const IssueDisplay = ({ issue, repository }: IssueDisplayProps) => {
       )}
 
       {/* Issue Description */}
-      <div className="prose prose-sm max-w-none">
-        <div
-          className={cn(
-            'bg-background/50 backdrop-blur-sm rounded-2xl p-6 border-2 border-foreground/20',
-            'prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-primary prose-strong:text-foreground',
-            'prose-code:text-foreground prose-pre:bg-foreground/5 prose-pre:border prose-pre:border-foreground/20'
-          )}
-        >
-          {issue.body ? (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: issue.body
-                  .replace(/\n/g, '<br />')
-                  .replace(
-                    /\[([^\]]+)\]\(([^)]+)\)/g,
-                    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>'
-                  ),
-              }}
-            />
-          ) : (
-            <p className="text-foreground/60 italic">No description provided.</p>
-          )}
-        </div>
+      <div
+        className={cn(
+          'bg-background/50 backdrop-blur-sm rounded-2xl p-6 border-2 border-foreground/20',
+          'prose prose-sm max-w-none',
+          'prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-primary prose-strong:text-foreground',
+          'prose-code:text-foreground prose-pre:bg-foreground/5 prose-pre:border prose-pre:border-foreground/20'
+        )}
+      >
+        {issue.body ? (
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            {issue.body}
+          </ReactMarkdown>
+        ) : (
+          <p className="text-foreground/60 italic">No description provided.</p>
+        )}
       </div>
     </div>
   )
