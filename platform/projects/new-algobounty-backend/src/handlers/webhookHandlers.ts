@@ -1,9 +1,9 @@
 import { Octokit } from "@octokit/rest";
-import type { WebhookEventMap } from "@octokit/webhooks";
+import type { EmitterWebhookEvent } from "@octokit/webhooks";
 
-type IssueOpenedPayload = WebhookEventMap["issues.opened"];
-type IssueClosedPayload = WebhookEventMap["issues.closed"];
-type PullRequestClosedPayload = WebhookEventMap["pull_request.closed"];
+type IssueOpenedPayload = EmitterWebhookEvent<"issues.opened">["payload"];
+type IssueClosedPayload = EmitterWebhookEvent<"issues.closed">["payload"];
+type PullRequestClosedPayload = EmitterWebhookEvent<"pull_request.closed">["payload"];
 
 export async function handleIssueOpened(payload: IssueOpenedPayload, octokit: Octokit) {
   const { issue, repository, installation } = payload;
