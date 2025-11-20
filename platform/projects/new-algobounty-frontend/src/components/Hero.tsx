@@ -21,7 +21,7 @@ const Hero = () => {
 
   useEffect(() => {
     // Animate words one by one
-    const timeouts: NodeJS.Timeout[] = []
+    const timeouts: ReturnType<typeof setTimeout>[] = []
     allWords.forEach((_, index) => {
       const timeout = setTimeout(() => {
         setVisibleWords(prev => [...prev, index])
