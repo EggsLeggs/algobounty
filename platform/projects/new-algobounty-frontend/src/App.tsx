@@ -6,6 +6,7 @@ import { SnackbarProvider } from 'notistack'
 import Navigation from '@/components/Navigation'
 import HomePage from '@/pages/HomePage'
 import FundPage from '@/pages/FundPage'
+import { WalletModalProvider } from '@/context/WalletModalContext'
 import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
 
 function App() {
@@ -62,14 +63,16 @@ function App() {
   return (
     <SnackbarProvider maxSnack={3}>
       <WalletProvider manager={walletManager}>
-        <BrowserRouter>
-          <Navigation />
-          <div className="noise" />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/fund/:owner/:repoName/:repoId/issue/:issueNumber" element={<FundPage />} />
-          </Routes>
-        </BrowserRouter>
+        <WalletModalProvider>
+          <BrowserRouter>
+            <Navigation />
+            <div className="noise" />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/fund/:owner/:repoName/:repoId/issue/:issueNumber" element={<FundPage />} />
+            </Routes>
+          </BrowserRouter>
+        </WalletModalProvider>
       </WalletProvider>
     </SnackbarProvider>
   )

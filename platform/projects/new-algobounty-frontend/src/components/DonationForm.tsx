@@ -4,6 +4,7 @@ import { useWallet } from '@txnlab/use-wallet-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { useSnackbar } from 'notistack'
+import { useWalletModal } from '@/context/WalletModalContext'
 
 type Currency = 'ALGO' | 'USDC'
 
@@ -18,6 +19,7 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
   const [copied, setCopied] = useState(false)
   const { activeAddress } = useWallet()
   const { enqueueSnackbar } = useSnackbar()
+  const { openModal } = useWalletModal()
 
   const platformFeePercent = 5
   const numericAmount = parseFloat(amount) || 0
@@ -37,6 +39,7 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
 
   const handleDonate = () => {
     if (!activeAddress) {
+      openModal()
       enqueueSnackbar('Please connect your wallet first', { variant: 'warning' })
       return
     }
@@ -46,6 +49,8 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
     }
     onDonate?.(numericAmount, currency)
   }
+
+  const isDonateDisabled = !!activeAddress && numericAmount <= 0
 
   return (
     <div className="space-y-6">
@@ -144,10 +149,10 @@ const DonationForm = ({ totalFunded, onDonate }: DonationFormProps) => {
         <Button
           onClick={handleDonate}
           className={cn(
-            "w-full py-6 text-lg font-semibold gap-2",
-            (!activeAddress || numericAmount <= 0) ? "" : "cursor-pointer"
+            'w-full py-6 text-lg font-semibold gap-2',
+            !isDonateDisabled ? 'cursor-pointer' : ''
           )}
-          disabled={!activeAddress || numericAmount <= 0}
+          disabled={isDonateDisabled}
         >
           <Wallet className="h-5 w-5" />
           {activeAddress ? 'Donate' : 'Connect Wallet to Donate'}

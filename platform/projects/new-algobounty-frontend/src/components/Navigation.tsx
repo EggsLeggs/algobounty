@@ -5,14 +5,14 @@ import { useWallet } from '@txnlab/use-wallet-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import starIcon from '@/assets/star.svg'
-import ConnectWallet from './ConnectWallet'
 import { ellipseAddress } from '@/utils/ellipseAddress'
+import { useWalletModal } from '@/context/WalletModalContext'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [openWalletModal, setOpenWalletModal] = useState(false)
   const { activeAddress } = useWallet()
+  const { openModal } = useWalletModal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +25,7 @@ const Navigation = () => {
   }, [])
 
   const handleWalletConnect = () => {
-    setOpenWalletModal(true)
+    openModal()
   }
 
   const handleGitHubIntegration = () => {
@@ -160,7 +160,6 @@ const Navigation = () => {
           </div>
         </div>
       </nav>
-      <ConnectWallet openModal={openWalletModal} closeModal={() => setOpenWalletModal(false)} />
     </>
   )
 }
