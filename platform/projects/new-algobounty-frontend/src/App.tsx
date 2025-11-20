@@ -8,31 +8,37 @@ import HomePage from '@/pages/HomePage'
 import FundPage from '@/pages/FundPage'
 import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
 
-let supportedWallets: SupportedWallet[]
-if (import.meta.env.VITE_ALGOD_NETWORK === 'localnet') {
-  const kmdConfig = getKmdConfigFromViteEnvironment()
-  supportedWallets = [
-    {
-      id: WalletId.KMD,
-      options: {
-        baseServer: kmdConfig.server,
-        token: String(kmdConfig.token),
-        port: String(kmdConfig.port),
-      },
-    },
-  ]
-} else {
-  supportedWallets = [
-    { id: WalletId.DEFLY },
-    { id: WalletId.PERA },
-    { id: WalletId.EXODUS },
-    // If you are interested in WalletConnect v2 provider
-    // refer to https://github.com/TxnLab/use-wallet for detailed integration instructions
-  ]
-}
-
 function App() {
   const algodConfig = getAlgodConfigFromViteEnvironment()
+
+  const supportedWallets: SupportedWallet[] = useMemo(() => {
+    if (import.meta.env.VITE_ALGOD_NETWORK === 'localnet') {
+      const kmdConfig = getKmdConfigFromViteEnvironment()
+      return [
+        {
+          id: WalletId.KMD,
+          options: {
+            baseServer: kmdConfig.server,
+            token: String(kmdConfig.token),
+            port: String(kmdConfig.port),
+          },
+        },
+      ]
+    } else {
+      // Pera Wallet - mobile-first wallet with robust dApp integration
+      // See: https://txnlab.gitbook.io/use-wallet/getting-started/supported-wallets
+      return [
+        {
+          id: WalletId.PERA,
+          // Optional configuration available:
+          // options: {
+          //   shouldShowSignTxnToast?: boolean
+          //   chainId?: number // Defaults to active network
+          // }
+        },
+      ]
+    }
+  }, [])
 
   const walletManager = useMemo(() => {
     return new WalletManager({
@@ -51,7 +57,7 @@ function App() {
       resetNetwork: true,
     },
   })
-  }, [algodConfig.network, algodConfig.server, algodConfig.port, algodConfig.token])
+  }, [supportedWallets, algodConfig.network, algodConfig.server, algodConfig.port, algodConfig.token])
 
   return (
     <SnackbarProvider maxSnack={3}>

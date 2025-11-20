@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=East+Sea+Dokdo&display=swap" rel="stylesheet" />
     <title>AlgoBounty</title>
+    <script>
+      // Polyfill for global object to fix wallet connection issues
+      if (typeof global === 'undefined') {
+        var global = window;
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
