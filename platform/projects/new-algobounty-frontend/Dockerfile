@@ -7,6 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
+# npm ci uses package-lock.json for faster, reliable installs
 RUN npm ci
 
 # Copy source code
