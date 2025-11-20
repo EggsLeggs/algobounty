@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Loader2, AlertCircle, Github } from 'lucide-react'
 import IssueDisplay from '@/components/IssueDisplay'
 import DonationForm from '@/components/DonationForm'
-import { cn } from '@/lib/utils'
 
 interface GitHubIssue {
   title: string
@@ -42,7 +41,7 @@ const FundPage = () => {
   const [repository, setRepository] = useState<Repository | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [totalFunded, setTotalFunded] = useState(0)
+  const [totalFunded] = useState(0)
 
   useEffect(() => {
     const fetchIssueData = async () => {
@@ -180,7 +179,7 @@ const FundPage = () => {
           {/* Right Column - Donation Form */}
           <div className="lg:col-span-1 space-y-6">
             <DonationForm totalFunded={totalFunded} onDonate={handleDonate} />
-            
+
             {/* Enable AlgoBounty Card */}
             <div className="bg-background/30 backdrop-blur-sm rounded-2xl p-5 border border-foreground/10 hover:border-foreground/20 transition-colors">
               <p className="text-sm text-foreground/60 mb-3 leading-relaxed">
