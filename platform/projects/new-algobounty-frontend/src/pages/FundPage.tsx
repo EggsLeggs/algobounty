@@ -12,7 +12,7 @@ import {
   claimBountyOnChain,
   fundBountyOnChain,
   microAlgosToAlgos,
-} from '@/contracts/BountyEscrow'
+} from '@/utils/bountyHelpers'
 
 interface GitHubIssue {
   title: string
