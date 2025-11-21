@@ -77,13 +77,13 @@ async function refreshClosedState(doc: DemoBountyDocument) {
   }
 
   const collection = await getDemoBountiesCollection();
-  const { value } = await collection.findOneAndUpdate(
+  const updatedDoc = await collection.findOneAndUpdate(
     { bountyKey: doc.bountyKey },
     { $set: { isClosed: latestState, updatedAt: new Date() } },
     { returnDocument: "after" },
   );
 
-  return value ?? doc;
+  return updatedDoc ?? doc;
 }
 
 function formatResponse(doc: DemoBountyDocument) {
@@ -155,7 +155,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/fund", async (req, res, next
       createdAt: new Date(),
     });
 
-    const { value: updatedDoc } = await bountyCollection.findOneAndUpdate(
+    const updatedDoc = await bountyCollection.findOneAndUpdate(
       { bountyKey },
       {
         $inc: { totalFundedMicroAlgos: microAmount },
@@ -197,7 +197,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/claim", async (req, res, nex
       return res.status(403).json({ error: "GitHub account not linked for this wallet" });
     }
 
-    const { value: updatedDoc } = await bountyCollection.findOneAndUpdate(
+    const updatedDoc = await bountyCollection.findOneAndUpdate(
       { bountyKey },
       {
         $set: {
