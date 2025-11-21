@@ -28,6 +28,10 @@ import { attestationRouter } from "./routes/attestations.js";
 import { bountyImageRouter, generateBountyImage } from "./routes/bountyImage.js";
 import { bountyRouter } from "./routes/bounties.js";
 import { waitlistRouter } from "./routes/waitlist.js";
+import { isDemoMode } from "./config/env.js";
+import { closeMongoConnection } from "./lib/mongo.js";
+import { demoBountiesRouter } from "./routes/demoBounties.js";
+import { demoAttestationsRouter } from "./routes/demoAttestations.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -60,6 +64,10 @@ app.use("/api/attestations", attestationRouter);
 app.use("/api/bounty-image", bountyImageRouter);
 app.use("/api/bounties", bountyRouter);
 app.use("/api/waitlist", waitlistRouter);
+if (isDemoMode) {
+  app.use("/api/demo/bounties", demoBountiesRouter);
+  app.use("/api/demo/attestations", demoAttestationsRouter);
+}
 // Also handle .svg extension at the app level
 app.get("/api/bounty-image.svg", generateBountyImage);
 
@@ -70,7 +78,20 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
   res.status(500).json({ error: "Internal server error", message: err.message });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🚀 AlgoBounty Backend API running on http://localhost:${PORT}`);
   console.log(`📝 Environment: ${process.env.NODE_ENV || "development"}`);
+  console.log(`🧪 Demo Mode: ${isDemoMode ? "ENABLED" : "disabled"}`);
 });
+
+async function shutdown(signal: NodeJS.Signals) {
+  console.log(`Received ${signal}, shutting down gracefully...`);
+  server.close(() => {
+    console.log("HTTP server closed");
+  });
+  await closeMongoConnection();
+  process.exit(0);
+}
+
+process.on("SIGINT", () => void shutdown("SIGINT"));
+process.on("SIGTERM", () => void shutdown("SIGTERM"));

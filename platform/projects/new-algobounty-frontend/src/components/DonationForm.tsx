@@ -14,6 +14,8 @@ interface DonationFormProps {
   isFunding?: boolean
   walletBalance?: number | null
   balanceLoading?: boolean
+  demoMode?: boolean
+  demoIsClosed?: boolean
 }
 
 const DonationForm = ({
@@ -22,6 +24,8 @@ const DonationForm = ({
   isFunding = false,
   walletBalance,
   balanceLoading = false,
+  demoMode = false,
+  demoIsClosed = false,
 }: DonationFormProps) => {
   const [amount, setAmount] = useState('')
   const [currency, setCurrency] = useState<Currency>('ALGO')
@@ -34,6 +38,7 @@ const DonationForm = ({
   const numericAmount = parseFloat(amount) || 0
   const platformFee = numericAmount * (platformFeePercent / 100)
   const netAmount = numericAmount - platformFee
+  const isDemoClosed = demoMode && demoIsClosed
 
   const handleShare = async () => {
     try {
@@ -47,6 +52,10 @@ const DonationForm = ({
   }
 
   const handleDonate = async () => {
+    if (isDemoClosed) {
+      enqueueSnackbar('This bounty is closed. Funding is disabled in demo mode.', { variant: 'info' })
+      return
+    }
     if (!activeAddress) {
       openModal()
       enqueueSnackbar('Please connect your wallet first', { variant: 'warning' })
@@ -64,7 +73,7 @@ const DonationForm = ({
     }
   }
 
-  const isDonateDisabled = (!!activeAddress && numericAmount <= 0) || isFunding
+  const isDonateDisabled = (!!activeAddress && numericAmount <= 0) || isFunding || isDemoClosed
 
   return (
     <div className="space-y-6">
@@ -185,6 +194,11 @@ const DonationForm = ({
           {isFunding ? <Loader2 className="h-5 w-5 animate-spin" /> : <Wallet className="h-5 w-5" />}
           {activeAddress ? (isFunding ? 'Processing...' : 'Donate') : 'Connect Wallet to Donate'}
         </Button>
+        {isDemoClosed && (
+          <p className="text-sm text-foreground/60 mt-3">
+            This bounty has been closed, so additional funding is disabled in demo mode.
+          </p>
+        )}
       </div>
     </div>
   )

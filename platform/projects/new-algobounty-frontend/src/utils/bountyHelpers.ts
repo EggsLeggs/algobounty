@@ -4,6 +4,11 @@ import { getAlgodConfigFromViteEnvironment } from "./network/getAlgoClientConfig
 import { makePaymentTxnWithSuggestedParamsFromObject, encodeUnsignedTransaction, assignGroupID } from "algosdk";
 import algosdk from "algosdk";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const DEMO_MODE = (import.meta.env.VITE_DEMO_MODE || "").toLowerCase() === "true";
+
+export const isDemoModeEnabled = DEMO_MODE;
+
 /**
  * Builds a bounty key from owner, repo, and issue number
  * Format: `${owner}/${repo}#${issueNumber}`
@@ -18,6 +23,92 @@ export function buildBountyKey(owner: string, repo: string, issueNumber: string)
 export function microAlgosToAlgos(microAlgos: string | number | bigint): number {
   const microAlgosNum = typeof microAlgos === "string" ? BigInt(microAlgos) : BigInt(microAlgos);
   return Number(microAlgosNum) / 1_000_000;
+}
+
+export interface DemoBountyState {
+  bountyKey: string;
+  owner: string;
+  repo: string;
+  issueNumber: string;
+  totalFundedMicroAlgos: number;
+  totalClaimedMicroAlgos: number;
+  isClosed: boolean;
+  isClaimed: boolean;
+  authorizedClaimer: string | null;
+  updatedAt: string;
+}
+
+export async function fetchBountyStateDemo(owner: string, repo: string, issueNumber: string): Promise<DemoBountyState> {
+  const response = await fetch(
+    `${API_BASE_URL}/api/demo/bounties/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${encodeURIComponent(issueNumber)}`,
+  );
+
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || "Failed to fetch demo bounty state");
+  }
+
+  return (await response.json()) as DemoBountyState;
+}
+
+interface FundBountyDemoParams {
+  owner: string;
+  repo: string;
+  issueNumber: string;
+  amountAlgos: number;
+  funderAddress: string | null;
+}
+
+export async function fundBountyDemo(params: FundBountyDemoParams): Promise<DemoBountyState> {
+  const { owner, repo, issueNumber, amountAlgos, funderAddress } = params;
+  const response = await fetch(
+    `${API_BASE_URL}/api/demo/bounties/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${encodeURIComponent(issueNumber)}/fund`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        amountAlgos,
+        funderAddress,
+      }),
+    },
+  );
+
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || "Failed to fund bounty in demo mode");
+  }
+
+  return (await response.json()) as DemoBountyState;
+}
+
+interface ClaimBountyDemoParams {
+  owner: string;
+  repo: string;
+  issueNumber: string;
+  claimerAddress: string;
+}
+
+export async function claimBountyDemo(params: ClaimBountyDemoParams) {
+  const { owner, repo, issueNumber, claimerAddress } = params;
+  const response = await fetch(
+    `${API_BASE_URL}/api/demo/bounties/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${encodeURIComponent(issueNumber)}/claim`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ claimerAddress }),
+    },
+  );
+
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || "Failed to claim bounty in demo mode");
+  }
+
+  return await response.json();
 }
 
 /**

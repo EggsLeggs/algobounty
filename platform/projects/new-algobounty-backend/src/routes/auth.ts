@@ -1,6 +1,12 @@
 import { Router } from "express";
 import { OAuthApp } from "@octokit/oauth-app";
 import { Octokit } from "@octokit/rest";
+import { isDemoMode } from "../config/env.js";
+import {
+  getDemoAttestationStatesCollection,
+  getDemoAttestationsCollection,
+} from "../lib/demoCollections.js";
+import { createAttestationPayload, signAttestation } from "../lib/attestation.js";
 
 export const authRouter = Router();
 
@@ -44,6 +50,48 @@ authRouter.get("/github", (req, res) => {
   }
 });
 
+async function linkDemoAttestation(state: string | undefined, githubId: number, githubUsername: string) {
+  if (!isDemoMode || !state) {
+    return null;
+  }
+
+  const statesCollection = await getDemoAttestationStatesCollection();
+  const stateRecord = await statesCollection.findOne({ state });
+  if (!stateRecord) {
+    console.warn("Demo attestation state not found or expired");
+    return null;
+  }
+
+  await statesCollection.deleteOne({ state });
+
+  const privateKeyBase64 = process.env.ATTESTOR_PRIVATE_KEY;
+  if (!privateKeyBase64) {
+    console.warn("ATTESTOR_PRIVATE_KEY is not configured; skipping demo attestation storage");
+    return null;
+  }
+
+  const privateKey = Buffer.from(privateKeyBase64, "base64");
+  const payload = createAttestationPayload(githubId, stateRecord.algorandAddress, state, 24);
+  const attestation = signAttestation(payload, privateKey);
+
+  const attestationsCollection = await getDemoAttestationsCollection();
+  await attestationsCollection.updateOne(
+    { algorandAddress: stateRecord.algorandAddress },
+    {
+      $set: {
+        githubId: githubId.toString(),
+        githubUsername,
+        algorandAddress: stateRecord.algorandAddress,
+        attestation,
+        createdAt: new Date(),
+      },
+    },
+    { upsert: true },
+  );
+
+  return stateRecord.algorandAddress;
+}
+
 // OAuth callback handler
 authRouter.get("/github/callback", async (req, res) => {
   try {
@@ -70,14 +118,18 @@ authRouter.get("/github/callback", async (req, res) => {
     const octokit = new Octokit({ auth: authentication.token });
     const { data: user } = await octokit.rest.users.getAuthenticated();
 
-    // TODO: Implement real smart contract - store GitHub account link to Algorand address
-    // For now, redirect with user data
     const redirectUrl = new URL(process.env.CORS_ORIGIN || "http://localhost:3000");
     redirectUrl.searchParams.set("github_linked", "true");
     redirectUrl.searchParams.set("github_id", user.id.toString());
     redirectUrl.searchParams.set("github_username", user.login);
     redirectUrl.searchParams.set("github_name", user.name || "");
     redirectUrl.searchParams.set("github_avatar", user.avatar_url);
+
+    const linkedAddress = await linkDemoAttestation(state, user.id, user.login);
+    if (linkedAddress) {
+      redirectUrl.searchParams.set("demo_linked", "true");
+      redirectUrl.searchParams.set("demo_algorand_address", linkedAddress);
+    }
 
     res.redirect(redirectUrl.toString());
   } catch (error) {
