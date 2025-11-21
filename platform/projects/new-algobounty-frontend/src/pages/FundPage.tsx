@@ -13,6 +13,8 @@ import {
   fundBountyOnChain,
   microAlgosToAlgos,
 } from '@/utils/bountyHelpers'
+import { getAlgodConfigFromViteEnvironment } from '@/utils/network/getAlgoClientConfigs'
+import algosdk from 'algosdk'
 
 interface GitHubIssue {
   title: string
@@ -66,6 +68,8 @@ const FundPage = () => {
   const [bountyLoading, setBountyLoading] = useState(true)
   const [funding, setFunding] = useState(false)
   const [claiming, setClaiming] = useState(false)
+  const [walletBalance, setWalletBalance] = useState<number | null>(null)
+  const [balanceLoading, setBalanceLoading] = useState(false)
   const { activeAddress, signTransactions } = useWallet()
   const { enqueueSnackbar } = useSnackbar()
   const { openModal } = useWalletModal()
@@ -163,6 +167,36 @@ const FundPage = () => {
     void fetchBountyState()
   }, [fetchBountyState])
 
+  const fetchWalletBalance = useCallback(async () => {
+    if (!activeAddress) {
+      setWalletBalance(null)
+      return
+    }
+
+    setBalanceLoading(true)
+    try {
+      const algodConfig = getAlgodConfigFromViteEnvironment()
+      const algodClient = new algosdk.Algodv2(
+        String(algodConfig.token),
+        algodConfig.server,
+        String(algodConfig.port)
+      )
+
+      const accountInfo = await algodClient.accountInformation(activeAddress).do()
+      const balanceInAlgos = microAlgosToAlgos(accountInfo.amount)
+      setWalletBalance(balanceInAlgos)
+    } catch (err) {
+      console.error('Error fetching wallet balance:', err)
+      setWalletBalance(null)
+    } finally {
+      setBalanceLoading(false)
+    }
+  }, [activeAddress])
+
+  useEffect(() => {
+    void fetchWalletBalance()
+  }, [fetchWalletBalance])
+
   const handleDonate = async (amount: number, currency: Currency) => {
     if (currency !== 'ALGO') {
       enqueueSnackbar('Only ALGO donations are supported right now', { variant: 'warning' })
@@ -188,6 +222,7 @@ const FundPage = () => {
       })
       enqueueSnackbar('Donation submitted on Algorand 🎉', { variant: 'success' })
       await fetchBountyState()
+      await fetchWalletBalance()
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to fund this bounty'
       enqueueSnackbar(message, { variant: 'error' })
@@ -294,7 +329,13 @@ const FundPage = () => {
 
           {/* Right Column - Donation Form */}
           <div className="lg:col-span-1 space-y-6">
-            <DonationForm totalFunded={totalFunded} onDonate={handleDonate} isFunding={funding} />
+            <DonationForm
+              totalFunded={totalFunded}
+              onDonate={handleDonate}
+              isFunding={funding}
+              walletBalance={walletBalance}
+              balanceLoading={balanceLoading}
+            />
 
             <div className="bg-background/50 backdrop-blur-sm rounded-3xl p-6 border-2 border-foreground/20 space-y-4">
               <div className="flex items-center justify-between">

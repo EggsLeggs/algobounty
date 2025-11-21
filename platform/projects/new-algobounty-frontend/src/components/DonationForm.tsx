@@ -12,9 +12,17 @@ interface DonationFormProps {
   totalFunded: number
   onDonate?: (amount: number, currency: Currency) => Promise<void> | void
   isFunding?: boolean
+  walletBalance?: number | null
+  balanceLoading?: boolean
 }
 
-const DonationForm = ({ totalFunded, onDonate, isFunding = false }: DonationFormProps) => {
+const DonationForm = ({
+  totalFunded,
+  onDonate,
+  isFunding = false,
+  walletBalance,
+  balanceLoading = false,
+}: DonationFormProps) => {
   const [amount, setAmount] = useState('')
   const [currency, setCurrency] = useState<Currency>('ALGO')
   const [copied, setCopied] = useState(false)
@@ -131,6 +139,20 @@ const DonationForm = ({ totalFunded, onDonate, isFunding = false }: DonationForm
             step="0.1"
             className="w-full px-4 py-3 rounded-xl bg-background/30 border-2 border-foreground/20 focus:border-primary focus:outline-none text-foreground placeholder:text-foreground/40 font-mono tabular-nums"
           />
+          {activeAddress && (
+            <div className="mt-2 text-sm text-foreground/60">
+              {balanceLoading ? (
+                <span className="flex items-center gap-2">
+                  <Loader2 className="h-3 w-3 animate-spin" />
+                  <span>Loading balance...</span>
+                </span>
+              ) : typeof walletBalance === "number" ? (
+                <span>
+                  Your balance: <span className="font-mono tabular-nums font-medium text-foreground/80">{walletBalance.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
+                </span>
+              ) : null}
+            </div>
+          )}
         </div>
 
         {/* Fee Breakdown */}
