@@ -77,13 +77,13 @@ async function refreshClosedState(doc: DemoBountyDocument) {
   }
 
   const collection = await getDemoBountiesCollection();
-  const result = await collection.findOneAndUpdate(
+  const { value } = await collection.findOneAndUpdate(
     { bountyKey: doc.bountyKey },
     { $set: { isClosed: latestState, updatedAt: new Date() } },
     { returnDocument: "after" },
   );
 
-  return result.value ?? doc;
+  return value ?? doc;
 }
 
 function formatResponse(doc: DemoBountyDocument) {
@@ -155,7 +155,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/fund", async (req, res, next
       createdAt: new Date(),
     });
 
-    const updated = await bountyCollection.findOneAndUpdate(
+    const { value: updatedDoc } = await bountyCollection.findOneAndUpdate(
       { bountyKey },
       {
         $inc: { totalFundedMicroAlgos: microAmount },
@@ -164,7 +164,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/fund", async (req, res, next
       { returnDocument: "after" },
     );
 
-    res.json(formatResponse(updated.value ?? doc));
+    res.json(formatResponse(updatedDoc ?? doc));
   } catch (error) {
     next(error);
   }
@@ -197,7 +197,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/claim", async (req, res, nex
       return res.status(403).json({ error: "GitHub account not linked for this wallet" });
     }
 
-    const updated = await bountyCollection.findOneAndUpdate(
+    const { value: updatedDoc } = await bountyCollection.findOneAndUpdate(
       { bountyKey },
       {
         $set: {
@@ -210,7 +210,7 @@ demoBountiesRouter.post("/:owner/:repo/:issueNumber/claim", async (req, res, nex
     );
 
     res.json({
-      ...formatResponse(updated.value ?? doc),
+      ...formatResponse(updatedDoc ?? doc),
       message: "Claim recorded in demo mode. Funds are not transferred in this environment.",
     });
   } catch (error) {

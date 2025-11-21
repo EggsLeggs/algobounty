@@ -1,4 +1,4 @@
-import type { Collection } from "mongodb";
+import type { Collection, Document } from "mongodb";
 import { getDb } from "./mongo.js";
 
 export interface DemoBountyDocument {
@@ -41,7 +41,11 @@ export interface DemoAttestationStateDocument {
 
 const initializedCollections = new Set<string>();
 
-async function ensureIndexes<T>(collection: Collection<T>, collectionName: string, indexes: Parameters<Collection<T>["createIndex"]>[]) {
+async function ensureIndexes<T extends Document>(
+  collection: Collection<T>,
+  collectionName: string,
+  indexes: Parameters<Collection<T>["createIndex"]>[],
+) {
   if (initializedCollections.has(collectionName)) {
     return collection;
   }
