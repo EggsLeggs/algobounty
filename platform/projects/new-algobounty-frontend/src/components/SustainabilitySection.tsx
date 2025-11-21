@@ -4,30 +4,30 @@ const SustainabilitySection = () => {
   const testimonials = [
     {
       persona: 'Companies',
-      quote: 'AlgoBounty has transformed how we support open source. We can now directly fund the issues that matter most to our business, ensuring critical fixes get prioritized.',
-      author: 'Sarah Chen',
+      quote: 'The ability to directly fund issues impacting our delivery sounds like a game changer. We will definitely give it a try!',
+      author: 'Anonymous',
       title: 'CTO',
-      company: 'TechCorp Inc.',
+      company: '',
       buttonText: 'Fund an Issue',
       color: '#7F9ED7',
       foregroundColor: '#ffffff',
     },
     {
       persona: 'Maintainers',
-      quote: 'Finally, a way to sustainably maintain our project. The bounty system helps us attract quality contributions and ensures maintainers are compensated for their time.',
-      author: 'Marcus Rodriguez',
-      title: 'Project Lead',
-      company: 'OpenSource Foundation',
+      quote: 'I\'m excited at the prospect of being able to entice contributors to work on issues that impact our projects but that we don\'t have the resources to fix ourselves.',
+      author: 'Hayden Bradley',
+      title: 'Founder',
+      company: 'ThinkHuman',
       buttonText: 'Enable on Repo',
       color: '#94A159',
       foregroundColor: '#ffffff',
     },
     {
       persona: 'Contributors',
-      quote: 'I love being able to find meaningful work and get paid fairly for my contributions. AlgoBounty makes open source development a viable career path.',
-      author: 'Alex Kim',
-      title: 'Open Source Developer',
-      company: 'Freelance',
+      quote: 'Being able to get paid to do work that I\'m passionate about sounds ideal. I\'d love to see bounty-hunting become a side hustle for me.',
+      author: 'Anonymous',
+      title: 'Student',
+      company: 'King\'s College London',
       buttonText: 'Find Bounties',
       color: '#D77FD1',
       foregroundColor: '#ffffff',
@@ -104,7 +104,7 @@ const SustainabilitySection = () => {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-base md:text-lg text-foreground/90 mb-6 flex-grow leading-relaxed">
+              <blockquote className="text-base md:text-lg text-foreground/90 mb-6 grow leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
 

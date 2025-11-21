@@ -13,12 +13,6 @@
     {
       "path": "projects/new-algobounty-contract"
     },
-    // {
-    //   "path": "./projects/algobounty-contracts"
-    // },
-    // {
-    //   "path": "./projects/algobounty-frontend"
-    // },
   ],
   "settings": {
     "files.exclude": {

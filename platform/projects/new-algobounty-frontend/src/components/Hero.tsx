@@ -1,8 +1,15 @@
 import { useEffect, useState } from 'react'
 import easyaLogo from '../assets/easya.svg'
 import algorandLogo from '../assets/algorand.svg'
+import { Button } from '@/components/ui/button'
 
 const Hero = () => {
+  const handleScrollToWaitlist = () => {
+    const waitlistElement = document.getElementById('waitlist')
+    if (waitlistElement) {
+      waitlistElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
   const line1 = ["Trustless", "Bounties"]
   const line2 = ["For", "Open-Source"]
   const line3 = ["Issues"]
@@ -158,6 +165,16 @@ const Hero = () => {
               <span className="text-sm font-bold text-foreground leading-tight">2025 Participant</span>
             </div>
           </div>
+        </div>
+
+        {/* Join Waitlist Button */}
+        <div className="mt-12">
+          <Button
+            onClick={handleScrollToWaitlist}
+            className="px-8 py-6 text-lg font-semibold rounded-xl cursor-pointer"
+          >
+            Join the Waitlist
+          </Button>
         </div>
       </div>
     </section>

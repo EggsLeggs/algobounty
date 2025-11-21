@@ -27,6 +27,7 @@ import { githubRouter } from "./routes/github.js";
 import { attestationRouter } from "./routes/attestations.js";
 import { bountyImageRouter, generateBountyImage } from "./routes/bountyImage.js";
 import { bountyRouter } from "./routes/bounties.js";
+import { waitlistRouter } from "./routes/waitlist.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -58,6 +59,7 @@ app.use("/api/github", githubRouter);
 app.use("/api/attestations", attestationRouter);
 app.use("/api/bounty-image", bountyImageRouter);
 app.use("/api/bounties", bountyRouter);
+app.use("/api/waitlist", waitlistRouter);
 // Also handle .svg extension at the app level
 app.get("/api/bounty-image.svg", generateBountyImage);
 
