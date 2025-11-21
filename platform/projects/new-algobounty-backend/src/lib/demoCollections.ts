@@ -28,6 +28,9 @@ export interface DemoAttestationDocument {
   algorandAddress: string;
   attestation: unknown;
   createdAt: Date;
+  githubLinkedAt?: Date;
+  attestationSignedAt?: Date;
+  storedAt?: Date;
 }
 
 export interface DemoAttestationStateDocument {

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Wallet, Copy, Check, Loader2 } from 'lucide-react'
+import { Wallet, Copy, Check, Loader2, Lock } from 'lucide-react'
 import { useWallet } from '@txnlab/use-wallet-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -109,95 +109,125 @@ const DonationForm = ({
       <div className="bg-background/50 backdrop-blur-sm rounded-3xl p-8 border-2 border-foreground/20">
         <h2 className="text-2xl font-bold text-foreground mb-6 wonky-text">Fund This Bounty</h2>
 
-        {/* Currency Selector */}
-        <div className="flex gap-3 mb-6">
-          <button
-            onClick={() => setCurrency('ALGO')}
-            className={cn(
-              'flex-1 px-6 py-3 rounded-xl font-medium transition-all border-2 cursor-pointer',
-              currency === 'ALGO'
-                ? 'bg-primary text-primary-foreground border-primary'
-                : 'bg-background/30 text-foreground/60 border-foreground/20 hover:border-foreground/40'
-            )}
-          >
-            ALGO
-          </button>
-          <button
-            onClick={() => setCurrency('USDC')}
-            disabled
-            className={cn(
-              'flex-1 px-6 py-3 rounded-xl font-medium transition-all border-2 cursor-not-allowed opacity-50',
-              'bg-background/30 text-foreground/60 border-foreground/20'
-            )}
-          >
-            USDC
-          </button>
-        </div>
-
-        {/* Amount Input */}
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-foreground/80 mb-2">
-            Amount ({currency})
-          </label>
-          <input
-            type="number"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            placeholder="0.00"
-            min="0"
-            step="0.1"
-            className="w-full px-4 py-3 rounded-xl bg-background/30 border-2 border-foreground/20 focus:border-primary focus:outline-none text-foreground placeholder:text-foreground/40 font-mono tabular-nums"
-          />
-          {activeAddress && (
-            <div className="mt-2 text-sm text-foreground/60">
-              {balanceLoading ? (
-                <span className="flex items-center gap-2">
-                  <Loader2 className="h-3 w-3 animate-spin" />
-                  <span>Loading balance...</span>
-                </span>
-              ) : typeof walletBalance === "number" ? (
-                <span>
-                  Your balance: <span className="font-mono tabular-nums font-medium text-foreground/80">{walletBalance.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
-                </span>
-              ) : null}
+        {isDemoClosed ? (
+          <div className="rounded-2xl border border-foreground/20 bg-foreground/5 p-6 text-center space-y-4">
+            <div className="mx-auto w-14 h-14 rounded-2xl border border-foreground/20 bg-background/80 flex items-center justify-center">
+              <Lock className="h-6 w-6 text-foreground/80" />
             </div>
-          )}
-        </div>
-
-        {/* Fee Breakdown */}
-        {numericAmount > 0 && (
-          <div className="mb-6 p-4 rounded-xl bg-foreground/5 border border-foreground/10 space-y-2">
-            <div className="flex justify-between text-sm">
-              <span className="text-foreground/70">Amount</span>
-              <span className="text-foreground font-medium font-mono tabular-nums">{numericAmount.toFixed(2)} {currency}</span>
+            <div>
+              <p className="text-xl font-semibold text-foreground">Funding Closed</p>
+              <p className="text-sm text-foreground/70 mt-1">
+                This issue has been resolved, so additional contributions are disabled.
+                Thanks for supporting this bounty!
+              </p>
             </div>
-            <div className="flex justify-between text-sm">
-              <span className="text-foreground/70">Platform Fee ({platformFeePercent}%)</span>
-              <span className="text-foreground font-medium font-mono tabular-nums">{platformFee.toFixed(2)} {currency}</span>
-            </div>
-            <div className="pt-2 border-t border-foreground/20 flex justify-between">
-              <span className="text-foreground font-medium">Net Amount</span>
-              <span className="text-foreground font-bold font-mono tabular-nums">{netAmount.toFixed(2)} {currency}</span>
-            </div>
+            <p className="text-xs text-foreground/60">
+              You can still follow the claim flow below to see how rewards are awarded in AlgoBounty.
+            </p>
           </div>
-        )}
+        ) : (
+          <>
+            {/* Currency Selector */}
+            <div className="flex gap-3 mb-6">
+              <button
+                onClick={() => setCurrency('ALGO')}
+                className={cn(
+                  'flex-1 px-6 py-3 rounded-xl font-medium transition-all border-2 cursor-pointer',
+                  currency === 'ALGO'
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : 'bg-background/30 text-foreground/60 border-foreground/20 hover:border-foreground/40'
+                )}
+              >
+                ALGO
+              </button>
+              <button
+                onClick={() => setCurrency('USDC')}
+                disabled
+                className={cn(
+                  'flex-1 px-6 py-3 rounded-xl font-medium transition-all border-2 cursor-not-allowed opacity-50',
+                  'bg-background/30 text-foreground/60 border-foreground/20'
+                )}
+              >
+                USDC
+              </button>
+            </div>
 
-        {/* Donate Button */}
-        <Button
-          onClick={handleDonate}
-          className={cn(
-            'w-full py-6 text-lg font-semibold gap-2',
-            !isDonateDisabled ? 'cursor-pointer' : ''
-          )}
-          disabled={isDonateDisabled}
-        >
-          {isFunding ? <Loader2 className="h-5 w-5 animate-spin" /> : <Wallet className="h-5 w-5" />}
-          {activeAddress ? (isFunding ? 'Processing...' : 'Donate') : 'Connect Wallet to Donate'}
-        </Button>
-        {isDemoClosed && (
-          <p className="text-sm text-foreground/60 mt-3">
-            This bounty has been closed, so additional funding is disabled in demo mode.
-          </p>
+            {/* Amount Input */}
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-foreground/80 mb-2">
+                Amount ({currency})
+              </label>
+              <input
+                type="number"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+                placeholder="0.00"
+                min="0"
+                step="0.1"
+                className="w-full px-4 py-3 rounded-xl bg-background/30 border-2 border-foreground/20 focus:border-primary focus:outline-none text-foreground placeholder:text-foreground/40 font-mono tabular-nums"
+              />
+              {activeAddress && (
+                <div className="mt-2 text-sm text-foreground/60">
+                  {balanceLoading ? (
+                    <span className="flex items-center gap-2">
+                      <Loader2 className="h-3 w-3 animate-spin" />
+                      <span>Loading balance...</span>
+                    </span>
+                  ) : typeof walletBalance === 'number' ? (
+                    <span>
+                      Your balance:{' '}
+                      <span className="font-mono tabular-nums font-medium text-foreground/80">
+                        {walletBalance.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO
+                      </span>
+                    </span>
+                  ) : null}
+                </div>
+              )}
+            </div>
+
+            {/* Fee Breakdown */}
+            {numericAmount > 0 && (
+              <div className="mb-6 p-4 rounded-xl bg-foreground/5 border border-foreground/10 space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-foreground/70">Amount</span>
+                  <span className="text-foreground font-medium font-mono tabular-nums">
+                    {numericAmount.toFixed(2)} {currency}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-foreground/70">
+                    Platform Fee ({platformFeePercent}%)
+                  </span>
+                  <span className="text-foreground font-medium font-mono tabular-nums">
+                    {platformFee.toFixed(2)} {currency}
+                  </span>
+                </div>
+                <div className="pt-2 border-t border-foreground/20 flex justify-between">
+                  <span className="text-foreground font-medium">Net Amount</span>
+                  <span className="text-foreground font-bold font-mono tabular-nums">
+                    {netAmount.toFixed(2)} {currency}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {/* Donate Button */}
+            <Button
+              onClick={handleDonate}
+              className={cn(
+                'w-full py-6 text-lg font-semibold gap-2',
+                !isDonateDisabled ? 'cursor-pointer' : ''
+              )}
+              disabled={isDonateDisabled}
+            >
+              {isFunding ? (
+                <Loader2 className="h-5 w-5 animate-spin" />
+              ) : (
+                <Wallet className="h-5 w-5" />
+              )}
+              {activeAddress ? (isFunding ? 'Processing...' : 'Donate') : 'Connect Wallet to Donate'}
+            </Button>
+          </>
         )}
       </div>
     </div>

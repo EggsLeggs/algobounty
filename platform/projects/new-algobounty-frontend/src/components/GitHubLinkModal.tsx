@@ -183,6 +183,12 @@ const GitHubLinkModal = ({ open, algorandAddress, onClose, onLinked }: GitHubLin
               flow.
             </p>
           )}
+          <div className="rounded-xl border border-border/40 bg-background/60 p-3 space-y-1 text-sm text-foreground/70">
+            <p className="text-xs uppercase font-semibold text-foreground/60">What happens next</p>
+            <p>1. A GitHub OAuth window opens so you can authorize AlgoBounty.</p>
+            <p>2. The backend signs an attestation linking your wallet to your GitHub account.</p>
+            <p>3. The attestation is stored (off-chain in this demo) so the claim button can unlock.</p>
+          </div>
         </div>
 
         <div className="flex gap-3">

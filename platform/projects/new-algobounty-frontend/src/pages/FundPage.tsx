@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Loader2, AlertCircle, Github, ShieldCheck, Lock } from 'lucide-react'
+import { Loader2, AlertCircle, Github, ShieldCheck, Lock, CheckCircle2, Clock3 } from 'lucide-react'
 import IssueDisplay from '@/components/IssueDisplay'
 import DonationForm, { type Currency } from '@/components/DonationForm'
 import GitHubLinkModal from '@/components/GitHubLinkModal'
@@ -18,6 +18,9 @@ import {
   fetchBountyStateDemo,
   claimBountyDemo,
   type DemoBountyState,
+  fetchDemoClaimStatus,
+  getDefaultClaimStages,
+  type ClaimStage,
 } from '@/utils/bountyHelpers'
 import { getAlgodConfigFromViteEnvironment } from '@/utils/network/getAlgoClientConfigs'
 import algosdk from 'algosdk'
@@ -81,6 +84,7 @@ const FundPage = () => {
   const [isGithubLinked, setIsGithubLinked] = useState(false)
   const [checkingGithubLink, setCheckingGithubLink] = useState(false)
   const [demoGithubUsername, setDemoGithubUsername] = useState<string | null>(null)
+  const [claimStages, setClaimStages] = useState<ClaimStage[]>(() => getDefaultClaimStages())
   const { activeAddress, signTransactions } = useWallet()
   const { enqueueSnackbar } = useSnackbar()
   const { openModal } = useWalletModal()
@@ -225,31 +229,28 @@ const FundPage = () => {
     void fetchWalletBalance()
   }, [fetchWalletBalance])
 
-  const checkDemoLinkStatus = useCallback(async () => {
+  const refreshDemoClaimStatus = useCallback(async () => {
     if (!isDemoMode) {
       return
     }
     if (!activeAddress) {
       setIsGithubLinked(false)
       setDemoGithubUsername(null)
+      setClaimStages(getDefaultClaimStages())
       return
     }
 
     setCheckingGithubLink(true)
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/demo/attestations/check/${encodeURIComponent(activeAddress)}`
-      )
-      if (!response.ok) {
-        throw new Error('Failed to check GitHub link status')
-      }
-      const data = await response.json()
-      setIsGithubLinked(Boolean(data.linked))
-      setDemoGithubUsername(data.linked ? data.githubUsername ?? null : null)
+      const status = await fetchDemoClaimStatus(activeAddress)
+      setIsGithubLinked(Boolean(status.linked))
+      setDemoGithubUsername(status.linked ? status.githubUsername ?? null : null)
+      setClaimStages(status.stages)
     } catch (err) {
       console.error('Error checking GitHub link status:', err)
       setIsGithubLinked(false)
       setDemoGithubUsername(null)
+      setClaimStages(getDefaultClaimStages())
     } finally {
       setCheckingGithubLink(false)
     }
@@ -257,9 +258,46 @@ const FundPage = () => {
 
   useEffect(() => {
     if (isDemoMode) {
-      void checkDemoLinkStatus()
+      void refreshDemoClaimStatus()
     }
-  }, [checkDemoLinkStatus, isDemoMode])
+  }, [refreshDemoClaimStatus, isDemoMode])
+
+  const nonDemoStages = useMemo<ClaimStage[]>(() => {
+    const baseStages = getDefaultClaimStages()
+    return baseStages.map((stage) => {
+      if (stage.id === 'github-oauth') {
+        return {
+          ...stage,
+          label: 'Log in with GitHub',
+          description: 'Production flow prompts you to authorize GitHub before claiming.',
+          status: activeAddress ? 'complete' : 'pending',
+          completedAt: null,
+        }
+      }
+      if (stage.id === 'attestation-sign') {
+        return {
+          ...stage,
+          label: 'Sign claim request',
+          description: 'When you click claim we automatically prompt your wallet to sign.',
+          status: bountyState?.isClaimed ? 'complete' : 'pending',
+          completedAt: null,
+        }
+      }
+      if (stage.id === 'commit-record') {
+        return {
+          ...stage,
+          label: 'On-chain settlement',
+          description: 'Funds move on Algorand once the signed request is confirmed.',
+          status: bountyState?.isClaimed ? 'complete' : 'pending',
+          completedAt: null,
+        }
+      }
+      return stage
+    })
+  }, [activeAddress, bountyState?.isClaimed])
+
+  const claimProgressStages = isDemoMode ? claimStages : nonDemoStages
+  const claimStagesReady = !isDemoMode || claimStages.every((stage) => stage.status === 'complete')
 
   const handleDonate = async (amount: number, currency: Currency) => {
     if (currency !== 'ALGO') {
@@ -340,6 +378,10 @@ const FundPage = () => {
       if (!isGithubLinked) {
         enqueueSnackbar('Link your GitHub account before claiming', { variant: 'info' })
         setGithubModalOpen(true)
+        return
+      }
+      if (!claimStagesReady) {
+        enqueueSnackbar('Complete the claim preparation steps first', { variant: 'info' })
         return
       }
       setClaiming(true)
@@ -435,7 +477,8 @@ const FundPage = () => {
 
   const totalFunded = microAlgosToAlgos(bountyState?.totalFundedMicroAlgos ?? '0')
   const totalClaimed = microAlgosToAlgos(bountyState?.totalClaimedMicroAlgos ?? '0')
-  const isClaimable = Boolean(bountyState?.isClosed && !bountyState?.isClaimed)
+  const isIssueClosed = bountyState?.isClosed ?? issue.state === 'closed'
+  const isClaimable = Boolean(isIssueClosed && !bountyState?.isClaimed)
   const authorizedClaimer = bountyState?.authorizedClaimer
 
   return (
@@ -457,7 +500,7 @@ const FundPage = () => {
                 walletBalance={walletBalance}
                 balanceLoading={balanceLoading}
                 demoMode={isDemoMode}
-                demoIsClosed={Boolean(bountyState?.isClosed)}
+                demoIsClosed={Boolean(isIssueClosed)}
               />
 
               <div className="bg-background/50 backdrop-blur-sm rounded-3xl p-6 border-2 border-foreground/20 space-y-4">
@@ -472,7 +515,7 @@ const FundPage = () => {
                         </span>
                       ) : bountyState?.isClaimed ? (
                         'Claimed'
-                      ) : bountyState?.isClosed ? (
+                      ) : isIssueClosed ? (
                         'Closed'
                       ) : (
                         'Open'
@@ -488,22 +531,74 @@ const FundPage = () => {
                   )}
                 </div>
 
-              <div className="space-y-1 text-sm font-mono tabular-nums">
-                <p className="flex justify-between text-foreground/70">
-                  <span>Total Funded</span>
-                  <span>{totalFunded.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
-                </p>
-                <p className="flex justify-between text-foreground/70">
-                  <span>Total Claimed</span>
-                  <span>{totalClaimed.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
-                </p>
-              </div>
-
-              {authorizedClaimer && (
-                <div className="text-xs text-foreground/60 break-all">
-                  Authorized claimer: <span className="font-mono">{authorizedClaimer}</span>
+                <div className="space-y-1 text-sm font-mono tabular-nums">
+                  <p className="flex justify-between text-foreground/70">
+                    <span>Total Funded</span>
+                    <span>{totalFunded.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
+                  </p>
+                  <p className="flex justify-between text-foreground/70">
+                    <span>Total Claimed</span>
+                    <span>{totalClaimed.toLocaleString(undefined, { maximumFractionDigits: 3 })} ALGO</span>
+                  </p>
                 </div>
-              )}
+
+                {authorizedClaimer && (
+                  <div className="text-xs text-foreground/60 break-all">
+                    Authorized claimer: <span className="font-mono">{authorizedClaimer}</span>
+                  </div>
+                )}
+
+                <div className="rounded-2xl border border-foreground/15 bg-background/40 p-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm text-foreground/60">Claim Progress</p>
+                      <p className="text-base font-semibold text-foreground">
+                        {isDemoMode ? 'Demo workflow' : 'On-chain workflow'}
+                      </p>
+                    </div>
+                    {isDemoMode && checkingGithubLink && (
+                      <span className="text-xs text-foreground/60 flex items-center gap-1">
+                        <Loader2 className="h-3 w-3 animate-spin" />
+                        Syncing
+                      </span>
+                    )}
+                  </div>
+                  <div className="space-y-2">
+                    {claimProgressStages.map((stage) => (
+                      <div
+                        key={stage.id}
+                        className="flex items-start gap-3 rounded-2xl border border-foreground/10 bg-background/60 p-3"
+                      >
+                        <div
+                          className={`mt-0.5 w-10 h-10 rounded-2xl border flex items-center justify-center ${
+                            stage.status === 'complete'
+                              ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-400'
+                              : 'border-foreground/15 text-foreground/60'
+                          }`}
+                        >
+                          {stage.status === 'complete' ? (
+                            <CheckCircle2 className="h-5 w-5" />
+                          ) : (
+                            <Clock3 className="h-5 w-5" />
+                          )}
+                        </div>
+                        <div className="flex-1 space-y-1">
+                          <div className="flex items-center justify-between gap-3">
+                            <p className="text-sm font-semibold text-foreground">{stage.label}</p>
+                            <span
+                              className={`text-xs font-semibold uppercase ${
+                                stage.status === 'complete' ? 'text-emerald-500' : 'text-foreground/50'
+                              }`}
+                            >
+                              {stage.status === 'complete' ? 'Done' : 'Pending'}
+                            </span>
+                          </div>
+                          <p className="text-xs text-foreground/60">{stage.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 {isDemoMode && (
                   <div className="rounded-2xl border border-foreground/20 bg-background/40 p-3 text-sm text-foreground/70 space-y-1">
@@ -524,13 +619,19 @@ const FundPage = () => {
                 <Button
                   className="w-full gap-2"
                   onClick={handleClaim}
-                  disabled={!isClaimable || claiming || bountyLoading}
+                  disabled={!isClaimable || claiming || bountyLoading || !claimStagesReady}
                 >
                   {claiming ? <Loader2 className="h-4 w-4 animate-spin" /> : <ShieldCheck className="h-4 w-4" />}
                   {isClaimable ? (claiming ? 'Claiming...' : isDemoMode ? 'Claim (Demo)' : 'Claim Bounty') : 'Waiting for closure'}
                 </Button>
 
-                {!bountyState?.isClosed && (
+                {isDemoMode && !claimStagesReady && (
+                  <p className="text-xs text-foreground/60 text-center">
+                    Complete the steps above to unlock claiming.
+                  </p>
+                )}
+
+                {!isIssueClosed && (
                   <p className="text-xs text-foreground/60">
                     Claims become available automatically once GitHub marks the issue as closed.
                   </p>
@@ -561,7 +662,7 @@ const FundPage = () => {
         onClose={() => setGithubModalOpen(false)}
         onLinked={() => {
           enqueueSnackbar('GitHub linked successfully!', { variant: 'success' })
-          void checkDemoLinkStatus()
+          void refreshDemoClaimStatus()
         }}
       />
     </>

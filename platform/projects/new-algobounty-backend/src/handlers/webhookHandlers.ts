@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/rest";
 import type { EmitterWebhookEvent } from "@octokit/webhooks";
+import { isDemoMode } from "../config/env.js";
 
 type IssueOpenedPayload = EmitterWebhookEvent<"issues.opened">["payload"];
 type IssueClosedPayload = EmitterWebhookEvent<"issues.closed">["payload"];
@@ -93,7 +94,11 @@ export async function handleIssueClosed(payload: IssueClosedPayload, octokit: Oc
     // Note: Chain interactions (marking issue closed) are now handled by the dapp
     // The dapp will handle closing the bounty when users interact with it
 
-    const awardLink = `[Award Bounty](${process.env.CORS_ORIGIN || "http://localhost:3000"}/award/${repository.full_name}/${issue.number})`;
+    const frontendUrl = process.env.CORS_ORIGIN || "http://localhost:3000";
+    const awardPath = isDemoMode
+      ? `/fund/${repository.owner.login}/${repository.name}/${repository.id}/issue/${issue.number}`
+      : `/award/${repository.full_name}/${issue.number}`;
+    const awardLink = `[Award Bounty](${frontendUrl}${awardPath})`;
 
     const awardMessage = `## 🏆 Issue Resolved - Award Bounty
 

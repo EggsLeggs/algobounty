@@ -366,3 +366,86 @@ export async function claimBountyOnChain(params: ClaimBountyParams): Promise<voi
   // Wait for confirmation (just wait a bit, the transaction will be processed)
   // Note: In production, you might want to implement proper confirmation waiting
 }
+
+export type ClaimStageStatus = "pending" | "complete";
+
+export interface ClaimStage {
+  id: string;
+  label: string;
+  status: ClaimStageStatus;
+  description: string;
+  completedAt: string | null;
+}
+
+export interface DemoClaimStatus {
+  linked: boolean;
+  githubId?: string;
+  githubUsername?: string;
+  stages: ClaimStage[];
+}
+
+const fallbackClaimStages: ClaimStage[] = [
+  {
+    id: "github-oauth",
+    label: "Connect GitHub",
+    status: "pending",
+    description: "Authenticate with GitHub so we can verify your identity.",
+    completedAt: null,
+  },
+  {
+    id: "attestation-sign",
+    label: "Sign Attestation",
+    status: "pending",
+    description: "Link your wallet to GitHub with a signed attestation.",
+    completedAt: null,
+  },
+  {
+    id: "commit-record",
+    label: "Commit Link",
+    status: "pending",
+    description: "Store the verified link (handled automatically in this demo).",
+    completedAt: null,
+  },
+];
+
+function normalizeClaimStages(stages: unknown): ClaimStage[] {
+  if (!Array.isArray(stages)) {
+    return fallbackClaimStages;
+  }
+
+  return stages.map((stage) => ({
+    id: typeof stage.id === "string" ? stage.id : "unknown",
+    label: typeof stage.label === "string" ? stage.label : "Unknown stage",
+    status: stage.status === "complete" ? "complete" : "pending",
+    description: typeof stage.description === "string" ? stage.description : "",
+    completedAt: typeof stage.completedAt === "string" ? stage.completedAt : null,
+  }));
+}
+
+export async function fetchDemoClaimStatus(algorandAddress: string): Promise<DemoClaimStatus> {
+  if (!algorandAddress) {
+    return {
+      linked: false,
+      stages: fallbackClaimStages,
+    };
+  }
+
+  const response = await fetch(`${API_BASE_URL}/api/demo/attestations/check/${encodeURIComponent(algorandAddress)}`);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch claim status");
+  }
+
+  const data = await response.json();
+
+  return {
+    linked: Boolean(data.linked),
+    githubId: typeof data.githubId === "string" ? data.githubId : undefined,
+    githubUsername: typeof data.githubUsername === "string" ? data.githubUsername : undefined,
+    stages: normalizeClaimStages(data.stages),
+  };
+}
+
+export function getDefaultClaimStages(): ClaimStage[] {
+  return fallbackClaimStages;
+}

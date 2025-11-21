@@ -75,6 +75,7 @@ async function linkDemoAttestation(state: string | undefined, githubId: number, 
   const attestation = signAttestation(payload, privateKey);
 
   const attestationsCollection = await getDemoAttestationsCollection();
+  const now = new Date();
   await attestationsCollection.updateOne(
     { algorandAddress: stateRecord.algorandAddress },
     {
@@ -83,7 +84,10 @@ async function linkDemoAttestation(state: string | undefined, githubId: number, 
         githubUsername,
         algorandAddress: stateRecord.algorandAddress,
         attestation,
-        createdAt: new Date(),
+        createdAt: now,
+        githubLinkedAt: now,
+        attestationSignedAt: now,
+        storedAt: now,
       },
     },
     { upsert: true },
