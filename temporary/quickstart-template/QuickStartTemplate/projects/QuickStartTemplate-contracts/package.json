@@ -24,7 +24,7 @@
     "@algorandfoundation/algorand-typescript": "~1.0.0-beta.25 <1.0.0",
     "@pinata/sdk": "^2.1.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "express": "^5.2.0",
     "multer": "^2.0.2"
   },
   "devDependencies": {
